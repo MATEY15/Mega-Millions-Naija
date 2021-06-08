@@ -1,0 +1,63 @@
+mixin message(title, desc, color)
+    // .message__item--popup
+    a(href="#" class=color).message__item.message__item--desktop
+        .message__content
+            h3.message__title=title
+            p.message__description=desc
+        +mixinSvg('72px', '55px', 'icon-email', 'icon-email')
+
+mixin messageContent()
+    .message__read
+        .message__read-close
+            +mixinSvg('21px', '21px', 'icon-close', 'icon-close')
+
+        .message__read-head
+            h3 Congratulations!
+            h4 Mr Oladapo Sodeinde
+        .message__read-main
+            p You have been selected in the lottery draw with the sum of N5million.
+
+            p A message have been sent to you email to clam your reward.
+
+            p Yours Sincerely #[br]
+                | Mr. Tunji Hassan #[br]
+                | Head of Operations
+
+section.section.section__message
+    .layout
+        h1.section__message-title Message
+        .message
+            .message__overlay
+            .message__lists
+                +message('Congratulations!', 'You are a winner', 'message__item--active')
+                +message('You too can hammer!', 'You are a winner', '')
+                +message('Congratulations!', 'You are a winner', 'message__item--red')
+                +message('Congratulations!', 'You are a winner', 'message__item--red')
+                +message('Congratulations!', 'You are a winner', 'message__item--red')
+                +message('Congratulations!', 'You are a winner', 'message__item--red')
+                +message('Congratulations!', 'You are a winner', 'message__item--red')
+                +message('Congratulations!', 'You are a winner', 'message__item--red')
+                +message('Congratulations!', 'You are a winner', 'message__item--red')
+                +message('Congratulations!', 'You are a winner', 'message__item--red')
+            .message__read-wrapper
+                +messageContent()
+                +messageContent()
+                .message__read.message__read--center
+                    .message__read-close
+                        +mixinSvg('21px', '21px', 'icon-close', 'icon-close')
+                    .message__read-head
+                        h3 Congratulations!
+                    .message__reward-points
+                        p You have earned yourself
+                        p.message__reward-points-sum 3
+                        p Reward Points
+                    .message__read-main
+                        p Play more games and earn #[br] Bigger points
+                        a(href="#") Click to check your Reward #[br] Points
+                +messageContent()
+                +messageContent()
+                +messageContent()
+                +messageContent()
+                +messageContent()
+                +messageContent()
+                +messageContent()

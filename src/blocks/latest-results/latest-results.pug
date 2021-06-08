@@ -1,0 +1,47 @@
+include ../win-it-all/win-it-all
+mixin latestResult(src, title)
+    .latest-results__table-item
+        .latest-results__table-game
+            .latest-results__game
+                a(href="#").latest-results__game-logo
+                    +img(src, '', title)
+                .latest-results__game-content
+                    a(href="#").latest-results__game-title=title
+                    .latest-results__game-date 08-May-2021
+                    .latest-results__table-draws-desc
+                        p Multiplier/ Megaplier
+        .latest-results__table-latest-draws
+            .latest-results__table-draws-wrapper
+                .latest-results__table-draw 23
+                .latest-results__table-draw 23
+                .latest-results__table-draw 23
+                .latest-results__table-draw 23
+                .latest-results__table-draw 23
+                .latest-results__table-draw.latest-results__table-draw--gray 23
+                .latest-results__table-draw.latest-results__table-draw--gray 23
+            .latest-results__table-draws-desc
+                p Multiplier/ Megaplier
+        .latest-results__table-play
+            a(href="#").button.button--play Play now
+
+section.section.section__latest-results(style="background-image: url(img/latest-results-bg.jpg)")
+    .layout
+        .latest-results__wrapper
+            .latest-results
+                .latest-results__table
+                    .latest-results__table-head
+                        .latest-results__table-title Latest Results
+                        .latest-results__table-find(data-da=".latest-results__table-title,992,0") Find results from the latest draws
+                        .latest-results__table-all
+                            a(href="#") View All
+                    .latest-results__table-main
+                        +latestResult('img/logos/logo1.png', 'US Mega Millions')
+                        +latestResult('img/logos/logo2.png', 'US Power Ball')
+                        +latestResult('img/logos/logo3.png', 'Italian Super EnaLotto')
+                        +latestResult('img/logos/logo4.png', 'European Millions')
+                        +latestResult('img/logos/logo5.png', 'European Jackpot')
+
+            .latest-results__win
+                +winItAll()
+
+        include ../latest-slider/latest-slider

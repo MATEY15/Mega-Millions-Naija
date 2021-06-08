@@ -1,0 +1,224 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.footer {
+  background: #052E04;
+  padding: 60px 0 70px;
+
+  @include mobile-mini-screen {
+    padding: 28px 0 50px;
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    //display: flex;
+    display: grid !important;
+    grid-template-columns: minmax(auto, 490px) 1fr;
+    @include laptop-small-screen {
+      display: flex !important;
+    }
+    @include table-large-screen {
+      flex-direction: column;
+    }
+    @include mobile-mini-screen {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__about {
+    @include laptop-small-screen {
+      max-width: 450px;
+      width: 100%;
+    }
+  }
+  &__about-head {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: inline-block;
+    margin-bottom: 30px;
+    @include mobile-mini-screen {
+      display: none;
+    }
+  }
+  &__logo-image {}
+  &__find-wrapper {}
+  &__find {
+    display: flex;
+    align-items: center;
+    border: 1px solid #D5D5D5;
+    padding-left: 20px;
+    .icon-location {
+      fill: #FFFFFF;
+      margin-right: 15px;
+    }
+    .find-us {}
+  }
+
+  &__about-description {
+    font-family: $hnr;
+    font-size: 15px;
+    line-height: 18px;
+    color: #707070;
+    max-width: 365px;
+    margin-bottom: 30px;
+    @include mobile-mini-screen {
+      display: none;
+    }
+  }
+  &__copy {
+    font-family: $hnb;
+    font-size: 17px;
+    line-height: 21px;
+    color: #fff;
+    padding-left: 18px;
+    @include table-large-screen {
+      display: none;
+    }
+  }
+  &__information {
+    @include offset(padding-left, 40px, 90px, 991px, 1199px);
+    @include table-large-screen {
+      padding-left: 0;
+    }
+  }
+  &__information-search {
+    h4 {
+      font-family: $hnb;
+      font-size: 17px;
+      line-height: 21px;
+      color: #fff;
+      margin-bottom: 15px;
+      @include mobile-mini-screen {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__search {
+    display: flex;
+  }
+  &__search-input {
+    min-height: 45px;
+    width: 100%;
+    font-family: $hnb;
+    font-size: 20px;
+    color: #707070;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: 0;
+    @include placeholder() {
+      font-family: $hnb;
+      font-size: 20px;
+      color: #707070;
+    }
+  }
+  &__search-button {
+    font-family: $hnb;
+    font-size: 17px;
+    line-height: 21px;
+    color: #fff;
+    background: #3A9B3F;
+    min-height: 45px;
+    min-width: 100px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 10px;
+    margin-left: 18px;
+    cursor: pointer;
+  }
+  &__information-main {
+    display: flex;
+    justify-content: space-between;
+    @include offset(padding-top, 35px, 65px, 768px, 1024px);
+    @include mobile-mini-screen {
+      flex-direction: column;
+    }
+  }
+  &__menu-wrapper {
+    @include mobile-mini-screen {
+      order: 1;
+      padding-bottom: 20px;
+    }
+  }
+  &__menu {
+    @include mobile-mini-screen {
+      //display: grid;
+      //grid-template-columns: repeat(3, 1fr);
+      text-align: justify;
+      margin: 0 -25px;
+    }
+  }
+  &__menu-list {
+    @include mobile-mini-screen {
+      display: inline-block;
+      margin: 0 25px 25px;
+    }
+  }
+  &__menu-link {
+    font-family: $hnb;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+  }
+  &__pay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include mobile-mini-screen {
+      order: 3;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 55px;
+    }
+  }
+  &__pay-link {
+    img {
+      @include mobile-mini-screen {
+        width: 96%;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 25px;
+      @include mobile-mini-screen {
+        margin-bottom: 0;
+        margin-right: 45px;
+      }
+    }
+  }
+  &__social-menu {
+    @include mobile-mini-screen {
+      order: 2;
+      margin-bottom: 56px;
+    }
+    &-title {
+      font-family: $hnb;
+      font-size: 17px;
+      line-height: 21px;
+      color: #fff;
+      margin-bottom: 45px;
+      @include mobile-mini-screen {
+        margin-bottom: 35px;
+        text-align: center;
+      }
+    }
+    .social__menu {
+      @include mobile-mini-screen {
+        display: flex;
+        justify-content: center;
+      }
+      &-link {
+        display: inline-block;
+        &:not(:last-child) {
+          margin-right: 35px;
+        }
+      }
+    }
+  }
+
+
+}

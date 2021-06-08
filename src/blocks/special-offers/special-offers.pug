@@ -1,0 +1,20 @@
+mixin gameWindow()
+    .special-offers__games-item
+        .special-offers__games-preview
+            a(href="#").special-offers__games-icon
+                +img('img/logos/logo1.png', 'special-offers__games-img', 'Logo Game')
+        .special-offers__games-desc
+            p Never miss a draw & recipe 25 instant VIP points
+        .special-offers__games-button
+            a(href="#").button.button--play PLAY NOW
+
+.special-offers
+    .special-offers__button
+        .special-offers__button-name SPECIAL OFFERS
+    .special-offers__window
+        .special-offers__games
+            +gameWindow()
+            +gameWindow()
+            +gameWindow()
+        .special-offers__more-wrapper
+            a(href="#").special-offers__more More Information

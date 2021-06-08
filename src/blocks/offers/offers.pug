@@ -1,0 +1,26 @@
+include ../win-it-all/win-it-all
+
+mixin offersItems(src)
+    .offers__item
+        .offers__item-content
+            .offers__item-image-wrapper
+                +img(src, 'offers__item-image', altImg)
+            .offers__item-description
+                h3.offers__item-title Never miss a draw & recipe 25 instant VIP points
+                p.offers__item-text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem i
+        .offers__item-button
+            a(href="#").button.button--play-large PLAY NOW
+
+section.section.section__offers
+    .layout.offers__layout
+        .offers__wrapper
+            .offers__main
+                +offersItems('img/logos/logo10.png')
+                +offersItems('img/logos/logo9.png')
+                +offersItems('img/logos/logo11.png')
+                +offersItems('img/logos/logo12.png')
+                +offersItems('img/logos/logo13.png')
+            .offers__terms-conditions
+                p #[a(href="#") Terms and Conditions] apply.
+        .offers__winItAll
+            +winItAllOffers()

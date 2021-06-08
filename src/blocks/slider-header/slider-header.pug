@@ -1,0 +1,30 @@
+mixin slideItem()
+    .slider-header__item
+        .slider-header__item-inside(style="background-image: url('img/header-slider/header-slider1.jpg')")
+            .slider-header__logo-wrapper
+                img(src="img/logo-slider.png" alt="Logo" width="282").slider-header__logo
+            .slider-header__content
+                .slider-header__title You too can Hammer!
+                .slider-header__jeckpot-main
+                    .slider-header__price #[span N] 500
+                    .slider-header__million
+                        .slider-header__jeckpot Monday jackpot
+                        | Million
+                a(href="#").slider-header__button PLAY NOW
+
+
+.slider-header__wrapper
+    .slider-header.slick-slider
+        +slideItem()
+        +slideItem()
+        +slideItem()
+        +slideItem()
+        //.slider-header__item
+        //    +img('img/header-slider/header-slider1.jpg', '', 'Slider Image')
+        //.slider-header__item
+        //    +img('img/header-slider/header-slider1.jpg', '', 'Slider Image')
+        //.slider-header__item
+        //    +img('img/header-slider/header-slider1.jpg', '', 'Master Clean Logo')
+        //.slider-header__item
+        //    +img('img/header-slider/header-slider1.jpg', '', 'Slider Image')
+    .slider-header__navigate

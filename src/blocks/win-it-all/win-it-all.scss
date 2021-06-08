@@ -1,0 +1,61 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.win-it-all {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 450px;
+  height: 100%;
+  min-height: 590px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center 0;
+  color: #fff;
+
+  &__offers {
+    max-height: 720px;
+    min-width: 330px;
+    max-width: 330px;
+    .win-it-all__small {
+      margin-top: -60px;
+    }
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $ah;
+    font-size: 56px;
+    line-height: 76px;
+  }
+  &__sum {
+    font-family: $ah;
+    font-size: 143px;
+    line-height: 195px;
+    color: #FFC217;
+    margin-top: -30px;
+    margin-left: -50px;
+    .win-it-all__small {
+      margin-top: 0;
+      position: relative;
+      left: 25px;
+    }
+  }
+  &__small {
+    font-family: $ah;
+    font-size: 61px;
+    line-height: 83px;
+    color: #fff;
+    margin-top: -38px;
+  }
+}

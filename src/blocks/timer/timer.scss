@@ -1,0 +1,8 @@
+.timer {
+  &-days,
+  &-hours,
+  &-minutes,
+  &-seconds {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+// Use variables.scss
+
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  font-weight: normal;
+  font-style: normal;
+  src: url("/src/fonts/HelveticaNeueBold/HelveticaNeueCyr-Bold.eot");
+  src: url("/src/fonts/HelveticaNeueBold/HelveticaNeueCyr-Bold.eot?#iefix")format("embedded-opentype"),
+  url("/src/fonts/HelveticaNeueBold/HelveticaNeueCyr-Bold.woff") format("woff"),
+  url("/src/fonts/HelveticaNeueBold/HelveticaNeueCyr-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'HelveticaNeueRegular';
+  font-weight: normal;
+  font-style: normal;
+  src: url("/src/fonts/HelveticaNeueRegular/HelveticaNeueRegular.eot");
+  src: url("/src/fonts/HelveticaNeueRegular/HelveticaNeueRegular.eot?#iefix")format("embedded-opentype"),
+  url("/src/fonts/HelveticaNeueRegular/HelveticaNeueRegular.woff") format("woff"),
+  url("/src/fonts/HelveticaNeueRegular/HelveticaNeueRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'HelveticaRegular';
+  font-weight: normal;
+  font-style: normal;
+  src: url("/src/fonts/HelveticaRegular/HelveticaRegular.eot");
+  src: url("/src/fonts/HelveticaRegular/HelveticaRegular.eot?#iefix")format("embedded-opentype"),
+  url("/src/fonts/HelveticaRegular/HelveticaRegular.woff") format("woff"),
+  url("/src/fonts/HelveticaRegular/HelveticaRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'HelveticaNeueBlack';
+  font-weight: normal;
+  font-style: normal;
+  src: url("/src/fonts/HelveticaNeueBlack/HelveticaNeueCyr-Black.eot");
+  src: url("/src/fonts/HelveticaNeueBlack/HelveticaNeueCyr-Black.eot?#iefix")format("embedded-opentype"),
+  url("/src/fonts/HelveticaNeueBlack/HelveticaNeueCyr-Black.woff") format("woff"),
+  url("/src/fonts/HelveticaNeueBlack/HelveticaNeueCyr-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'AquaticHeavy';
+  font-weight: normal;
+  font-style: normal;
+  src: url("/src/fonts/AquaticHeavy/AquaticHeavy.eot");
+  src: url("/src/fonts/AquaticHeavy/AquaticHeavy.eot?#iefix")format("embedded-opentype"),
+  url("/src/fonts/AquaticHeavy/AquaticHeavy.woff") format("woff"),
+  url("/src/fonts/AquaticHeavy/AquaticHeavy.ttf") format("truetype");
+}

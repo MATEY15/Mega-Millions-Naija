@@ -1,0 +1,87 @@
+mixin slideItem()
+    .proposal__games-item
+        .proposal__games.slick-slider
+            .proposal__games-col
+                +gameItem('#00235D', 'US Mega Millions', 'United States', 'img/logos/logo1.png')
+                +gameItem('#1549A0', 'US Power Ball', 'United States', 'img/logos/logo2.png')
+            .proposal__games-col
+                +gameItem('#007300', 'Italian Super EnaLotto', 'Italy', 'img/logos/logo3.png')
+                +gameItem('#B20A1B', 'European Millions', 'Spain', 'img/logos/logo4.png')
+            .proposal__games-col
+                +gameItem('#5084F8', 'UK Lotto', 'United kingdom', 'img/logos/logo5.png')
+                +gameItem('#7B0713', 'Spain La Primitiva', 'Spain', 'img/logos/logo6.png')
+            .proposal__games-col
+                +gameItem('#C66004', 'Irish Lotto', 'Ireland', 'img/logos/logo7.png')
+                +gameItem('#BB885D', 'California Super Plus', 'United States', 'img/logos/logo8.png')
+            .proposal__games-col
+                +gameItem('#00235D', 'US Mega Millions', 'United States', 'img/logos/logo1.png')
+                +gameItem('#1549A0', 'US Power Ball', 'United States', 'img/logos/logo2.png')
+            .proposal__games-col
+                +gameItem('#007300', 'Italian Super EnaLotto', 'Italy', 'img/logos/logo3.png')
+                +gameItem('#B20A1B', 'European Millions', 'Spain', 'img/logos/logo4.png')
+            .proposal__games-col
+                +gameItem('#5084F8', 'UK Lotto', 'United kingdom', 'img/logos/logo5.png')
+                +gameItem('#7B0713', 'Spain La Primitiva', 'Spain', 'img/logos/logo6.png')
+        .proposal__games__navigate
+
+mixin slideItemMobile()
+    .proposal__slide-mobile-col
+        +gameItem('#00235D', 'US Mega Millions', 'United States', 'img/logos/logo1.png')
+    .proposal__slide-mobile-col
+        +gameItem('#1549A0', 'US Power Ball', 'United States', 'img/logos/logo2.png')
+    .proposal__slide-mobile-col
+        +gameItem('#007300', 'Italian Super EnaLotto', 'Italy', 'img/logos/logo3.png')
+    .proposal__slide-mobile-col
+        +gameItem('#B20A1B', 'European Millions', 'Spain', 'img/logos/logo4.png')
+    .proposal__slide-mobile-col
+        +gameItem('#5084F8', 'UK Lotto', 'United kingdom', 'img/logos/logo5.png')
+    .proposal__slide-mobile-col
+        +gameItem('#7B0713', 'Spain La Primitiva', 'Spain', 'img/logos/logo6.png')
+    .proposal__slide-mobile-col
+        +gameItem('#C66004', 'Irish Lotto', 'Ireland', 'img/logos/logo7.png')
+    .proposal__slide-mobile-col
+        +gameItem('#BB885D', 'California Super Plus', 'United States', 'img/logos/logo8.png')
+
+include ../game-item/game-item
+
+section.section.section__proposal
+    .layout
+        .heading
+            .heading__title Play the Biggest Jackpots on #[span Mega Millions]
+
+        .proposal__mobile
+            .proposal__tab
+                ul.proposal__tab-lists
+                    li.proposal__tab-list.proposal__tab-list--active Popular
+                    li.proposal__tab-list Closing Soon
+                    li.proposal__tab-list View All
+                .proposal__tab-contents
+                    .proposal__tab-content
+                        .proposal__slide-mobile
+                            +slideItemMobile()
+                    .proposal__tab-content
+                        .proposal__slide-mobile
+                            +slideItemMobile()
+                    .proposal__tab-content
+                        .proposal__slide-mobile
+                            +slideItemMobile()
+
+        .proposal
+            .proposal__main
+                ul.proposal__menu
+                    li.proposal__menu-list.proposal__menu-list--active Popular
+                    li.proposal__menu-list Closing Soon
+                    li.proposal__menu-list View All
+                    li.proposal__menu-list United States lottos
+                    li.proposal__menu-list Euro Lottos
+                .proposal__games-wrapper
+                    +slideItem()
+                    +slideItem()
+                    +slideItem()
+                    +slideItem()
+                    +slideItem()
+
+            .proposal__bar-wrapper
+                .proposal__bar(style="background-image: url(img/bar-green-bg.png)")
+                    +gameItemFull('img/card-bg/card-bg1.jpg', 'Syndicates')
+                    +gameItemFull('img/card-bg/card-bg2.jpg', 'Combos')

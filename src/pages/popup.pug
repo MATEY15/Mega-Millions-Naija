@@ -1,0 +1,244 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+
+include ../blocks/popup-default/popup-default
+
+include ../blocks/header-section/header-section
+block content
+    section
+        .layout
+            h1 Popup Window
+
+            +popupDefault()
+                .popup-default__heading.popup-default__heading--offset
+                    h3.popup-default__title.popup-default__title--center Register
+                .popup-default__form
+                    .popup-default__label-main 1. Create Login #[span *]
+                    .popup-default__item.input__item
+                        +mixinSvg('24px', '25px', 'icon-user', 'icon-user input__icon input__icon--left')
+                        +input('Username, Email or Phone Number', 'text', 'input__padding')
+                    .popup-default__item.input__item
+                        +mixinSvg('17px', '25px', 'icon-lock', 'icon-lock input__icon input__icon--left')
+                        +mixinSvg('19px', '15px', 'icon-eye', 'icon-eye input__icon input__icon--right')
+                        +input('Password', 'text', 'input__padding')
+                    .popup-default__item.input__item
+                        +mixinSvg('17px', '25px', 'icon-lock', 'icon-lock input__icon input__icon--left')
+                        +mixinSvg('19px', '15px', 'icon-eye', 'icon-eye input__icon input__icon--right')
+                        +input('Confirm Password', 'text', 'input__padding')
+                    .popup-default__desc Password must be at least 8 characters long, including at least 1 upper case alphabet, a number, and a special character
+                    .height-40
+                    .popup-default__label-main 2. Personal Information
+
+                    .popup-default__wrapper.popup-default__wrapper--one_three
+                        .popup-default__item
+                            label.popup-default__label-small Title #[span *]
+                            +select('select-form', '')
+                                option Mr
+                                option Mrs
+                                option Ms
+                        .popup-default__item
+                            label.popup-default__label-small First Name #[span *]
+                            .input__item
+                                +input('', 'text', '')
+                    .popup-default__item
+                        .popup-default__label-small Last Name #[span *]
+                        .input__item
+                            +mixinSvg('24px', '25px', 'icon-user', 'icon-user input__icon input__icon--left')
+                            +input('', 'text', 'input__padding')
+                    .popup-default__item
+                        .popup-default__label-small Address  #[span *]
+                        .input__item
+                            +mixinSvg('24px', '24px', 'icon-flag', 'icon-user input__icon input__icon--left')
+                            +input('', 'text', 'input__padding')
+                    .popup-default__item
+                        label.popup-default__label-small Street Address
+                        .input__item
+                            +input('', 'text', '')
+                    .popup-default__item
+                        label.popup-default__label-small State #[span *]
+                        .input__item
+                            +input('', 'text', '')
+                    .popup-default__item
+                        label.popup-default__label-small City / Location #[span *]
+                        .input__item
+                            +input('', 'text', '')
+                    .popup-default__item
+                        label.popup-default__label-small Postal Code
+                        .input__item
+                            +input('', 'text', '')
+                    .popup-default__item
+                        label.popup-default__label-small Date of Birth #[span *]
+                    .popup-default__wrapper.popup-default__wrapper--three
+                        .popup-default__item
+                            +select('select-form', '')
+                                option 1
+                                option 2
+                                option 3
+                                option 4
+                                option 5
+                                option 6
+                                option 7
+                        .popup-default__item
+                            +select('select-form', '')
+                                option jan
+                                option feb
+                                option mar
+                                option apr
+                                option may
+                                option jun
+                                option jul
+                                option aug
+                                option sep
+                                option oct
+                        .popup-default__item
+                            +select('select-form', '')
+                                option 2017
+                                option 2018
+                                option 2019
+                                option 2020
+                                option 2021
+                    .popup-default__button
+                        button.button.button--large.button--darkgreen Register Account
+
+
+            +popupDefault()
+                .popup-default__heading.popup-default__heading--offset
+                    h3.popup-default__title.popup-default__title--center Log In
+                .popup-default__form
+                    .popup-default__item.input__item
+                        +mixinSvg('24px', '25px', 'icon-user', 'icon-user input__icon input__icon--left')
+                        +input('Username, Email or Phone Number', 'text', 'input__padding')
+                    .popup-default__item.input__item
+                        +mixinSvg('17px', '25px', 'icon-lock', 'icon-lock input__icon input__icon--left')
+                        +mixinSvg('19px', '15px', 'icon-eye', 'icon-eye input__icon input__icon--right')
+                        +input('Password', 'text', 'input__padding')
+                    .popup-default__item.popup-default__item--offset-large.popup-default__item--flex
+                        .popup-default__item-col
+                            a(href="#").popup-default__link Forgot Password?
+                        .popup-default__item-col
+                            label.checkbox-button
+                                input.checkbox-button__input(type="checkbox" required="")
+                                .checkbox-button__text
+                                    .checkbox-button__status
+                                    p Remember Me?
+                    .popup-default__button
+                        button.button.button--large.button--darkgreen Login
+                    .popup-default__text.popup-default__text--or or
+                    .popup-default__button.popup-default__button--fifty
+                        .popup-default__button-col
+                            a(href="#").button.button--social.button--fb
+                                img(src="img/social-img/fb-white.svg" alt="")
+                                | Login with Facebook
+                        .popup-default__button-col
+                            a(href="#").button.button--social.button--gg
+                                img(src="img/social-img/google-white.svg" alt="")
+                                | Login with Google
+                    .height-45
+                    .popup-default__text.popup-default__text--center
+                        a(href="#").popup-default__link Don’t have an account ? Register
+
+            +popupDefault()
+                .popup-default__heading.popup-default__heading--offset
+                    h3.popup-default__title.popup-default__title--center Log In
+                .popup-default__form
+                    .popup-default__item.input__item
+                        +mixinSvg('24px', '25px', 'icon-user', 'icon-user input__icon input__icon--left')
+                        +input('Username, Email or Phone Number', 'text', 'input__padding input--error')
+                    .popup-default__item.input__item
+                        +mixinSvg('17px', '25px', 'icon-lock', 'icon-lock input__icon input__icon--left')
+                        +mixinSvg('19px', '15px', 'icon-eye', 'icon-eye input__icon input__icon--right')
+                        +input('Password', 'text', 'input__padding input--error')
+                    .popup-default__item.popup-default__item--offset-large.popup-default__item--flex
+                        .popup-default__item-col
+                            a(href="#").popup-default__link Forgot Password?
+                        .popup-default__item-col
+                            label.checkbox-button
+                                input.checkbox-button__input(type="checkbox" required="")
+                                .checkbox-button__text
+                                    .checkbox-button__status
+                                    p Remember Me?
+                    .popup-default__button
+                        button.button.button--large.button--darkgreen Login
+                    .popup-default__text.popup-default__text--or or
+                    .popup-default__button.popup-default__button--fifty
+                        .popup-default__button-col
+                            a(href="#").button.button--social.button--fb
+                                img(src="img/social-img/fb-white.svg" alt="")
+                                | Login with Facebook
+                        .popup-default__button-col
+                            a(href="#").button.button--social.button--gg
+                                img(src="img/social-img/google-white.svg" alt="")
+                                | Login with Google
+                    .height-45
+                    .popup-default__text.popup-default__text--center
+                        a(href="#").popup-default__link Don’t have an account ? Register
+
+            +popupDefault()
+                .popup-default__heading.popup-default__heading--offset
+                    h3.popup-default__title.popup-default__title--center Forgot Your Password
+                    p.popup-default__decsription.popup-default__decsription--green Enter your email address or verified phone number to reset your password
+                .popup-default__form
+                    .popup-default__item.input__item
+                        +mixinSvg('24px', '25px', 'icon-user', 'icon-user input__icon input__icon--left')
+                        +input('Email or Phone Number', 'text', 'input__padding')
+                    .popup-default__button
+                        button.button.button--large.button--darkgreen Reset
+
+            +popupDefault()
+                .popup-default__heading.popup-default__heading--offset
+                    h3.popup-default__title.popup-default__title--center OTP Verification
+                    p.popup-default__decsription.popup-default__decsription--gray Enter the 6 digit OTP number sent to your email or phone number
+                .popup-default__form
+                    .popup-default__verification
+                        .input__item
+                            input(type="text" value="4").input__verification
+                        .input__item
+                            input(type="text" value="5").input__verification
+                        .input__item
+                            input(type="text" value="6").input__verification
+                        .input__item
+                            input(type="text" value="8").input__verification
+                        .input__item
+                            input(type="text" value="2").input__verification
+                        .input__item
+                            input(type="text" value="7").input__verification
+                    .popup-default__verification-message.popup-default__verification-message--red.popup-default__verification-message--text Invalid code, #[strong please try again!]
+                    .popup-default__button.popup-default__button--offset-full
+                        button.button.button--large.button--darkgreen Ok
+                    .popup-default__verification-message.popup-default__verification-message--text Didn’t receive the email? #[strong Try again]
+                        
+            +popupDefaultSuccess()
+                .popup-default__heading.popup-default__heading--offset
+                    h3.popup-default__title.popup-default__title--center OTP Confirmed
+                .popup-default__correct
+                    img(src="img/icons/correct.svg" alt="Correct")
+
+            +popupDefault()
+                .popup-default__heading.popup-default__heading--offset
+                    h3.popup-default__title.popup-default__title--center Enter Your New Password
+                .popup-default__form
+                    .popup-default__item
+                        .input__item
+                            +mixinSvg('17px', '25px', 'icon-lock', 'icon-lock input__icon input__icon--left')
+                            +mixinSvg('19px', '15px', 'icon-eye', 'icon-eye input__icon input__icon--right')
+                            +input('Password', 'text', 'input__padding')
+                        .input__pass.input__pass--large Weak
+                    .popup-default__item.input__item
+                        .input__item
+                            +mixinSvg('17px', '25px', 'icon-lock', 'icon-lock input__icon input__icon--left')
+                            +mixinSvg('19px', '15px', 'icon-eye', 'icon-eye input__icon input__icon--right')
+                            +input('Confirm Password', 'text', 'input__padding')
+                        .input__pass.input__pass--lov Password doesn’t match
+                    .popup-default__text.popup-default__text--light.popup-default__text--center Password must be at least 8 characters long, including at least 1 upper case alphabet, a number, and a special character
+                    .height-40
+                    .popup-default__button
+                        button.button.button--large.button--darkgreen Reset
+
+
+            .popup-default
+                +mixinSvg('21px', '21px', 'icon-close', 'icon-close')
+                +mixinSvg('24px', '25px', 'icon-user', 'icon-user')
+                +mixinSvg('17px', '25px', 'icon-lock', 'icon-lock')
+                +mixinSvg('19px', '15px', 'icon-eye', 'icon-eye')

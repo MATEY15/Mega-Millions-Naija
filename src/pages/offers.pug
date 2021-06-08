@@ -1,0 +1,11 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+
+include ../blocks/header-section/header-section
+block content
+    +headerTwo('img/header-slider/header-slider2.jpg')
+    include ../blocks/offers/offers
+    include ../blocks/get-know/get-know
+    include ../blocks/partner/partner

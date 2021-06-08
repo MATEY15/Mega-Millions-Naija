@@ -1,0 +1,219 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 65px;
+  z-index: 100;
+  background: #688C34;
+
+  @include table-large-screen {
+    background: #fff;
+  }
+
+  &--scroll {
+    background: rgba(94, 89, 184, .4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  }
+
+  $scroll: '.header--scroll';
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 0;
+
+    @include table-large-screen {
+      padding: 16px 0 14px;
+    }
+  }
+
+  &__menu-wrapper {
+    @include table-large-screen {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: flex;
+
+    &-list {
+      &:not(:last-child) {
+        margin-right: 75px;
+        @include laptop-big-screen {
+          margin-right: 50px;
+        }
+        @include laptop-small-screen {
+          margin-right: 40px;
+        }
+      }
+    }
+
+    &-link {
+      font-family: $hnb;
+      font-size: 18px;
+      line-height: 22px;
+      color: #FFFFFF;
+      text-decoration: none;
+      text-transform: uppercase;
+      @include trn(.2s);
+      @include laptop-small-screen {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__search-wrapper {
+    position: relative;
+    max-width: 460px;
+    min-height: 32px;
+    width: 100%;
+    @include laptop-small-screen {
+      max-width: 320px;
+    }
+    @include table-large-screen {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+      @include table-large-screen {
+        display: block;
+        margin: 15px auto;
+        max-width: calc(100% - 40px);
+      }
+      .header__search {
+        height: 42px;
+        padding: 12px 50px 12px 20px;
+      }
+      .header__search-button {
+        height: 42px;
+        width: 46px;
+      }
+    }
+  }
+  
+  &__search {
+    height: 100%;
+    min-height: 32px;
+    border-radius: 10px;
+    border: 0;
+    width: 100%;
+    background: #fff;
+    padding: 6px 50px 8px 28px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #707070;
+    @include placeholder() {
+      font-size: 15px;
+      line-height: 18px;
+      color: #707070;
+    }
+  }
+
+  &__search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    min-height: 32px;
+    width: 40px;
+    border: 0;
+    border-radius: 0 10px 10px 0;
+    background: var(--black-green-color);
+    cursor: pointer;
+    @include trn(.2s);
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &__registration-wrapper {
+    @include table-large-screen {
+      display: none;
+    }
+  }
+  &__registration {}
+
+  &__registration,
+  &__cart {
+    font-family: $hnb;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include trn(.2s);
+
+  }
+
+  &__cart-wrapper {
+    @include table-large-screen {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 76px;
+    @include table-large-screen {
+      color: #000;
+    }
+    &-counter {
+      position: absolute;
+      top: -10px;
+      right: 0;
+    }
+    svg {
+      fill: #fff;
+      margin-left: 20px;
+      @include table-large-screen {
+        fill: #000;
+      }
+    }
+  }
+
+  &__link-home {
+    font-family: $hnb;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include trn(.2s);
+    display: none;
+    @include table-large-screen {
+      display: inline-block;
+      margin-right: 30px;
+    }
+  }
+
+  &__drop-menu {
+    position: absolute;
+    left: 100%;
+    padding-left: 25px;
+    @media (max-width: 1369px) {
+      position: static;
+      left: auto;
+      padding-left: 0;
+    }
+    @include table-large-screen {
+      display: none;
+    }
+  }
+
+}

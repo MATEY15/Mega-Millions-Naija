@@ -1,0 +1,50 @@
+header.header
+    .layout.header__wrapper
+        button.burger-menu.burger-menu--mobile
+            span.burger-menu__item
+            span.burger-menu__item
+            span.burger-menu__item
+        .header__menu-wrapper
+            ul.header__menu
+                +listLink('Home', '/', 'header__menu-list', 'header__menu-link')
+                +listLink('Lotteries', '#', 'header__menu-list', 'header__menu-link')
+                +listLink('Results', '#', 'header__menu-list', 'header__menu-link')
+                +listLink('Blog', '#', 'header__menu-list', 'header__menu-link')
+        .header__search-wrapper
+            input(type="text" placeholder="Search").header__search
+            button.header__search-button
+                +mixinSvg('18px', '18px', 'icon-search', 'icon-search')
+        .header__registration-wrapper
+            a(href="#").header__registration Log IN \ Register
+
+        .header__cart-wrapper
+            a(href="#").header__link-home home
+            a(href="#").header__cart
+                | Cart
+                +mixinSvg('30px', '28px', 'icon-cart', 'icon-cart')
+                .header__cart-counter 0
+
+        .header__drop-menu
+            .drop-menu
+                .drop-menu__button
+                    .drop-menu__name Menu
+                    .drop-menu__arrow
+                    .drop-menu__counter 1
+                .drop-menu__drop
+                    .drop-menu__drop-wrapper
+                        a(href="#").drop-menu__drop-title Mega Millions Naija
+                        ul.drop-menu__main
+                            +listLink('All Lottos', '#', 'drop-menu__main-list', 'drop-menu__main-link')
+                            +listLink('United States Lottos', '#', 'drop-menu__main-list', 'drop-menu__main-link')
+                            +listLink('Euro Lottos', '#', 'drop-menu__main-list', 'drop-menu__main-link drop-menu__main-link--active')
+                            +listLink('My profile', '#', 'drop-menu__main-list', 'drop-menu__main-link')
+                            +listLink('My Account', '#', 'drop-menu__main-list', 'drop-menu__main-link')
+                            li.drop-menu__main-list
+                                a(href="#").drop-menu__main-link Message #[span.count 3]
+                            +listLink('How to Play', '#', 'drop-menu__main-list', 'drop-menu__main-link')
+                            +listLink('Contact Us', '#', 'drop-menu__main-list', 'drop-menu__main-link')
+
+.header__search-wrapper.header__search-wrapper--mobile
+    input(type="text" placeholder="Search").header__search
+    button.header__search-button
+        +mixinSvg('18px', '18px', 'icon-search', 'icon-search')

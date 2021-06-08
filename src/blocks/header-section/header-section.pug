@@ -1,0 +1,14 @@
+mixin headerOne()
+    section.section.section__header-section
+        .layout
+            .header-section__wrapper
+                include ../slider-header/slider-header
+                include ../cart-head/cart-head
+
+mixin headerTwo(src)
+    section.section.section__header-section
+        .layout
+            .header-section__wrapper
+                .slider-header__item
+                    +img(src, '', 'Slider Image')
+                include ../cart-head/cart-head

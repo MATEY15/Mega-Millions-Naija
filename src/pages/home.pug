@@ -1,0 +1,12 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+
+include ../blocks/header-section/header-section
+block content
+    +headerOne()
+    include ../blocks/proposal/proposal
+    include ../blocks/latest-results/latest-results
+    include ../blocks/get-know/get-know
+    include ../blocks/partner/partner

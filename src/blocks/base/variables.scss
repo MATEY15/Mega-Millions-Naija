@@ -1,0 +1,149 @@
+// Color
+
+$colorWhite: #F2F7FF;
+
+//@mixin font-ibm {
+//  font-family: 'IBM Plex Sans', sans-serif;
+//}
+//
+//@mixin font-cuprum {
+//  font-family: 'Cuprum', sans-serif;
+//}
+//
+//@mixin fr {
+//  font-family: 'Roboto', sans-serif;
+//}
+
+$hnr: "HelveticaRegular", sans-serif;
+$hnnr: "HelveticaNeueRegular", sans-serif;
+$hnb: "HelveticaNeueBold", sans-serif;
+$hnbl: "HelveticaNeueBlack", sans-serif;
+$ah: "AquaticHeavy", sans-serif;
+
+@mixin fr {
+  font-family: $fr;
+}
+
+@mixin boxShadow {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content
+  }
+  &:-moz-placeholder {
+    @content
+  }
+  &::-moz-placeholder {
+    @content
+  }
+  &:-ms-input-placeholder {
+    @content
+  }
+}
+
+@mixin col($column) {
+  width: calc(100% / 12 * #{$column});
+}
+
+// Column size
+
+@mixin colSize($i) {
+  width: calc(100% / 12 * #{$i});
+}
+
+//@include colSize("contact__col-6", 2);
+
+// Grid
+
+$columnGrid: 12;
+@mixin grid($name) {
+
+  @for $i from 1 through $columnGrid {
+    .#{$name}-#{$i} {
+      width: calc(100% / #{$columnGrid} * #{$i});
+    }
+  }
+}
+
+// ==============================
+// Mixins Custom
+// ==============================
+
+@mixin trn($time) {
+  transition: all $time ease-out;
+}
+
+@mixin brr($rad) {
+  border-radius: $rad;
+}
+
+@mixin tt($Xposition, $Yposition) {
+  transform: translate($Xposition, $Yposition);
+}
+
+// ==============================
+// Size mixin
+// ==============================
+
+//  default font scale bounding
+$font-lock-min: 400px !default;
+$font-lock-max: 1000px !default;
+
+@mixin offset(
+  $offset,
+  $min,
+  $max: null,
+  $lock-min: $font-lock-min,
+  $lock-max: $font-lock-max
+) {
+
+  & { #{$offset}: $min; }
+  @if $max {
+    @media (min-width: $lock-min) {
+      & {
+        #{$offset}: calc(
+                #{$min} +
+                #{num($max) - num($min)} *
+                (100vw - #{$lock-min}) /
+                #{num($lock-max) - num($lock-min)}
+        );
+      }
+    }
+    @media (min-width: $lock-max){
+      & { #{$offset}: $max; }
+    }
+  }
+}
+
+//  strip units helper function
+@function num($input) {
+  @return $input/($input * 0 + 1);
+}
+
+// Scroll Bar
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+//Use
+// @include scrollbars(10px, pink, red);

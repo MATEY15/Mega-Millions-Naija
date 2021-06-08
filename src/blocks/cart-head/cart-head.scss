@@ -1,0 +1,66 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.cart-head {
+  background: #D5342F;
+  padding: 20px 25px 21px;
+  min-width: 290px;
+  max-width: 290px;
+
+  @include table-large-screen {
+    display: flex;
+    max-width: 100%;
+    padding: 20px 0;
+    background-color: transparent;
+  }
+
+  &__item {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    min-height: 105px;
+    padding: 24px 15px 26px 15px;
+    @include table-large-screen {
+      width: 50%;
+      background: #D5342F;
+    }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+      @include table-large-screen {
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+  &__icon {
+    margin-right: 11px;
+    svg {
+      fill: #000000;
+      @include table-large-screen {
+        fill: #fff;
+      }
+    }
+  }
+  &__content {}
+  &__content-title {
+    font-family: $hnbl;
+    font-size: 24px;
+    line-height: 33px;
+    color: #D5342F;
+    @include table-large-screen {
+      font-size: 18px;
+      line-height: 26px;
+      color: #FFC217;
+    }
+  }
+  &__content-total {
+    font-family: $hnb;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--black-green-color);
+    @include table-large-screen {
+      color: #fff;
+    }
+  }
+}

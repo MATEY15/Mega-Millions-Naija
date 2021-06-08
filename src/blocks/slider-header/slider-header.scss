@@ -1,0 +1,200 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.slider-header {
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    display: block;
+  }
+
+  &__item {
+    position: relative;
+
+    @include mobile-small-screen {
+      max-width: 300px;
+      margin-right: 10px;
+    }
+    
+    img {
+      //width: 100%;
+    }
+  }
+  &__item-inside {
+    display: flex;
+    justify-content: space-between;
+    min-height: 267px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 20px 60px 20px 50px;
+    @include laptop-small-screen {
+      background-position: 0 0;
+    }
+    @include mobile-small-screen {
+      min-height: 145px;
+      padding: 15px 10px;
+      background-position: 60% 0;
+      margin-right: 10px;
+    }
+  }
+  &__logo-wrapper {}
+  &__logo {
+    @include laptop-small-screen {
+      width: 150px;
+    }
+    @include mobile-small-screen {
+      width: 80px;
+    }
+  }
+  &__content {
+    color: #fff;
+    text-align: right;
+  }
+  &__title {
+    font-family: $ah;
+    font-size: 47px;
+    line-height: 63px;
+    text-transform: uppercase;
+    //@include offset(font-size, 14px, 47px, 600px, 991px);
+    //@include offset(line-height, 19px, 63px, 600px, 991px);
+    @include offset(margin-bottom, 16px, 20px, 600px, 991px);
+    @include laptop-small-screen {
+      font-size: 32px;
+      line-height: 44px;
+    }
+    @include mobile-small-screen {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+  &__jeckpot-main {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 14px;
+  }
+  &__price {
+    font-family: $ah;
+    font-size: 110px;
+    line-height: 42px;
+    //@include offset(font-size, 36px, 110px, 600px, 991px);
+    //@include offset(line-height, 22px, 42px, 600px, 991px);
+    color: #FFC217;
+    @include laptop-small-screen {
+      font-size: 80px;
+    }
+    @include mobile-small-screen {
+      font-size: 36px;
+      line-height: 22px;
+    }
+    span {
+      font-family: $ah;
+      font-size: 48px;
+      line-height: 65px;
+      color: #fff;
+      @include laptop-small-screen {
+        font-size: 42px;
+        line-height: 42px;
+      }
+      @include mobile-small-screen {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+  &__jeckpot {
+    font-family: $hnb;
+    @include offset(font-size, 11px, 11px, 600px, 991px);
+    @include offset(line-height, 13px, 13px, 600px, 991px);
+    @include mobile-small-screen {
+      display: none;
+    }
+  }
+  &__million {
+    font-family: $ah;
+    font-size: 48px;
+    line-height: 65px;
+    //@include offset(font-size, 16px, 48px, 600px, 991px);
+    //@include offset(line-height, 22px, 65px, 600px, 991px);
+    color: #fff;
+    text-align: center;
+    margin-left: 8px;
+    @include laptop-small-screen {
+      font-size: 42px;
+      line-height: 42px;
+    }
+    @include mobile-small-screen {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  &__button {
+    display: inline-block;
+    font-family: $hnb;
+    @include offset(font-size, 10px, 21px, 600px, 991px);
+    @include offset(line-height, 12px, 26px, 600px, 991px);
+    color: #012F00;
+    min-height: 47px;
+    min-width: 160px;
+    padding: 10px;
+    text-align: center;
+    background: #FFC217;
+    @include trn(.2s);
+    margin-left: auto;
+    @include mobile-small-screen {
+      padding: 7px;
+      min-height: 26px;
+      min-width: 85px;
+    }
+    
+    &:hover {
+      color: #fff;
+    }
+  }
+
+
+  &__navigate {
+    //position: absolute;
+    //top: 50%;
+    //left: 0;
+    //width: 100%;
+    //@include tt(0, -50%);
+  }
+  &__nav {
+
+    &--prev,
+    &--next {
+      position: absolute;
+      top: 50%;
+      @include tt(0, -50%);
+      cursor: pointer;
+    }
+    &--prev {
+      left: 10px;
+    }
+    &--next {
+      right: 10px;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+    li {
+      font-size: 0;
+      background: #C4C3C3;
+      height: 3px;
+      width: 15px;
+      margin: 0 3px;
+      @include trn(.2s);
+      button {
+        display: none;
+      }
+      &.slick-active {
+        background: #000;
+      }
+    }
+  }
+}

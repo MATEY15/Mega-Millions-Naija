@@ -1,0 +1,119 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.special-offers {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  display: flex;
+  @include tt(400px, -50%);
+  @include trn(.2s);
+  z-index: 1000;
+  &--active {
+    @include tt(0, -50%);
+  }
+
+  @include mobile-large-screen {
+    display: none;
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 146px;
+    border-radius: 10px 0 0 10px;
+    background: #D5342F;
+    padding: 10px 15px;
+    cursor: pointer;
+    overflow: hidden;
+    @include trn(.25s);
+  }
+  &__button-name {
+    font-family: $hnb;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fff;
+    white-space: nowrap;
+    transform: rotateZ(90deg);
+    user-select: none;
+  }
+  &__window {
+    position: relative;
+    background: #fff;
+    width: 400px;
+    min-height: 146px;
+    padding: 15px 0 55px 10px;
+    @include boxShadow();
+  }
+  &__games {}
+  &__games-item {
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+    &:not(:last-child) {
+      border-bottom: 1px solid #707070;
+    }
+  }
+  &__games-preview {
+    padding: 10px;
+    border-right: 1px solid #707070;
+  }
+  &__games-icon {
+    display: block;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__games-img {
+    @include absolute-fill();
+    object-fit: cover;
+  }
+  &__games-desc {
+    max-width: 160px;
+    padding-left: 12px;
+    p {
+      font-family: $hnr;
+      font-size: 13px;
+      line-height: 16px;
+      color: #707070;
+    }
+  }
+  &__games-button {
+    margin-left: auto;
+    .button--play {
+      padding: 7px 10px 5px;
+      text-transform: uppercase;
+      min-width: 100px;
+    }
+  }
+
+  &__more-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+  &__more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    font-family: $hnb;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+    background: #688C34;
+    @include trn(.25s);
+
+    &:hover {
+      background: var(--black-green-color);
+    }
+  }
+}

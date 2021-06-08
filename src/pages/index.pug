@@ -1,0 +1,17 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+
+block content
+    section
+        .layout
+            ul.menu-view
+                +listLink('Index', 'index.html', 'menu-view__list', 'menu-view__link')
+                +listLink('Home', 'home.html', 'menu-view__list', 'menu-view__link')
+                +listLink('Special Offers LP', 'offers.html', 'menu-view__list', 'menu-view__link')
+                +listLink('Careers', 'careers.html', 'menu-view__list', 'menu-view__link')
+                +listLink('Message', 'message.html', 'menu-view__list', 'menu-view__link')
+                +listLink('Popup', 'popup.html', 'menu-view__list', 'menu-view__link')
+
+    //include ../blocks/footer/footer

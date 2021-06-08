@@ -1,0 +1,183 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.game-item {
+  position: relative;
+  max-width: 242px;
+  width: 100%;
+  margin-bottom: 35px;
+
+  @include table-large-screen {
+    margin-bottom: 0;
+    maxw-width: 200px;
+  }
+  @include mobile-large-screen {
+    width: 150px;
+  }
+  @include mobile-mini-screen {
+    //width: 130px;
+  }
+
+  &--white {
+    max-width: 242px;
+    @include mobile-large-screen {
+      width: 100%;
+    }
+    .game-item__timer-wrapper {
+      .icon-time {
+        fill: #FFFFFF;
+      }
+      .game-item__timer {
+        color: #fff;
+      }
+    }
+
+    .game-item__card-foot {
+      text-align: center;
+    }
+
+    .game-item__card-title {
+      font-family: $hnbl;
+      font-size: 18px;
+      line-height: 26px;
+    }
+    .game-item__card-price {
+      font-size: 24px;
+      line-height: 33px;
+    }
+    .game-item__card-head {
+      padding-top: 15px;
+      display: flex;
+    }
+    .game-item__card-summ {
+      margin-left: 24px;
+      @include table-large-screen {
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+      }
+      .game-item__card-price-name {
+        @include table-large-screen {
+          margin-top: 0;
+          margin-left: 5px;
+        }
+      }
+    }
+
+  }
+
+  &__timer-wrapper {
+    display: flex;
+    margin-bottom: 13px;
+    @include table-large-screen {
+      margin-bottom: 52px;
+    }
+    svg {
+      margin-right: 15px;
+    }
+  }
+  &__timer {
+    font-family: $hnb;
+    font-size: 16px;
+    line-height: 20px;
+    color: #012F00;
+
+    &-wrapper {
+      .icon-time {
+        fill: #707070;
+      }
+    }
+  }
+
+  // Card
+
+  &__card {
+    border-radius: 0 0 50px 0;
+    overflow: hidden;
+    @include table-large-screen {
+      border-radius: 0;
+    }
+    &--full {
+      border-radius: 0;
+      .game-item__card-head {
+        @include table-large-screen {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+    }
+  }
+  &__card-head {
+    position: relative;
+    min-height: 97px;
+    background: #00235D;
+    border-radius: 10px 10px 0 0;
+    padding: 5px 15px 8px;
+    @include table-large-screen {
+      padding-top: 62px;
+      text-align: center;
+    }
+  }
+  &__card-price-logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    @include table-large-screen {
+      bottom: auto;
+      right: auto;
+      left: 50%;
+      top: 33px;
+      @include tt(-50%, 0)
+    }
+  }
+  &__card-title {
+    font-family: $hnbl;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fff;
+    @include table-large-screen {
+      display: none;
+    }
+  }
+  &__card-country {
+    font-family: $hnb;
+    font-size: 9px;
+    line-height: 10px;
+    color: #fff;
+  }
+  &__card-price {
+    font-family: $hnbl;
+    font-size: 28px;
+    line-height: 40px;
+    color: #FFC217;
+  }
+  &__card-price-name {
+    font-family: $hnbl;
+    font-size: 15px;
+    line-height: 22px;
+    color: #fff;
+    margin-top: -7px;
+  }
+  &__card-foot {
+    display: block;
+    min-height: 37px;
+    width: 100%;
+    background: #FFC217;
+    padding: 5px 15px;
+    border-radius: 0 0 10px 10px;
+    @include table-large-screen {
+      text-align: center;
+    }
+  }
+  &__card-button {
+    font-family: $hnbl;
+    font-size: 18px;
+    line-height: 26px;
+    color: #012F00;
+  }
+}
+

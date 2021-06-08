@@ -1,0 +1,57 @@
+footer.footer
+    .layout.footer__wrapper
+        .footer__about
+            .footer__about-head
+                a(href="#").footer__logo
+                    +img('img/footer logo.svg', '', 'Logo Footer').footer__logo-image
+                .footer__find-wrapper
+                    .footer__find
+                        +mixinSvg('18px', '26px', 'icon-location', 'icon-location')
+                        +select('find-us', 'placeholder')
+                            option
+                            option Lagos
+                            option Ibadan
+                            option Abuja
+                            option Enugu
+                            option Calabar
+
+            .footer__about-description
+                p Be you own boss! Enjoy flexibility, freedom and competitive earnings by delivery with Spikk Be you own boss! Enjoy flexibility, freedom and competitive earnings by delivery with
+            .footer__copy Mega Millions Naija © Copyright 2021
+        .footer__information
+            .footer__information-search
+                h4 Sign up for our Newsletter
+                form.footer__search
+                    input(type="text" placeholder="Email Address").footer__search-input
+                    button.footer__search-button Sign Up
+
+            .footer__information-main
+                .footer__menu-wrapper
+                    ul.footer__menu
+                        +listLink('Careers', '#', 'footer__menu-list', 'footer__menu-link')
+                        +listLink('Agents / Affiliates', '#', 'footer__menu-list', 'footer__menu-link')
+                        +listLink('Staff / Associate ', '#', 'footer__menu-list', 'footer__menu-link')
+                        +listLink('Privacy', '#', 'footer__menu-list', 'footer__menu-link')
+                        +listLink('FAQs', '#', 'footer__menu-list', 'footer__menu-link')
+                        +listLink('Play Responsibly ', '#', 'footer__menu-list', 'footer__menu-link')
+                        +listLink('Terms and Conditions', '#', 'footer__menu-list', 'footer__menu-link')
+                        +listLink('Contact Us', '#', 'footer__menu-list', 'footer__menu-link')
+                        +listLink('About Us', '#', 'footer__menu-list', 'footer__menu-link')
+                .footer__pay
+                    a(href="#").footer__pay-link
+                        +img('img/icon-pay/master-card.svg', '', 'Master Card')
+                    a(href="#").footer__pay-link
+                        +img('img/icon-pay/verve.svg', '', 'Verve')
+                    a(href="#").footer__pay-link
+                        +img('img/icon-pay/visa.svg', '', 'Visa')
+                .footer__social-menu
+                    h4.footer__social-menu-title Join us on
+                    .social__menu
+                        a(href="#").social__menu-link
+                            img(src="img/social-img/twitter.svg" alt="Twitter")
+                        a(href="#").social__menu-link
+                            img(src="img/social-img/facebook.svg" alt="facebook")
+                        a(href="#").social__menu-link
+                            img(src="img/social-img/instagram.svg" alt="Instagram")
+                        a(href="#").social__menu-link
+                            img(src="img/social-img/youtube.svg" alt="YouTube")

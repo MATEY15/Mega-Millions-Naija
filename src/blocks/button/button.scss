@@ -1,0 +1,134 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #012F00;
+  background: #FFC217;
+  transition: all .2s ease-out;
+  cursor: pointer;
+  border: none;
+
+  &--play {
+    font-family: $hnb;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 6px 15px 4px;
+    text-transform: uppercase;
+    color: #012F00;
+    background: #FFC217;
+    
+    &:hover {
+      background: #012f00;
+      color: #fff;
+    }
+  }
+
+  &--play-large {
+    font-family: $hnb;
+    font-size: 19px;
+    line-height: 23px;
+    padding: 11px 15px 10px;
+    min-width: 154px;
+    text-transform: uppercase;
+    color: #012F00;
+    background: #FFC217;
+
+    @include table-large-screen {
+      font-size: 12px;
+      line-height: 15px;
+      padding: 8px 10px 7px;
+      min-width: 105px;
+    }
+
+    &:hover {
+      background: #012f00;
+      color: #fff;
+    }
+  }
+
+  &--big {
+    font-family: $hnb;
+    font-size: 31px;
+    line-height: 38px;
+    min-width: 210px;
+    text-align: center;
+    padding: 14px 20px;
+  }
+
+  &--green {
+    background: #688C34;
+  }
+
+  &--darkgreen {
+    background: #3A9B3F;
+    &:hover {
+      background: #012f00;
+    }
+  }
+
+  &--about {
+    height: 69px;
+    max-width: 278px;
+    width: 100%;
+    font-family: $hnb;
+    font-size: 20px;
+    line-height: 25px;
+    padding: 23px 22px;
+    color: #fff;
+    @include trn(.2s);
+    @include boxShadow();
+    @include table-large-screen {
+      height: 45px;
+      padding: 10px 20px;
+      max-width: 100%;
+    }
+    &:hover {
+      background: #012f00;
+    }
+  }
+
+  &--large {
+    height: 50px;
+    width: 100%;
+    font-family: $hnb;
+    font-size: 20px;
+    line-height: 25px;
+    padding: 23px 22px;
+    color: #fff;
+    @include brr(10px);
+    -webkit-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+  }
+
+  &--social {
+    position: relative;
+    font-family: $hnb;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -.5px;
+    color: #fff;
+    min-height: 65px;
+    max-width: 210px;
+    width: 100%;
+    @include brr(10px);
+    img {
+      margin-right: 14px;
+    }
+  }
+  &--fb {
+    background: #2E5C92;
+  }
+  &--gg {
+    background: #FF2B25;
+  }
+
+}

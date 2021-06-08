@@ -1,0 +1,26 @@
+block variables
+
+include ../blocks/base/mixin
+include ../blocks/select/select
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        //title #{title}
+        title Mega Millions Naija
+        block scripts
+
+    body
+        .overlay-fill
+        include ../blocks/special-offers/special-offers
+        include ../blocks/mobile-menu/mobile-menu
+        block header
+            include ../blocks/header/header
+        block content
+        block footer
+            include ../blocks/footer/footer
+            .chat
+                .chat__button
+                    +mixinSvg('33px', '33px', 'icon-chat', 'icon-chat')

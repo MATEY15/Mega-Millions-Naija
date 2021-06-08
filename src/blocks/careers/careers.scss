@@ -1,0 +1,92 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.section__careers {}
+.careers {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(400px, 1fr) minmax(400px, 600px);
+  grid-gap: 0 130px;
+  background: #fff;
+  margin-top: 20px;
+  padding: 50px 55px 120px 115px;
+  @include boxShadow();
+  @include laptop-small-screen {
+    padding: 50px 55px;
+    grid-gap: 0 50px;
+  }
+  @include table-large-screen {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  @include mobile-large-screen {
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  &__content {}
+  &__item {
+    &:not(:last-child) {
+      @include offset(margin-bottom, 40px, 100px, 991px, 1200px);
+    }
+  }
+  &__item-title {
+    font-size: 40px;
+    line-height: 45px;
+    color: #3A9B3F;
+    @include offset(margin-bottom, 20px, 50px, 767px, 1200px);
+    @include mobile-small-screen {
+      font-size: 25px;
+      line-height: 29px;
+    }
+    &--mobile {
+      display: none;
+      @include table-large-screen {
+        display: block;
+      }
+    }
+    &--mobile-hide {
+      @include table-large-screen {
+        display: none;
+      }
+    }
+  }
+  &__item-text {
+    &,
+    p {
+      font-size: 18px;
+      line-height: 21px;
+      color: #000;
+      @include mobile-small-screen {
+        font-size: 17px;
+        line-height: 20px;
+      }
+    }
+  }
+  &__image-wrapper {
+    @include table-large-screen {
+      margin-bottom: 30px;
+    }
+  }
+  &__image {
+    max-width: 100%;
+  }
+
+  &__button {
+
+  }
+  &__link {
+    position: relative;
+    font-family: $hnb;
+    font-size: 22px;
+    line-height: 26px;
+    color: #3A9B3F;
+    text-decoration: underline;
+    @include mobile-small-screen {
+      font-size: 17px;
+      line-height: 20px;
+    }
+  }
+
+}

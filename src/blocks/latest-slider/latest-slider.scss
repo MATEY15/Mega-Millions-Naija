@@ -1,0 +1,114 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.latest-slider {
+  &__wrapper {
+    padding-top: 40px;
+    .heading {
+      margin-bottom: 40px;
+    }
+    .heading__title {
+      @include table-large-screen {
+        color: #012F00;
+      }
+    }
+  }
+  &__main {
+    position: relative;
+    @media (max-width: 1560px) {
+      padding: 0 50px;
+    }
+    @include table-large-screen {
+      padding: 0;
+    }
+  }
+  &__navigate {
+    @include table-large-screen {
+      display: none;
+    }
+  }
+  &__nav {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 95px;
+    background: #FFC217;
+    cursor: pointer;
+    @include tt(0, -50%);
+
+
+    svg {
+      fill: #012F00;
+    }
+
+    &--prev {
+      left: -52px;
+      @media (max-width: 1560px) {
+        left: 0;
+      }
+    }
+    &--next {
+      right: -52px;
+      @media (max-width: 1560px) {
+        right: 0;
+      }
+    }
+  }
+
+  .slick-track {
+    margin: 0 -19px;
+    @include table-large-screen {
+      margin: 0 -10px;
+    }
+  }
+
+  &__col {
+    padding: 0 19px;
+    margin: 10px 0;
+    @include table-large-screen {
+      padding: 0 12px;
+    }
+  }
+
+  &__item {
+    min-height: 116px;
+    min-width: 285px;
+    background: #F7F7F7;
+    font-family: $hnb;
+    border-radius: 10px;
+    @include boxShadow();
+    padding: 20px 27px 27px;
+    @include table-large-screen {
+      padding: 0;
+      min-width: 125px;
+      width: 125px;
+    }
+  }
+  &__title {
+    font-family: $hnbl;
+    font-size: 16px;
+    line-height: 23px;
+    color: #688C34;
+    @include table-large-screen {
+      padding: 10px 10px 4px;
+      text-align: center;
+      border-bottom: 1px solid #E6E6E6;
+    }
+  }
+  &__description {
+    font-family: $hnb;
+    font-size: 13px;
+    line-height: 16px;
+    color: #707070;
+    margin-top: 14px;
+    @include table-large-screen {
+      padding: 18px;
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+}
