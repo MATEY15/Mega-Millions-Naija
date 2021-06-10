@@ -160,6 +160,18 @@ input {
 .height-45 {
   height: 45px;
 }
+.height-60 {
+  height: 60px;
+}
+
+.link-check {
+  &--blue {
+    color: #6382D4;
+  }
+  &--red {
+    color: #E71621;
+  }
+}
 
 * {
   //outline: 1px solid #44c3ff;

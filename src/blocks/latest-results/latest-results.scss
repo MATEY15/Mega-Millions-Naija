@@ -167,8 +167,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    @media (max-width: 1260px) {
-
+    @include laptop-big-screen {
+      padding-right: 15px;
     }
     @include table-large-screen {
       width: 100%;

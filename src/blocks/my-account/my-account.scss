@@ -1,0 +1,133 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.my-account {
+  position: relative;
+  &__user {
+    display: flex;
+    font-family: $hnr;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+    &--mobile {
+      display: none;
+      color: #000;
+      margin-right: auto;
+      margin-left: 20px;
+      @include table-large-screen {
+        display: block;
+      }
+      @media (max-width: 390px) {
+        margin-left: 10px;
+      }
+      .my-account__user-name {
+        color: #000;
+      }
+      .my-account__user-price {
+        color: #000;
+        @media (max-width: 390px) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__user-name {
+    font-family: $hnr;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+  }
+  &__user-price {
+    font-family: $hnb;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  // Drop
+  
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 30px);
+    left: 0;
+    width: 335px;
+    background: #fff;
+    padding: 30px 10px 28px;
+    @include brr(4px);
+    @include boxShadow();
+    @include trn(.25s);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 25px);
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, 0);
+    }
+  }
+  &__dropdown-head {
+    border-bottom: 1px solid #C7C7C7;
+    padding-left: 25px;
+    padding-bottom: 20px;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__title-name {
+    font-family: $hnb;
+    font-size: 30px;
+    line-height: 34px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  &__title-name-edit {
+    font-family: $hnb;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3A9B3F;
+  }
+  &__information {}
+  &__info-item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  &__info-label {
+    font-family: $hnr;
+    font-size: 15px;
+    line-height: 20px;
+    color: #707070;
+    margin-bottom: 10px;
+  }
+  &__info-name {
+    font-family: $hnb;
+    font-size: 18px;
+    line-height: 22px;
+    color: #012F00;
+  }
+  &__dropdown-foot {
+    padding: 28px 25px 0;
+  }
+  &__wallet {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  &__wallet-label {
+    font-family: $hnb;
+    font-size: 18px;
+    line-height: 22px;
+    color: #012F00;
+    margin-bottom: 20px;
+  }
+  &__wallet-sum {
+    font-family: $hnb;
+    font-size: 30px;
+    line-height: 34px;
+    color: #6D9138;
+  }
+  &__wallet-check {}
+}

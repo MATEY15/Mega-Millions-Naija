@@ -4,6 +4,10 @@ header.header
             span.burger-menu__item
             span.burger-menu__item
             span.burger-menu__item
+        if (user === true)
+            .my-account__user.my-account__user--mobile
+                a(href="#").my-account__user-name Hello! Oladapo
+                a(href="#").my-account__user-price (N67,000)
         .header__menu-wrapper
             ul.header__menu
                 +listLink('Home', '/', 'header__menu-list', 'header__menu-link')
@@ -15,7 +19,11 @@ header.header
             button.header__search-button
                 +mixinSvg('18px', '18px', 'icon-search', 'icon-search')
         .header__registration-wrapper
-            a(href="#").header__registration Log IN \ Register
+            if (user === true)
+                include ../my-account/my-account
+
+            else
+                a(href="#register").popup.header__registration Log IN \ Register
 
         .header__cart-wrapper
             a(href="#").header__link-home home

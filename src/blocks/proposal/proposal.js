@@ -9,7 +9,7 @@ let sliderEven = function () {
             dots: false,
             infinite: true,
             slidesToShow: 4,
-            slidesToScroll: 1,
+            slidesToScroll: 4,
             autoplay: false,
             arrows: true,
             speed: 400,
@@ -29,9 +29,10 @@ let sliderEven = function () {
                     settings: 'unslick'
                 },
                 {
-                    breakpoint: 1640,
+                    breakpoint: 1190,
                     settings: {
                         variableWidth: true,
+                        slidesToScroll: 2,
                     }
                 },
             ]

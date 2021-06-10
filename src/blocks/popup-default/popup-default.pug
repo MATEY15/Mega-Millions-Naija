@@ -1,9 +1,11 @@
-mixin popupDefault()
-    .popup-default
+mixin popupDefault(className, id)
+    .popup-default.mfp-zoom-in.mfp-with-anim.mfp-hide(class=className id=id)
         .popup-default__close
             +mixinSvg('21px', '21px', 'icon-close', 'icon-close')
+        .popup-default__close-mobile.
+            <svg width="27" height="21" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.1845 11.1001H4.26953" stroke="black" stroke-width="3"/><path d="M11.846 2L3 10.846L11.846 19.691" stroke="black" stroke-width="3"/></svg>
         block
 
 mixin popupDefaultSuccess()
-    .popup-default
+    .popup-default.mfp-zoom-in.mfp-with-anim.mfp-hide#successful
         block

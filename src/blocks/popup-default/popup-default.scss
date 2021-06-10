@@ -2,6 +2,49 @@
 @import "../../blocks/base/variables";
 @import "../../blocks/base/media-queries";
 
+.mfp-container {
+  @include mobile-mini-screen {
+    padding: 0;
+  }
+}
+
+.popup-m {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    opacity: 0;
+    z-index: 950;
+  }
+
+  &__wrapper {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    overflow-y: scroll;
+    display: none;
+    opacity: 0;
+  }
+
+  &__window {
+    display: none;
+
+    &--active {
+      //position: fixed !important;
+      //top: 80px;
+      //left: 50%;
+      //transform: translate(-50%, 0);
+      //z-index: 1000;
+    }
+  }
+}
+
 .popup-default {
   position: relative;
   font-family: $hnb;
@@ -12,9 +55,17 @@
   max-width: 544px;
   padding: 55px 44px 38px;
   @include boxShadow();
-  @include  brr(10px);
+  @include brr(10px);
   margin: 40px auto;
-  
+
+  @include mobile-mini-screen {
+    margin: 0;
+    @include brr(0);
+    min-height: 100vh;
+    background: #F7F7F7;
+    padding: 100px 20px 40px;
+  }
+
   &__close {
     position: absolute;
     top: 16px;
@@ -22,9 +73,31 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
+
     .icon-close {
       fill: #E71621;
     }
+
+    @include mobile-mini-screen {
+      display: none;
+    }
+  }
+
+  &__close-mobile {
+    display: none;
+    @include mobile-mini-screen {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+      width: 100%;
+      padding: 20px 20px;
+    }
+  }
+
+  .mfp-close {
+    display: none !important;
   }
 
   &__heading {
@@ -38,30 +111,39 @@
     font-size: 30px;
     line-height: 34px;
     color: #000;
+
     &--center {
       text-align: center;
     }
   }
+
   &__decsription {
     font-family: $hnr;
     font-size: 15px;
     line-height: 18px;
     text-align: center;
     margin-top: 12px;
+
     &--green {
       color: #688C34;
     }
+
     &--gray {
       color: #707070;
     }
   }
-  &__form {}
+
+  &__form {
+  }
+
   &__item {
     margin-bottom: 20px;
+
     &--offset-large {
       margin-top: 36px;
       margin-bottom: 36px;
     }
+
     &--flex {
       display: flex;
       align-items: center;
@@ -76,9 +158,10 @@
       grid-template-columns: 150px 1fr;
       grid-gap: 10px 10px;
     }
+
     &--three {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 10px 10px;
     }
   }
@@ -114,30 +197,36 @@
     line-height: 16px;
     color: #1A1818;
   }
+
   &__desc {
     font-family: $hnr;
     font-size: 15px;
     line-height: 18px;
     color: #707070;
   }
+
   &__text {
     font-family: $hnb;
     font-size: 13px;
     line-height: 16px;
     color: #1A1818;
+
     &--large {
       font-size: 15px;
       line-height: 18px;
     }
+
     &--center {
       text-align: center;
     }
+
     &--or {
       font-size: 18px;
       line-height: 22px;
       text-align: center;
       margin: 16px 0 22px;
     }
+
     &--light {
       font-family: $hnr;
       font-size: 15px;
@@ -154,15 +243,33 @@
 
     &--fifty {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: 0 20px;
+      @media (max-width: 450px) {
+        display: block;
+      }
+      .popup-default__button-col {
+        @media (max-width: 450px) {
+          text-align: center;
+        }
+
+        &:not(:last-child) {
+          @media (max-width: 450px) {
+            margin-bottom: 10px;
+          }
+        }
+      }
     }
   }
 
   &__verification {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 10px 20px;
+    @include mobile-mini-screen {
+      grid-gap: 10px 12px;
+
+    }
   }
 
   &__verification-message {
@@ -172,18 +279,23 @@
     text-align: center;
     color: #707070;
     margin-top: 10px;
+
     strong {
       font-family: $hnb;
     }
+
     &--red {
       color: #E71621;
     }
-    &--text {}
+
+    &--text {
+    }
   }
 
   &__correct {
     text-align: center;
     padding: 15px 0 10px;
+
     img {
       max-width: 100%;
     }

@@ -105,6 +105,10 @@
     padding: 30px 40px 55px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
 
+    @include laptop-big-screen {
+      padding: 30px 25px 50px;
+    }
+
     &-item {
       position: absolute;
       top: 0;
@@ -116,7 +120,6 @@
       transform: rotateX(-20deg) translateZ(0px);
       transform-style: preserve-3d;
       //transform: translateY(-100%);
-
       transform-origin: top;
 
       &--active {

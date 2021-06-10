@@ -7,6 +7,12 @@ $(".find-us").select2({
     containerCssClass: "find-us__select",
 });
 
+$(".select-default").select2({
+    minimumResultsForSearch: -1,
+    dropdownCssClass: "select-default__drop",
+    containerCssClass: "select-default__select",
+});
+
 $(".select-form").select2({
     minimumResultsForSearch: -1,
     dropdownCssClass: "select-form__drop",

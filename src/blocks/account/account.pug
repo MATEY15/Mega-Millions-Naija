@@ -1,0 +1,26 @@
+include ../win-it-all/win-it-all
+section.section.section__account
+    .layout
+        .account__wrapper
+            .account
+                .account__prifile
+                    .account__title
+                        h3 Mr Sodeinde Oladapo
+                            img(src="/src/img/icons/icon-check-small.svg" alt="")
+                        .account__number Account No. 34D4653
+                        .height-45
+                    .account__verification
+                        p (Account Verified)
+                    .account__balance
+                        .account__balance-title Available Balance
+                    .account__balance-wrapper
+                        .account__balance-item
+                            .account__balance-title My Wallet
+                            .account__balance-number N67,600.00
+                        .account__balance-item
+                            .account__balance-title Reward Points
+                            .account__balance-number.account__balance-number--big 650
+                .account__photo
+                    img(src="img/account/account-person.jpg" alt="Person")
+            .account__win
+                +winItAllOffers()

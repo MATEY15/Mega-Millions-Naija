@@ -7,10 +7,15 @@
   max-width: 242px;
   width: 100%;
   margin-bottom: 35px;
-
+  @include laptop-big-screen {
+    max-width: 190px;
+  }
+  @media (max-width: 1189px) {
+    max-width: 242px;
+  }
   @include table-large-screen {
     margin-bottom: 0;
-    maxw-width: 200px;
+    max-width: 200px;
   }
   @include mobile-large-screen {
     width: 150px;
@@ -126,6 +131,12 @@
     bottom: 0;
     right: 0;
     z-index: 10;
+    @include laptop-big-screen {
+      max-width: 70px;
+    }
+    @media (max-width: 1189px) {
+      max-width: 100px;
+    }
     @include table-large-screen {
       bottom: auto;
       right: auto;
@@ -139,6 +150,12 @@
     font-size: 13px;
     line-height: 18px;
     color: #fff;
+    @include laptop-big-screen {
+      font-size: 12px;
+    }
+    @media (max-width: 1189px) {
+      font-size: 13px;
+    }
     @include table-large-screen {
       display: none;
     }
@@ -178,6 +195,12 @@
     font-size: 18px;
     line-height: 26px;
     color: #012F00;
+    @include laptop-big-screen {
+      font-size: 16px;
+    }
+    @media (max-width: 1189px) {
+      font-size: 18px;
+    }
   }
 }
 

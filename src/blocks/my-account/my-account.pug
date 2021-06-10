@@ -1,0 +1,27 @@
+mixin infiFill(label, name)
+    .my-account__info-item
+        .my-account__info-label=label
+        .my-account__info-name=name
+
+.my-account
+    .my-account__user
+        a(href="#").my-account__user-name Hello! Oladapo
+        a(href="#").my-account__user-price (N67,000)
+    .my-account__dropdown
+        .my-account__dropdown-head
+            .my-account__title
+                h3.my-account__title-name Hello! Oladapo
+                a(href="#").my-account__title-name-edit Edit Profile
+            .my-account__information
+                +infiFill('Name', 'Oladapo Sodeinde')
+                +infiFill('Email', 'dapsiny@gmail.com')
+                +infiFill('Phone', '+234 890479489298')
+
+        .my-account__dropdown-foot
+            .my-account__wallet
+                .my-account__wallet-info
+                    .my-account__wallet-label My Wallet
+                    .my-account__wallet-sum N5,600.00
+                .my-account__wallet-check
+                    img(src="/src/img/icons/icon-chec-small.svg" alt="")
+            a(href="#").button.button--large.button--darkgreen Log Out

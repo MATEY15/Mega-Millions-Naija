@@ -1,0 +1,257 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.section__profile {
+  padding-top: 60px;
+}
+
+.profile {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 85px 1fr minmax(300px, 300px);
+  }
+  &__back {
+    width: 85px;
+    text-align: center;
+    svg {
+      fill: #707070;
+    }
+  }
+  &__back-link {
+    margin: 75px auto;
+    display: inline-block;
+  }
+
+  // Item
+  &__main {}
+  &__item {
+    @include boxShadow();
+    &:not(:last-child) {
+      margin-bottom: 38px;
+    }
+  }
+  &__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr minmax(140px, 220px);
+    grid-gap: 10px 20px;
+    min-height: 156px;
+    background: #fff;
+    padding: 50px 36px 50px 80px;
+    align-items: center;
+  }
+  &__item-title {
+    font-family: $hnb;
+    font-size: 30px;
+    line-height: 34px;
+    color: #000;
+    max-width: 370px;
+  }
+  &__item-desc {
+    font-family: $hnr;
+    font-size: 15px;
+    line-height: 22px;
+    color: #707070;
+    max-width: 320px;
+  }
+  &__item-button {
+    text-align: right;
+    .button {
+      max-width: 140px;
+    }
+  }
+
+  // Body
+
+  &__body {
+    background: #fff;
+    padding: 0 20px;
+    &-wrapper {
+      border-top: 1px solid #707070;
+      padding: 40px 50px;
+      &--no-offset {
+        padding: 0;
+      }
+    }
+  }
+
+  &__personal-information {
+  }
+  &__personal-item {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #C7C7C7;
+    padding: 30px 100px 34px 60px;
+  }
+  &__person {
+    display: flex;
+    width: 100%;
+
+    &--three {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(120px, 170px));
+      grid-gap: 10px 70px;
+    }
+  }
+  &__person-info {
+    //margin-right: 20px;
+  }
+  &__person-info-title {
+    font-family: $hnr;
+    font-size: 15px;
+    line-height: 20px;
+    color: #707070;
+    margin-bottom: 20px;
+    display: block;
+    span {
+      color: #e71621;
+    }
+  }
+  &__person-info-content {
+    font-family: $hnb;
+    font-size: 18px;
+    line-height: 22px;
+    color: #012F00;
+  }
+  &__person-edit-wrapper {}
+  &__person-edit {
+    font-family: $hnb;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3A9B3F;
+  }
+
+  // Pay
+  &__pay-wrapper {
+    display: grid;
+    //grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 200px 1fr 200px;
+    grid-gap: 20px 30px;
+  }
+
+  &__pay-item {
+    &--card {
+      .account__balance-item {
+        padding-bottom: 15px;
+      }
+      .account__balance-title {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  // Validation
+  &__validation {}
+  &__validation-form {}
+  &__validation-item {
+    &:not(:last-child){
+      margin-bottom: 40px;
+    }
+  }
+  &__validation-input {
+    font-family: $hnr;
+    font-size: 15px;
+    line-height: 20px;
+    width: 100%;
+    max-width: 850px;
+    color: #707070;
+    padding: 20px 0;
+    border: none;
+    border-bottom: 1px solid #C7C7C7;
+    @include placeholder {
+      font-family: $hnr;
+      font-size: 15px;
+      line-height: 20px;
+      color: #707070;
+    }
+  }
+  &__validation-button {
+    margin-top: 60px;
+    text-align: center;
+    .button {
+      max-width: 530px;
+    }
+  }
+
+  // Identity
+
+  &__identity {}
+  &__identity-form {
+    display: flex;
+  }
+  &__identity-item {
+    padding: 12px 18px;
+    width: 100%;
+    @include boxShadow();
+    .file-load {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__identity-button {
+    .button {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+
+  &__notification {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .button {
+      margin: 0 10px;
+      width: 100%;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-family: $hnr;
+    font-size: 15px;
+    line-height: 20px;
+    color: #707070;
+  }
+
+  &__input-item {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    input {
+      padding-right: 30px;
+    }
+  }
+
+  &__input {
+    font-family: $hnb;
+    font-size: 18px;
+    line-height: 22px;
+    width: 100%;
+    color: #012F00;
+    padding: 20px 0;
+    border: none;
+    border-bottom: 1px solid #C7C7C7;
+    @include placeholder {
+      font-family: $hnr;
+      font-size: 18px;
+      line-height: 22px;
+      color: #012F00;
+    }
+  }
+
+  &__content {
+    max-width: 450px;
+    p {
+      font-family: $hnr;
+      font-size: 15px;
+      line-height: 20px;
+      color: #707070;
+    }
+  }
+
+  // Win
+  &__win {
+    .win-it-all {
+      margin-left: 80px;
+    }
+  }
+}

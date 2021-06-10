@@ -3,6 +3,8 @@ block variables
 include ../blocks/base/mixin
 include ../blocks/select/select
 
+include ../blocks/popup-default/popup-default
+
 doctype html
 html(lang="en")
     head
@@ -24,3 +26,6 @@ html(lang="en")
             .chat
                 .chat__button
                     +mixinSvg('33px', '33px', 'icon-chat', 'icon-chat')
+
+        //.popup-m__wrapper
+        //    include ../blocks/popup/popup-page

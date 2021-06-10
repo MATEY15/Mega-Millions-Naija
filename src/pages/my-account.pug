@@ -1,0 +1,14 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+    - var user = true
+
+include ../blocks/popup-default/popup-default
+include ../blocks/header-section/header-section
+block content
+    include ../blocks/account/account
+    include ../blocks/proposal/proposal
+    include ../blocks/latest-results/latest-results
+    include ../blocks/get-know/get-know
+    include ../blocks/partner/partner

@@ -3,3 +3,8 @@ mixin input(placeholder, type, addClass)
 
 mixin textarea(placeholder, addClass)
     textarea(placeholder=placeholder class=addClass).textarea
+
+
+label.file-load
+    input(type="file").file-load__hide
+    span.file-load__text Attached Document

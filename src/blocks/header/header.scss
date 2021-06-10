@@ -50,6 +50,9 @@
         @include laptop-big-screen {
           margin-right: 50px;
         }
+        @media (max-width: 1369px) {
+          margin-right: 35px;
+        }
         @include laptop-small-screen {
           margin-right: 40px;
         }
@@ -64,7 +67,7 @@
       text-decoration: none;
       text-transform: uppercase;
       @include trn(.2s);
-      @include laptop-small-screen {
+      @media (max-width: 1369px) {
         font-size: 16px;
         line-height: 20px;
       }
@@ -78,6 +81,10 @@
     width: 100%;
     @include laptop-small-screen {
       max-width: 320px;
+    }
+    @media (max-width: 1369px) {
+      max-width: 350px;
+      margin: 0 20px;
     }
     @include table-large-screen {
       display: none;

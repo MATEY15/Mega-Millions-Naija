@@ -1,0 +1,91 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+@import '~intl-tel-input/build/css/intlTelInput.css';
+
+.iti__flag {background-image: url("/src/img/flag/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("/src/img/flag/flags@2x.png");}
+}
+
+.phone-country {
+  //font-family: $hnb;
+  //font-size: 17px;
+  //line-height: 21px;
+  //color: #000;
+  //width: 100%;
+  //min-height: 55px;
+  //border: 2px solid #707070;
+  //padding: 15px;
+  //border-radius: 30px;
+  //-webkit-transition: all .2s ease-out;
+  //-o-transition: all .2s ease-out;
+  //transition: all .2s ease-out;
+  opacity: 0;
+  visibility: hidden;
+
+  &__wrapper {
+
+    .iti__flag-container {
+      width: 100%;
+      max-width: 150px;
+      &:hover .iti__selected-flag {
+        background: #fff;
+      }
+    }
+
+    .iti__flag {
+      order: 1;
+      margin-right: 10px;
+    }
+    .iti__code {
+      order: 2;
+    }
+    .iti__arrow {
+      order: 3;
+      border: none;
+      width: 16px;
+      height: 9px;
+      background-image: url(/src/img/icons/arrow-bottom.svg);
+      background-repeat: no-repeat;
+      transform: scale(1);
+      -webkit-transition: all .2s ease-out;
+      -o-transition: all .2s ease-out;
+      transition: all .2s ease-out;
+      margin-left: 10px;
+      &--up {
+        transform: scale(-1);
+      }
+    }
+
+    .iti__selected-flag {
+      display: flex;
+      align-items: center;
+      font-family: HelveticaNeueBold,sans-serif;
+      font-size: 17px;
+      line-height: 21px;
+      color: #000;
+      width: 100%;
+      height: 55px;
+      background: #fff;
+      padding: 0 23px;
+      border: 2px solid #707070;
+      border-radius: 30px;
+      -webkit-transition: all .2s ease-out;
+      -o-transition: all .2s ease-out;
+      transition: all .2s ease-out;
+      @include mobile-mini-screen {
+        height: 75px;
+        border-radius: 50px;
+      }
+      &:hover {
+        background: #fff;
+      }
+    }
+
+
+  }
+}
+
+

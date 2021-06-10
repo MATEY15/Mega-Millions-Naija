@@ -163,13 +163,32 @@ $checkBoxItemStatus: '.checkbox-item__status';
     }
   }
 
+  &__text-wrapper {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
   &__text {
     display: flex;
-    align-items: center;
     font-family: $hnb;
     font-size: 13px;
     line-height: 16px;
     color: #1A1818;
+
+    &--large {
+      font-family: $hnr;
+      font-size: 15px;
+      line-height: 22px;
+      .checkbox-button__status {
+        top: 4px;
+      }
+    }
+    &--gray {
+      color: #707070;
+    }
   }
 
   &__status {
@@ -179,8 +198,9 @@ $checkBoxItemStatus: '.checkbox-item__status';
     box-sizing: border-box;
     border-radius: 4px;
     width: 17px;
+    min-width: 17px;
     height: 17px;
-    margin-right: 16px;
+    margin-right: 14px;
 
     &:before {
       position: absolute;
