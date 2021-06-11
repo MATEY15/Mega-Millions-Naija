@@ -1,0 +1,213 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.section__account {
+  margin-top: 60px;
+  margin-bottom: 35px;
+  @include table-large-m-screen {
+    margin-bottom: 40px;
+  }
+}
+
+.account {
+  display: flex;
+  background: #fff;
+  @include boxShadow();
+  @include table-large-m-screen {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 330px);
+    grid-gap: 20px 20px;
+    @include table-large-m-screen {
+      display: block;
+    }
+  }
+  &__prifile {
+    padding: 60px 60px 70px 85px;
+    width: 100%;
+    @include laptop-big-screen {
+      padding: 30px 20px 30px 20px;
+    }
+    @include table-large-m-screen {
+      padding: 0;
+    }
+  }
+  &__title {
+    text-align: center;
+    h3 {
+      position: relative;
+      display: inline-block;
+      font-family: $hnb;
+      font-size: 30px;
+      line-height: 30px;
+      color: #000;
+      text-align: center;
+      @include laptop-big-screen {
+        font-size: 26px;
+        line-height: 31px;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: -14px;
+      right: -40px;
+      @include laptop-big-screen {
+        position: absolute;
+        top: -10px;
+        right: -35px;
+      }
+    }
+  }
+  &__number {
+    font-family: $hnr;
+    font-size: 15px;
+    line-height: 22px;
+    color: #707070;
+    text-align: center;
+    margin-top: 15px;
+    @include laptop-big-screen {
+      margin-top: 10px;
+    }
+  }
+  &__verification {
+    margin-bottom: 40px;
+    @include laptop-big-screen {
+      margin-bottom: 30px;
+    }
+    p {
+      font-family: $hnr;
+      font-size: 15px;
+      line-height: 22px;
+      color: #707070;
+      text-align: center;
+    }
+  }
+  &__balance-title {
+    font-family: $hnb;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 30px;
+    @include laptop-big-screen {
+      font-size: 21px;
+      line-height: 24px;
+      margin-top: 28px;
+    }
+  }
+  &__balance-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px 30px;
+    @media (max-width: 380px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // Balance
+
+  &__balance-item {
+    position: relative;
+    padding: 20px 10px;
+    background: #F7F7F7;
+    text-align: center;
+    min-height: 184px;
+    @include brr(10px);
+    @include table-large-m-screen {
+      background: #fff;
+      @include boxShadow();
+    }
+  }
+  &__balance-title {
+    font-family: $hnb;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000;
+    @include laptop-big-screen {
+      font-size: 21px;
+      line-height: 24px;
+    }
+  }
+  &__balance-number {
+    font-family: $hnb;
+    font-size: 30px;
+    line-height: 34px;
+    color: #6D9138;
+    margin-top: 35px;
+
+    @include laptop-big-screen {
+      font-size: 26px;
+      line-height: 31px;
+      margin-top: 32px;
+    }
+
+    &--big {
+      font-size: 52px;
+      line-height: 60px;
+      margin-top: 32px;
+      @include laptop-big-screen {
+        font-size: 45px;
+        line-height: 52px;
+        margin-top: 30px;
+      }
+    }
+  }
+  &__balance-ckeck {
+    position: absolute;
+    bottom: -12px;
+    right: 0;
+  }
+
+  &__balance-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin-bottom: 20px;
+  }
+  &__balance-card-icon {}
+  &__balance-card-number {
+    font-family: $hnb;
+    font-size: 30px;
+    line-height: 34px;
+    color: #6D9138;
+  }
+  &__balance-card-remove {
+    font-family: $hnb;
+    font-size: 11px;
+    line-height: 13px;
+    color: #1A1818;
+  }
+
+  // Photo
+  &__photo {
+    position: relative;
+    margin-left: auto;
+    width: 100%;
+    max-width: 450px;
+    @media (max-width: 1140px) {
+      display: none;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__win {
+    @include table-large-m-screen {
+      display: none;
+    }
+  }
+
+}

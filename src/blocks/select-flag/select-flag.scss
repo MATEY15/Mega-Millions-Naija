@@ -84,6 +84,15 @@
       }
     }
 
+    &--no-border {
+      .iti__selected-flag {
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+        height: auto;
+      }
+    }
+
 
   }
 }

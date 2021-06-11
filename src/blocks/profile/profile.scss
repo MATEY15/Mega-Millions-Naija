@@ -4,16 +4,36 @@
 
 .section__profile {
   padding-top: 60px;
+  @include table-large-screen {
+    padding-top: 35px;
+  }
 }
 
 .profile {
   &__wrapper {
     display: grid;
     grid-template-columns: 85px 1fr minmax(300px, 300px);
+    @media (max-width: 1369px) {
+      grid-template-columns: auto 1fr 330px;
+      display: grid;
+      grid-gap: 10px 20px;
+    }
+    @include table-large-m-screen {
+      grid-template-columns: auto 1fr;
+    }
+    @include mobile-large-screen {
+      display: block;
+    }
   }
   &__back {
     width: 85px;
     text-align: center;
+    @media (max-width: 1369px) {
+      width: 100%;
+    }
+    @include mobile-large-screen {
+      display: none;
+    }
     svg {
       fill: #707070;
     }
@@ -39,6 +59,21 @@
     background: #fff;
     padding: 50px 36px 50px 80px;
     align-items: center;
+    @media (max-width: 1369px) {
+      grid-template-columns: 1fr 1fr 140px;
+      padding: 50px 30px 50px 40px;
+    }
+    @include tablet-big-screen {
+      display: block;
+      padding: 24px 14px 14px 24px;
+    }
+    @include table-large-m-screen {
+      display: grid;
+      grid-template-columns: 1fr 1fr 140px;
+    }
+    @include mobile-large-screen {
+      display: block;
+    }
   }
   &__item-title {
     font-family: $hnb;
@@ -46,6 +81,9 @@
     line-height: 34px;
     color: #000;
     max-width: 370px;
+    @include tablet-big-screen {
+      margin-bottom: 17px;
+    }
   }
   &__item-desc {
     font-family: $hnr;
@@ -53,6 +91,9 @@
     line-height: 22px;
     color: #707070;
     max-width: 320px;
+    @include tablet-big-screen {
+      margin-bottom: 10px;
+    }
   }
   &__item-button {
     text-align: right;
@@ -80,8 +121,10 @@
   &__personal-item {
     display: flex;
     width: 100%;
-    border-bottom: 1px solid #C7C7C7;
     padding: 30px 100px 34px 60px;
+    &:not(:last-child) {
+      border-bottom: 1px solid #C7C7C7;
+    }
   }
   &__person {
     display: flex;
@@ -119,6 +162,34 @@
     font-size: 18px;
     line-height: 22px;
     color: #3A9B3F;
+  }
+
+  &__person-birth {
+    display: flex;
+    .popup-default__item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+    .select-form+.select2-container {
+      min-width: 135px;
+    }
+  }
+
+  &__person-option {
+    display: flex;
+    .phone-country__wrapper {
+      max-width: 120px;
+      .iti__flag-container {
+        width: auto;
+      }
+    }
+    p {
+      font-family: $hnb;
+      font-size: 18px;
+      line-height: 22px;
+      color: #1A1818;
+    }
   }
 
   // Pay
@@ -250,8 +321,17 @@
 
   // Win
   &__win {
+    @include table-large-m-screen {
+      display: none;
+    }
     .win-it-all {
       margin-left: 80px;
+      @include laptop-big-screen {
+        margin-left: 40px;
+      }
+      @media (max-width: 1369px) {
+        margin-left: 0px;
+      }
     }
   }
 }
