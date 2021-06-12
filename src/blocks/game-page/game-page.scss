@@ -1,0 +1,321 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.section__game-page {
+  padding-bottom: 50px;
+}
+
+.game-page {
+  &__head {
+
+  }
+  &__head-timer {}
+  &__timer-wrapper {}
+  &__timer {}
+  &__timer-button {
+    display: none;
+  }
+  &__tab-list {
+    display: flex;
+    justify-content: center;
+    border-bottom: 9px solid #688C34;
+  }
+  &__tab-li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $hnb;
+    font-size: 23px;
+    line-height: 28px;
+    color: #707070;
+    text-align: center;
+    height: 67px;
+    min-width: 200px;
+    margin: 0 5px;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    @include trn(.2s);
+    cursor: pointer;
+    user-select: none;
+    &:hover,
+    &--active {
+      background: #688C34;
+      color: #fff;
+    }
+  }
+
+  // Body
+
+  &__body {
+
+  }
+  &__item {
+    background: #fff;
+    padding: 24px 25px;
+    @include boxShadow();
+  }
+
+  // Tickets link top
+
+
+  &__item-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  &__ticket-list {
+    display: flex;
+    flex-wrap: wrap;
+    //display: grid;
+    //grid-template-columns: repeat(8, minmax(auto, 126px));
+    //grid-gap: 10px 17px;
+    list-style: none;
+  }
+  &__ticket-li {
+    &:not(:last-child) {
+      margin-right: 17px;
+    }
+  }
+  &__ticket-link {
+    display: inline-block;
+    width: 126px;
+    font-family: $hnb;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #707070;
+    padding: 14px 15px;
+    background: #fff;
+    @include boxShadow();
+
+    &--active {
+      @include tt(0, 10px)
+    }
+  }
+
+  &__ticket-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    .button {
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  // Items
+
+  &__item-main {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(256px, 1fr) );
+    grid-gap: 10px 20px;
+  }
+
+  &__ticket-item {
+    position: relative;
+    max-width: 256px;
+  }
+  &__ticket-title,
+  &__ticket-heading{
+    font-family: $hnb;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #707070;
+    margin-bottom: 12px;
+  }
+  &__ticket-title {
+    margin-bottom: 25px;
+  }
+  &__ticket {
+    padding: 5px;
+    background: #F7F7F7;
+    @include brr(10px);
+  }
+  &__ticket-pick {
+    display: flex;
+    .button--ticket {
+      width: 100%;
+      margin-right: 5px;
+    }
+  }
+  &__circle-body {
+    padding: 15px 10px;
+  }
+  &__circle-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5,minmax(29px, 1fr));
+    grid-gap: 10px 16px;
+    margin-bottom: 25px;
+  }
+  &__circle-item {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    border: 2px solid #D5342F;
+    background: #fff;
+
+    &--yellow {
+      border: 2px solid #F6C348;
+    }
+  }
+
+  &__circle-main {
+    display: grid;
+    grid-template-columns: repeat(8,minmax(23px, 1fr));
+    grid-gap: 12px 5px;
+    margin-bottom: 25px;
+  }
+
+  &__circle {
+    width: 23px;
+    height: 23px;
+    font-size: 10px;
+    line-height: 12px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    background: #707070;
+    padding: 6px 0;
+    cursor: pointer;
+    @include trn(.2s);
+    &--yellow {
+      background: #FFC217;
+      color: #012F00;
+    }
+    &--gray {
+      background: #707070;
+    }
+  }
+
+  // Total
+
+  &__total-wrapper {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 10px 20px;
+  }
+  &__total-draws {
+    background: #fff;
+    padding: 25px 20px 20px;
+    @include boxShadow();
+  }
+  &__draws-head {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px 30px;
+    border-bottom: 1px solid #707070;
+    padding-bottom: 14px;
+  }
+
+  &__total-main {
+    background: #fff;
+    padding: 25px 20px 20px;
+    @include boxShadow();
+  }
+
+  &__total-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: $hnb;
+    font-size: 17px;
+    line-height: 21px;
+    color: #012F00;
+    &--offset {
+      margin-bottom: 35px;
+    }
+  }
+  &__total-name {
+    font-family: $hnb;
+    font-size: 17px;
+    line-height: 21px;
+    color: #012F00;
+  }
+  &__total-sum {
+    font-family: $hnb;
+    font-size: 17px;
+    line-height: 21px;
+    color: #688C34;
+  }
+  &__total-all {
+    border-top: 1px solid #707070;
+    padding-top: 10px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__draws-item {
+    display: flex;
+  }
+
+  &__draws-text {
+    //max-width: 230px;
+    margin-left: 32px;
+    margin-top: 14px;
+    color: #707070;
+  }
+
+  &__draws-icon {
+    width: 94px;
+    min-width: 94px;
+    height: 94px;
+    font-family: $hnb;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0 10px 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    span {
+      color: #FFC217;
+      text-transform: uppercase;
+    }
+  }
+
+  &__draws-choose {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px 30px;
+    padding-top: 25px;
+  }
+
+  &__choose-text {
+    font-family: $hnb;
+    font-size: 17px;
+    line-height: 21px;
+    color: #688C34;
+  }
+
+  &__choose-item {
+    display: flex;
+    .radio-button--gray {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 16px;
+  }
+  &__button-submit {
+    width: 100%;
+    max-width: 320px;
+    margin-left: 40px;
+  }
+  &__button-check {
+
+  }
+
+}

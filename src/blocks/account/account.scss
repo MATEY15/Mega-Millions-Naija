@@ -170,6 +170,9 @@
     justify-content: space-between;
     padding: 0 30px;
     margin-bottom: 20px;
+    @include mobile-small-screen {
+      padding: 0 10px;
+    }
   }
   &__balance-card-icon {}
   &__balance-card-number {
@@ -177,6 +180,10 @@
     font-size: 30px;
     line-height: 34px;
     color: #6D9138;
+    @include mobile-small-screen {
+      font-size: 21px;
+      line-height: 24px;
+    }
   }
   &__balance-card-remove {
     font-family: $hnb;

@@ -5,7 +5,7 @@
 .section__profile {
   padding-top: 60px;
   @include table-large-screen {
-    padding-top: 35px;
+    padding-top: 25px;
   }
 }
 
@@ -21,7 +21,7 @@
     @include table-large-m-screen {
       grid-template-columns: auto 1fr;
     }
-    @include mobile-large-screen {
+    @include table-large-screen {
       display: block;
     }
   }
@@ -31,7 +31,7 @@
     @media (max-width: 1369px) {
       width: 100%;
     }
-    @include mobile-large-screen {
+    @include table-large-screen {
       display: none;
     }
     svg {
@@ -84,6 +84,10 @@
     @include tablet-big-screen {
       margin-bottom: 17px;
     }
+    @include table-large-m-screen {
+      font-size: 25px;
+      line-height: 29px;
+    }
   }
   &__item-desc {
     font-family: $hnr;
@@ -94,11 +98,29 @@
     @include tablet-big-screen {
       margin-bottom: 10px;
     }
+    @include table-large-m-screen {
+      line-height: 17px;
+    }
   }
   &__item-button {
     text-align: right;
     .button {
       max-width: 140px;
+      @include mobile-small-screen {
+        height: 42px;
+        padding: 11px 22px;
+        max-width: 100%;
+        width: auto;
+        min-width: 120px;
+      }
+    }
+  }
+
+  &__save-mobile {
+    padding-bottom: 30px;
+    display: none;
+    @include mobile-small-screen {
+      display: block;
     }
   }
 
@@ -107,9 +129,22 @@
   &__body {
     background: #fff;
     padding: 0 20px;
+    display: none;
+    &--open {
+      display: block;
+    }
     &-wrapper {
       border-top: 1px solid #707070;
       padding: 40px 50px;
+      @include laptop-small-screen {
+        padding: 40px;
+      }
+      @include mobile-small-screen {
+        padding: 30px 0;
+      }
+      @include mobile-mini-screen {
+        padding: 20px 0;
+      }
       &--no-offset {
         padding: 0;
       }
@@ -117,11 +152,18 @@
   }
 
   &__personal-information {
+
   }
   &__personal-item {
     display: flex;
     width: 100%;
     padding: 30px 100px 34px 60px;
+    @include laptop-small-screen {
+      padding: 30px 40px 34px 40px;
+    }
+    @include table-large-screen {
+      padding: 20px;
+    }
     &:not(:last-child) {
       border-bottom: 1px solid #C7C7C7;
     }
@@ -134,10 +176,33 @@
       display: grid;
       grid-template-columns: repeat(3,minmax(120px, 170px));
       grid-gap: 10px 70px;
+      @include laptop-small-screen {
+        grid-template-columns: repeat(3,minmax(auto, 170px));
+        grid-gap: 10px 20px;
+      }
+      @include mobile-small-screen {
+        display: block;
+      }
     }
   }
   &__person-info {
     //margin-right: 20px;
+    @include mobile-small-screen {
+      display: flex;
+    }
+    @media (max-width: 450px) {
+      flex-direction: column;
+    }
+    &:not(:last-child) {
+      @include mobile-small-screen {
+        margin-bottom: 24px;
+      }
+    }
+    &--birth {
+      @include mobile-small-screen {
+        flex-direction: column;
+      }
+    }
   }
   &__person-info-title {
     font-family: $hnr;
@@ -146,8 +211,22 @@
     color: #707070;
     margin-bottom: 20px;
     display: block;
+    @include mobile-small-screen {
+      display: flex;
+      min-width: 120px;
+      max-width: 120px;
+      padding-right: 10px;
+      margin-bottom: 0;
+    }
+    @media (max-width: 450px) {
+      margin-bottom: 10px;
+    }
     span {
       color: #e71621;
+      @include mobile-small-screen {
+        display: inline-block;
+        margin-left: 10px;
+      }
     }
   }
   &__person-info-content {
@@ -156,7 +235,11 @@
     line-height: 22px;
     color: #012F00;
   }
-  &__person-edit-wrapper {}
+  &__person-edit-wrapper {
+    @include mobile-small-screen {
+      display: none;
+    }
+  }
   &__person-edit {
     font-family: $hnb;
     font-size: 18px;
@@ -166,13 +249,41 @@
 
   &__person-birth {
     display: flex;
+    @include mobile-small-screen {
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
     .popup-default__item {
       &:not(:last-child) {
         margin-right: 30px;
+        @include mobile-mini-screen {
+          margin-right: 14px;
+        }
       }
     }
     .select-form+.select2-container {
       min-width: 135px;
+      @include mobile-small-screen {
+        min-width: 80px;
+        min-height: 20px;
+        border: 0;
+      }
+      .select2-selection {
+        @include mobile-small-screen {
+          min-height: 20px;
+          &__rendered {
+            @include mobile-small-screen {
+              padding: 0 !important;
+            }
+          }
+        }
+
+      }
+      .select2-selection--single {
+        @include mobile-small-screen {
+          height: 20px !important;
+        }
+      }
     }
   }
 
@@ -180,6 +291,9 @@
     display: flex;
     .phone-country__wrapper {
       max-width: 120px;
+      @include mobile-small-screen {
+        max-width: 90px;
+      }
       .iti__flag-container {
         width: auto;
       }
@@ -198,9 +312,25 @@
     //grid-template-columns: repeat(3,1fr);
     grid-template-columns: 200px 1fr 200px;
     grid-gap: 20px 30px;
+    @include laptop-big-screen {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__pay-item {
+    .account__balance-item {
+      @include table-large-m-screen {
+        background: #f7f7f7;
+        box-shadow: none;
+      }
+      .account__balance-number--big {
+        @include mobile-small-screen {
+          font-size: 30px;
+          line-height: 34px;
+        }
+      }
+    }
     &--card {
       .account__balance-item {
         padding-bottom: 15px;
@@ -217,6 +347,9 @@
   &__validation-item {
     &:not(:last-child){
       margin-bottom: 40px;
+      @include mobile-small-screen {
+        margin-bottom: 20px;
+      }
     }
   }
   &__validation-input {
@@ -249,11 +382,17 @@
   &__identity {}
   &__identity-form {
     display: flex;
+    @include mobile-mini-screen {
+      flex-direction: column;
+    }
   }
   &__identity-item {
     padding: 12px 18px;
     width: 100%;
     @include boxShadow();
+    @include mobile-mini-screen {
+      margin-bottom: 14px;
+    }
     .file-load {
       display: flex;
       align-items: center;
@@ -262,16 +401,24 @@
   &__identity-button {
     .button {
       border-radius: 0 10px 10px 0;
+      @include mobile-mini-screen {
+        @include brr(10px);
+      }
     }
   }
 
   &__notification {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    @media (max-width: 400px) {
+      flex-wrap: wrap;
+    }
     .button {
-      margin: 0 10px;
+      margin: 10px 10px;
       width: 100%;
+      @media (max-width: 400px) {
+        margin: 10px 0;
+      }
     }
   }
 
@@ -311,6 +458,9 @@
 
   &__content {
     max-width: 450px;
+    @include mobile-mini-screen {
+      text-align: center;
+    }
     p {
       font-family: $hnr;
       font-size: 15px;
@@ -321,7 +471,7 @@
 
   // Win
   &__win {
-    @include table-large-m-screen {
+    @include table-large-screen {
       display: none;
     }
     .win-it-all {

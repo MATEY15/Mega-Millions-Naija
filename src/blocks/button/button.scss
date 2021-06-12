@@ -41,9 +41,44 @@
     padding: 28px 25px 26px;
     @include brr(10px);
     @include trn(.2s);
+    @include mobile-small-screen {
+      padding: 18px 20px 18px;
+      min-height: 60px;
+      max-width: 100%;
+      font-size: 13px;
+      line-height: 16px;
+    }
     &:hover {
       background: #012f00;
     }
+  }
+
+  &--ticket {
+    display: inline-block;
+    font-family: $hnb;
+    font-size: 13px;
+    line-height: 16px;
+    color: #707070;
+    min-width: 126px;
+    min-height: 44px;
+    padding: 14px;
+    @include boxShadow();
+    @include trn(.2s);
+  }
+
+  &--delete {
+    display: inline-block;
+    padding: 8px 8px 7px;
+    background: #E71621;
+    @include boxShadow();
+    @include trn(.2s);
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &--square {
+    border-radius: 0;
   }
 
   &--play-large {
@@ -80,6 +115,7 @@
 
   &--green {
     background: #688C34;
+    color: #fff;
   }
 
   &--darkgreen {
@@ -178,5 +214,7 @@
       background: #012f00;
     }
   }
+
+
 
 }

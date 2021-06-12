@@ -4,6 +4,7 @@
 
 $radioText: '.radio-button__text';
 $radioStatus: '.radio-button__status';
+$radioStatusGray: '.radio-button__status-gray';
 $radioItemStatus: '.radio-item__status';
 $checkBoxText: '.checkbox-button__text';
 $checkBoxStatus: '.checkbox-button__status';
@@ -68,6 +69,99 @@ $checkBoxItemStatus: '.checkbox-item__status';
       height: 10px;
       background: #219653;
       opacity: 0;
+    }
+  }
+
+  &--gray {
+    #{$radioText} {
+      font-family: $hnb;
+      font-size: 17px;
+      line-height: 21px;
+      color: #688C34;
+    }
+    .radio-button__status {
+      position: relative;
+      top: -1px;
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      cursor: pointer;
+
+      .radio-button__input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin: 10px 0 0 7px;
+        display: none;
+
+        &:checked + #{$radioText} #{$radioStatus}:after {
+          opacity: 1;
+        }
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        @include trn(.15s);
+      }
+
+      &:before {
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #707070;
+        background-color: #fff;
+      }
+      &:after {
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background: #ffffff;
+        opacity: 0;
+        border: 6px solid #707070;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__status-gray2 {
+    position: relative;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      @include trn(.2s);
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #D2D6E6;
+      background-color: #f6f8f9;
+    }
+    &:after {
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: #ffffff;
+      opacity: 0;
+      border: 6px solid #707070;
+      border-radius: 50%;
     }
   }
 
@@ -152,6 +246,23 @@ $checkBoxItemStatus: '.checkbox-item__status';
   display: flex;
   cursor: pointer;
   user-select: none;
+  
+  &--facebook {
+    #{$checkBoxText} {
+      font-family: $hnb;
+      font-size: 16px;
+      line-height: 20px;
+      color: #2E5C92;
+    }
+    strong {
+      display: flex;
+      align-items: center;
+    }
+    svg {
+      fill: #2E5C92;
+      margin-right: 11px;
+    }
+  }
 
   &__input {
     display: none;
@@ -186,8 +297,22 @@ $checkBoxItemStatus: '.checkbox-item__status';
         top: 4px;
       }
     }
+    &--big {
+      font-family: $hnb;
+      font-size: 17px;
+      line-height: 21px;
+      .checkbox-button__status {
+        top: 2px;
+      }
+    }
     &--gray {
       color: #707070;
+    }
+    &--red {
+      color: #E71621;
+    }
+    &--green {
+      color: #688C34;
     }
   }
 

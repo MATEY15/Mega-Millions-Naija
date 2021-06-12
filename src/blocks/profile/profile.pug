@@ -79,7 +79,7 @@ section.section.section__profile
                                         a(href="#").profile__person-edit Edit
                                 .profile__personal-item
                                     .profile__person
-                                        .profile__person-info
+                                        .profile__person-info.profile__person-info--birth
                                             .profile__person-info-title Date of Birth
                                             .profile__person-birth
                                                 .popup-default__item
@@ -110,6 +110,8 @@ section.section.section__profile
                                                         option 2019
                                                         option 2020
                                                         option 2021
+                        .profile__save-mobile
+                            a(href="#").button.button--yellow.button--darkgreen.button--large Save
 
 
                 .profile__item
@@ -140,6 +142,8 @@ section.section.section__profile
                                     .account__balance-item
                                         .account__balance-title Reward Points
                                         .account__balance-number.account__balance-number--big 650
+                        .profile__save-mobile
+                            a(href="#").button.button--yellow.button--darkgreen.button--large Save
 
 
                 .profile__item
@@ -160,6 +164,8 @@ section.section.section__profile
                                         input(type="text" placeholder="Date of Birth (DD/ MM/YYYY)").profile__validation-input
                                     .profile__validation-button
                                         a(href="#").button.button--darkgreen.button--large Verify BVN
+                        .profile__save-mobile
+                            a(href="#").button.button--yellow.button--darkgreen.button--large Save
 
                 .profile__item
                     .profile__head
@@ -178,6 +184,8 @@ section.section.section__profile
                                             input(type="file").file-load__hide
                                     .profile__identity-button
                                         button.button.button--darkgreen.button--large Upload
+                        .profile__save-mobile
+                            a(href="#").button.button--yellow.button--darkgreen.button--large Save
 
                 .profile__item
                     .profile__head
@@ -190,6 +198,8 @@ section.section.section__profile
                             .profile__notification
                                 a(href="#").button.button--gray.button--notification SMS options
                                 a(href="#").button.button--darkgreen.button--notification Email options
+                        .profile__save-mobile
+                            a(href="#").button.button--yellow.button--darkgreen.button--large Save
 
                 .profile__item
                     .profile__head
@@ -218,6 +228,8 @@ section.section.section__profile
                                             +mixinSvg('19px', '15px', 'icon-eye', 'icon-eye input__icon input__icon--right')
                                     .profile__content
                                         p Password must be at least 8 characters long, including at least 1 upper case alphabet, a number, and a special character
+                        .profile__save-mobile
+                            a(href="#").button.button--yellow.button--darkgreen.button--large Save
 
             .profile__win
                 +winItAllOffers()

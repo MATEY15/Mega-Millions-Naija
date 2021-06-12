@@ -1,0 +1,246 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+    - var user = true
+
+include ../blocks/popup-default/popup-default
+include ../blocks/header-section/header-section
+include ../blocks/win-it-all/win-it-all
+block content
+    section.section.section__profile
+        .layout
+            .profile__wrapper
+                .profile__back
+                    a(href="#").profile__back-link
+                        +mixinSvg('24px', '13px', 'icon-back2', 'icon-back2')
+                .profile__main
+                    .profile__item
+                        .profile__head
+                            .profile__item-title Personal Information
+                            .profile__item-desc View or edit your personal information. This information will be used to contact you in the event of a win
+                            .profile__item-button
+                                a(href="#").button.button--darkgreen.button--large Edit
+                        .profile__body.profile__body--open
+                            .profile__body-wrapper.profile__body-wrapper--no-offset
+                                .profile__personal-information
+                                    .profile__personal-item
+                                        .profile__person.profile__person--three
+                                            .profile__person-info.profile__person-info--small
+                                                .profile__person-info-title Title #[span *]
+                                                +select('select-default', '')
+                                                    option Mr
+                                                    option Mrs
+                                                    option Ms
+                                            .profile__person-info
+                                                .profile__person-info-title First Name
+                                                .profile__person-info-content Sodeinde
+                                            .profile__person-info
+                                                .profile__person-info-title Last Name
+                                                .profile__person-info-content Oladapo
+                                        .profile__person-edit-wrapper
+                                            a(href="#").profile__person-edit Edit
+
+                                    .profile__personal-item
+                                        .profile__person
+                                            .profile__person-info
+                                                .profile__person-info-title Email #[span *]
+                                                .profile__person-info-content dapsiny@gmail.com
+                                        .profile__person-edit-wrapper
+                                            a(href="#").profile__person-edit Edit
+                                    .profile__personal-item
+                                        .profile__person
+                                            .profile__person-info
+                                                .profile__person-info-title Phone #[span *]
+                                                .profile__person-option
+                                                    .phone-country__wrapper.phone-country__wrapper--no-border
+                                                        input(type="text").phone-country
+                                                    p 816   263   4776
+                                        .profile__person-edit-wrapper
+                                            a(href="#").profile__person-edit Edit
+                                    .profile__personal-item
+                                        .profile__person
+                                            .profile__person-info
+                                                .profile__person-info-title address
+                                                .profile__person-info-content no 5a, ogunlade street, lekki phase 1, lagos.
+                                        .profile__person-edit-wrapper
+                                            a(href="#").profile__person-edit edit
+                                    .profile__personal-item
+                                        .profile__person
+                                            .profile__person-info
+                                                .profile__person-info-title Street Address (Optional)
+                                                .profile__person-info-content Lekki Phase
+                                        .profile__person-edit-wrapper
+                                            a(href="#").profile__person-edit Edit
+                                    .profile__personal-item
+                                        .profile__person
+                                            .profile__person-info
+                                                .profile__person-info-title City/Loacation
+                                                .profile__person-info-content Lagos
+                                        .profile__person-edit-wrapper
+                                            a(href="#").profile__person-edit Edit
+                                    .profile__personal-item
+                                        .profile__person
+                                            .profile__person-info
+                                                .profile__person-info-title Postal Code (Optional)
+                                                .profile__person-info-content Nill
+                                        .profile__person-edit-wrapper
+                                            a(href="#").profile__person-edit Edit
+                                    .profile__personal-item
+                                        .profile__person
+                                            .profile__person-info.profile__person-info--birth
+                                                .profile__person-info-title Date of Birth
+                                                .profile__person-birth
+                                                    .popup-default__item
+                                                        +select('select-form', '')
+                                                            option 1
+                                                            option 2
+                                                            option 3
+                                                            option 4
+                                                            option 5
+                                                            option 6
+                                                            option 7
+                                                    .popup-default__item
+                                                        +select('select-form', '')
+                                                            option jan
+                                                            option feb
+                                                            option mar
+                                                            option apr
+                                                            option may
+                                                            option jun
+                                                            option jul
+                                                            option aug
+                                                            option sep
+                                                            option oct
+                                                    .popup-default__item
+                                                        +select('select-form', '')
+                                                            option 2017
+                                                            option 2018
+                                                            option 2019
+                                                            option 2020
+                                                            option 2021
+                            .profile__save-mobile
+                                a(href="#").button.button--yellow.button--darkgreen.button--large Save
+
+
+                    .profile__item
+                        .profile__head
+                            .profile__item-title Payment Details
+                            .profile__item-desc Remove and Add your payment details
+                            .profile__item-button
+                                a(href="#").button.button--yellow.button--darkgreen.button--large Save
+                        .profile__body.profile__body--open
+                            .profile__body-wrapper
+                                .profile__pay-wrapper
+                                    .profile__pay-item.profile__pay-item--sum
+                                        .account__balance-item
+                                            .account__balance-title My Wallet
+                                            .account__balance-number N5,600.00
+                                            .account__balance-ckeck
+                                                img(src="img/icons/icon-chec-small.svg" alt="")
+                                    .profile__pay-item.profile__pay-item--card
+                                        .account__balance-item
+                                            .account__balance-title Card
+                                            .account__balance-card
+                                                .account__balance-card-icon
+                                                    +mixinSvg('34px', '25px', 'icon-card', 'icon-card')
+                                                .account__balance-card-number **** **** **** 5678
+                                                a(href="#").account__balance-card-remove Remove
+                                            button.button.button--add-card #[+mixinSvg('23px', '23px', 'icon-plus', 'icon-plus')] Add Another Card
+                                    .profile__pay-item.profile__pay-item--points
+                                        .account__balance-item
+                                            .account__balance-title Reward Points
+                                            .account__balance-number.account__balance-number--big 650
+                            .profile__save-mobile
+                                a(href="#").button.button--yellow.button--darkgreen.button--large Save
+
+
+                    .profile__item
+                        .profile__head
+                            .profile__item-title BVN Validation
+                            .profile__item-desc Verify your BVN details
+                            .profile__item-button
+                                a(href="#").button.button--darkgreen.button--large Edit
+                        .profile__body.profile__body--open
+                            .profile__body-wrapper
+                                .profile__validation
+                                    form.profile__validation-form
+                                        .profile__validation-item
+                                            input(type="text" placeholder="Enter your BVN").profile__validation-input
+                                        .profile__validation-item
+                                            input(type="text" placeholder="Mobile No. Registered with BVN").profile__validation-input
+                                        .profile__validation-item
+                                            input(type="text" placeholder="Date of Birth (DD/ MM/YYYY)").profile__validation-input
+                                        .profile__validation-button
+                                            a(href="#").button.button--darkgreen.button--large Verify BVN
+                            .profile__save-mobile
+                                a(href="#").button.button--yellow.button--darkgreen.button--large Save
+
+                    .profile__item
+                        .profile__head
+                            .profile__item-title Valid Identity
+                            .profile__item-desc Upload a valid means of identity. e.g Passport, National Identity Card or Voters Card
+                            .profile__item-button
+                                a(href="#").button.button--darkgreen.button--large Edit
+                        .profile__body.profile__body--open
+                            .profile__body-wrapper
+                                .profile__identity
+                                    form.profile__identity-form
+                                        .profile__identity-item
+                                            label.file-load
+                                                +mixinSvg('24px', '24px', 'icon-upload', 'icon-upload')
+                                                span.file-load__text Attached Document
+                                                input(type="file").file-load__hide
+                                        .profile__identity-button
+                                            button.button.button--darkgreen.button--large Upload
+                            .profile__save-mobile
+                                a(href="#").button.button--yellow.button--darkgreen.button--large Save
+
+                    .profile__item
+                        .profile__head
+                            .profile__item-title Notification Setting
+                            .profile__item-desc Edit your notification preferences
+                            .profile__item-button
+                                a(href="#").button.button--darkgreen.button--large Edit
+                        .profile__body.profile__body--open
+                            .profile__body-wrapper
+                                .profile__notification
+                                    a(href="#").button.button--gray.button--notification SMS options
+                                    a(href="#").button.button--darkgreen.button--notification Email options
+                            .profile__save-mobile
+                                a(href="#").button.button--yellow.button--darkgreen.button--large Save
+
+                    .profile__item
+                        .profile__head
+                            .profile__item-title Change Password
+                            .profile__item-desc To keep your password safe and secure, we recommend you change your password every 6
+                            .profile__item-button
+                                a(href="#").button.button--darkgreen.button--large Edit
+                        .profile__body.profile__body--open
+                            .profile__body-wrapper
+                                .profile__validation
+                                    form.profile__validation-form
+                                        .profile__validation-item
+                                            label.profile__label Old Password
+                                            .profile__input-item
+                                                input(type="text" value="********").profile__input
+                                                +mixinSvg('19px', '15px', 'icon-eye', 'icon-eye input__icon input__icon--right')
+                                        .profile__validation-item
+                                            label.profile__label New Password
+                                            .profile__input-item
+                                                input(type="text" value="********").profile__input
+                                                +mixinSvg('19px', '15px', 'icon-eye', 'icon-eye input__icon input__icon--right')
+                                        .profile__validation-item
+                                            label.profile__label Confirm Password
+                                            .profile__input-item
+                                                input(type="text" value="********").profile__input
+                                                +mixinSvg('19px', '15px', 'icon-eye', 'icon-eye input__icon input__icon--right')
+                                        .profile__content
+                                            p Password must be at least 8 characters long, including at least 1 upper case alphabet, a number, and a special character
+                            .profile__save-mobile
+                                a(href="#").button.button--yellow.button--darkgreen.button--large Save
+
+                .profile__win
+                    +winItAllOffers()
+    include ../blocks/get-know/get-know
+    include ../blocks/partner/partner
