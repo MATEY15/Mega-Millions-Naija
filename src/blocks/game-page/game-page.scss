@@ -3,23 +3,69 @@
 @import "../../blocks/base/media-queries";
 
 .section__game-page {
+  position: relative;
+  padding-top: 16px;
   padding-bottom: 50px;
 }
 
 .game-page {
   &__head {
-
+    position: relative;
   }
-  &__head-timer {}
-  &__timer-wrapper {}
+  &__head-timer {
+    position: absolute;
+    top: 18px;
+    @include laptop-small-screen {
+      position: static;
+    }
+    @include table-large-screen {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .game-item__timer-wrapper {
+      align-items: center;
+      @include table-large-screen {
+        margin-bottom: 0;
+      }
+    }
+    .game-item__timer {
+      font-size: 22px;
+      line-height: 27px;
+      @include table-large-screen {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    .icon-time {
+      width: 32px;
+      height: 32px;
+      fill: #012F00;
+      @include table-large-screen {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  &__timer-wrapper {
+    margin: 0;
+  }
   &__timer {}
   &__timer-button {
     display: none;
+    @include table-large-screen {
+      display: block;
+    }
   }
   &__tab-list {
     display: flex;
     justify-content: center;
     border-bottom: 9px solid #688C34;
+    @include mobile-large-screen {
+      border-bottom: 0;
+      margin-bottom: 35px;
+    }
   }
   &__tab-li {
     display: flex;
@@ -38,6 +84,23 @@
     @include trn(.2s);
     cursor: pointer;
     user-select: none;
+    @include mobile-large-screen {
+      width: calc(100% / 3);
+      height: 42px;
+      min-width: auto;
+      font-size: 15px;
+      line-height: 18px;
+      padding: 12px;
+      margin: 0 2px;
+      border-radius: 0;
+      color: #000;
+      &:first-child {
+        border-radius: 10px 0 0 10px;
+      }
+      &:last-child {
+        border-radius: 0 10px 10px 0;
+      }
+    }
     &:hover,
     &--active {
       background: #688C34;
@@ -54,6 +117,12 @@
     background: #fff;
     padding: 24px 25px;
     @include boxShadow();
+
+    @include mobile-mini-screen {
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+    }
   }
 
   // Tickets link top
@@ -63,7 +132,53 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    @include mobile-large-screen {
+      display: block;
+      margin-bottom: 35px;
+    }
   }
+
+  &__ticket-mobile {
+    display: none;
+    @include mobile-large-screen {
+      display: block;
+    }
+  }
+  &__ticket-drop {
+    display: flex;
+    max-width: 400px;
+  }
+  &__ticket-drop-name {
+    font-family: $hnb;
+    font-size: 17px;
+    line-height: 21px;
+    color: #707070;
+    margin-bottom: 10px;
+  }
+  &__ticket-drop-title {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-family: $hnb;
+    font-size: 12px;
+    line-height: 15px;
+    color: #707070;
+    text-transform: uppercase;
+    padding: 13px 44px 13px 16px;
+    min-height: 44px;
+    max-width: 400px;
+    @include boxShadow();
+  }
+  &__ticket-drop-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #688C34;
+  }
+
   &__ticket-list {
     display: flex;
     flex-wrap: wrap;
@@ -71,10 +186,21 @@
     //grid-template-columns: repeat(8, minmax(auto, 126px));
     //grid-gap: 10px 17px;
     list-style: none;
+    @include mobile-large-screen {
+      max-width: 400px;
+      display: none;
+    }
   }
   &__ticket-li {
+    margin-bottom: 20px;
+    @include mobile-large-screen {
+      margin: 0;
+    }
     &:not(:last-child) {
       margin-right: 17px;
+      @include mobile-large-screen {
+        margin: 0;
+      }
     }
   }
   &__ticket-link {
@@ -88,9 +214,23 @@
     padding: 14px 15px;
     background: #fff;
     @include boxShadow();
+    @include trn(.2s);
+
+    @include mobile-large-screen {
+      font-size: 15px;
+      line-height: 18px;
+      width: 100%;
+      box-shadow: none;
+      color: #012F00;
+      background: #F4F2F2;
+    }
 
     &--active {
-      @include tt(0, 10px)
+      @include tt(0, 10px);
+      @include mobile-large-screen {
+        @include tt(0, 0);
+        background: #E6E6E6;
+      }
     }
   }
 
@@ -98,6 +238,9 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
+    @include table-large-screen {
+      display: none;
+    }
     .button {
 
       &:not(:first-child) {
@@ -117,6 +260,11 @@
   &__ticket-item {
     position: relative;
     max-width: 256px;
+    @include mobile-mini-screen {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
   }
   &__ticket-title,
   &__ticket-heading{
@@ -134,22 +282,57 @@
     padding: 5px;
     background: #F7F7F7;
     @include brr(10px);
+    @include mobile-mini-screen {
+      padding: 0;
+      background-color: transparent;
+      @include brr(0);
+    }
   }
   &__ticket-pick {
     display: flex;
     .button--ticket {
       width: 100%;
       margin-right: 5px;
+      @include mobile-mini-screen {
+        max-width: 120px;
+        margin-right: 0;
+        border-radius: 0;
+      }
+    }
+    .button--delete {
+      @include mobile-mini-screen {
+        margin-right: 0;
+        border-radius: 0;
+      }
+    }
+  }
+  &__ticket-step {
+    font-family: $hnb;
+    font-size: 11px;
+    line-height: 13px;
+    background: #FFC217;
+    padding: 13px 5px 10px 18px;
+    color: #000;
+    display: none;
+    @include mobile-mini-screen {
+      display: block;
+      width: 100%;
     }
   }
   &__circle-body {
     padding: 15px 10px;
+    @include mobile-mini-screen {
+      padding: 15px 0;
+    }
   }
   &__circle-wrapper {
     display: grid;
     grid-template-columns: repeat(5,minmax(29px, 1fr));
     grid-gap: 10px 16px;
     margin-bottom: 25px;
+    @include mobile-mini-screen {
+      display: none;
+    }
   }
   &__circle-item {
     width: 29px;
@@ -182,6 +365,13 @@
     padding: 6px 0;
     cursor: pointer;
     @include trn(.2s);
+    @include mobile-mini-screen {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
     &--yellow {
       background: #FFC217;
       color: #012F00;
@@ -198,11 +388,22 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-gap: 10px 20px;
+    @include table-large-screen {
+      display: block;
+    }
   }
   &__total-draws {
     background: #fff;
     padding: 25px 20px 20px;
     @include boxShadow();
+    @include table-large-screen {
+      margin-bottom: 20px;
+    }
+    @include mobile-small-screen {
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+    }
   }
   &__draws-head {
     display: grid;
@@ -210,6 +411,12 @@
     grid-gap: 20px 30px;
     border-bottom: 1px solid #707070;
     padding-bottom: 14px;
+    @include mobile-large-screen {
+      display: block;
+    }
+    @include mobile-small-screen {
+      border-bottom: 0;
+    }
   }
 
   &__total-main {
@@ -235,6 +442,9 @@
     font-size: 17px;
     line-height: 21px;
     color: #012F00;
+    @include mobile-mini-screen {
+      max-width: 150px;
+    }
   }
   &__total-sum {
     font-family: $hnb;
@@ -253,6 +463,12 @@
 
   &__draws-item {
     display: flex;
+    &:not(:last-child) {
+      @include mobile-large-screen {
+        margin-bottom: 32px;
+        max-width: 450px;
+      }
+    }
   }
 
   &__draws-text {
@@ -260,6 +476,8 @@
     margin-left: 32px;
     margin-top: 14px;
     color: #707070;
+    font-size: 15px;
+    line-height: 22px;
   }
 
   &__draws-icon {
@@ -274,6 +492,9 @@
     padding: 20px 0 10px 5px;
     background-repeat: no-repeat;
     background-position: center;
+    @include mobile-large-screen {
+      margin-left: 20px;
+    }
     span {
       color: #FFC217;
       text-transform: uppercase;
@@ -285,6 +506,9 @@
     grid-template-columns: repeat(2,1fr);
     grid-gap: 20px 30px;
     padding-top: 25px;
+    @include mobile-small-screen {
+      display: block;
+    }
   }
 
   &__choose-text {
@@ -292,6 +516,9 @@
     font-size: 17px;
     line-height: 21px;
     color: #688C34;
+    @include mobile-small-screen {
+      margin-bottom: 35px;
+    }
   }
 
   &__choose-item {
@@ -301,21 +528,75 @@
         margin-right: 20px;
       }
     }
+    @include mobile-small-screen {
+      .radio-button--gray .radio-button__text {
+        font-size: 25px;
+        line-height: 31px;
+      }
+      .radio-button--gray .radio-button__status:after,
+      .radio-button--gray .radio-button__status:before,
+      .radio-button--gray .radio-button__status {
+        width: 42px;
+        height: 42px;
+      }
+      .radio-button--gray .radio-button__status:after {
+        border: 12px solid #707070;
+      }
+    }
+
+    @include mobile-mini-screen {
+      .radio-button--gray .radio-button__text {
+        font-size: 17px;
+        line-height: 21px;
+      }
+      .radio-button--gray .radio-button__status:after,
+      .radio-button--gray .radio-button__status:before,
+      .radio-button--gray .radio-button__status {
+        width: 30px;
+        height: 30px;
+      }
+      .radio-button--gray .radio-button__status:after {
+        border: 9px solid #707070;
+      }
+    }
+
   }
 
   &__buttons {
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 10px 20px;
     align-items: center;
     margin-top: 16px;
+    @include table-large-screen {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include table-large-m-screen {
+      grid-template-columns: 1fr 2fr;
+    }
+    @include mobile-small-screen {
+      display: block;
+    }
+  }
+  &__buttons-item {
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media (max-width: 400px) {
+      flex-direction: column;
+      align-items: initial;
+    }
   }
   &__button-submit {
-    width: 100%;
-    max-width: 320px;
-    margin-left: 40px;
+    flex: 1;
   }
   &__button-check {
-
+    margin-right: 40px;
+    @media (max-width: 400px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 
 }

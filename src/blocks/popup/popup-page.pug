@@ -244,3 +244,41 @@
         .height-40
         .popup-default__button
             button.button.button--large.button--darkgreen Reset
+
++popupVideo('', 'play-video')
+    .popup-default__head
+        .popup-default__title.popup-default__title-custome How to Play
+    .popup-default__title.popup-default__title--center.popup-default__names Watch Video
+    .video-default__wrapper
+        .video-default__play
+        video(poster="img/video/video1.jpg").video-default
+            source(src="img/video/Nadal-Novak.mp4" type="video/mp4")
+    .popup-default__content.popup-default__content--offset
+        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    a(href="#").button.button--large.button--darkgreen Continue Game
+
+.popup-check.mfp-zoom-in.mfp-with-anim.mfp-hide#radio
+    .popup-check__head
+        .popup-default__close
+            +mixinSvg('21px', '21px', 'icon-close', 'icon-close')
+        .popup-check__title You are missing Something
+        .popup-check__desc Incase you chance of wining bigger and spending less
+    .popup-check__content
+        .popup-check__item
+            label.radio-button--gray
+                input.radio-button__input(type="radio" name="radio" checked="checked" required="")
+                .radio-button__text
+                    .radio-button__status
+                    .popup-check__text
+                        .popup-check__text-head.popup-check__text-head--red Mulptiplier
+                        .popup-check__text-desc Multiply any non-jackpot prize amount won by 2,3,4 or 5, depending on the
+        .popup-check__item
+            label.radio-button--gray
+                input.radio-button__input(type="radio" name="radio" required="")
+                .radio-button__text
+                    .radio-button__status
+                    .popup-check__text
+                        .popup-check__text-head.popup-check__text-head--green Subscription
+                        .popup-check__text-desc Subscribe, never miss a draw, and earn Free tickets!
+        .popup-check__button
+            a(href="#").button.button--large.button--darkgreen Continue

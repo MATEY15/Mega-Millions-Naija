@@ -9,9 +9,27 @@
     min-width: 0;
     display: block;
   }
+  &__main-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 20px 50px;
+    background-repeat: no-repeat;
+    background-position: right 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    @include table-large-screen {
+      min-height: 140px;
+      padding: 20px 15px 20px 30px;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
 
   &__item {
     position: relative;
+    flex: 1;
 
     @include mobile-small-screen {
       max-width: 300px;
@@ -46,6 +64,23 @@
     }
     @include mobile-small-screen {
       width: 80px;
+    }
+  }
+  &__logo-icon {
+    margin-right: 50px;
+    &--offset-large {
+      margin-right: 80px;
+      @include laptop-small-screen {
+        margin-right: 40px;
+        max-width: 130px;
+      }
+      @include table-large-m-screen {
+        max-width: 85px;
+        margin-right: 0;
+      }
+    }
+    img {
+      max-width: 100%;
     }
   }
   &__content {

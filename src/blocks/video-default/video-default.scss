@@ -1,0 +1,23 @@
+.video-default {
+  max-width: 100%;
+  width: 100%;
+  &__wrapper {
+    position: relative;
+    display: flex;
+    border: 10px solid #688c34;
+    border-radius: 10px;
+  }
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-top: 49px solid rgba(0,0,0,0);
+    border-left: 84px solid #fff;
+    border-bottom: 49px solid rgba(0,0,0,0);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}

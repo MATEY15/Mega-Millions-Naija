@@ -5,8 +5,19 @@ block variables
     - var user = true
 
 include ../blocks/header-section/header-section
+include ../blocks/popup-default/popup-default
 block content
-    +headerOne()
+    +headerBanner('img/header-preview/header-preview--fill.png', '')
+        .slider-header__logo-icon.slider-header__logo-icon--offset-large
+            img(src="img/header-preview/header-preview--logo.png" alt="Logo Icon")
+        .slider-header__content-block
+            //.slider-header__title-name
+            .million-text
+                .million-text__title US Mega Millions
+                .million-text__content
+                    .million-text__content-small N
+                    .million-text__content-big 500
+                    .million-text__content-small Million
     include ../blocks/game-page/game-page
     include ../blocks/get-know/get-know
     include ../blocks/partner/partner

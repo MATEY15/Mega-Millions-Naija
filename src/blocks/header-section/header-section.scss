@@ -4,7 +4,6 @@
 
 .header-section__wrapper {
   display: flex;
-  align-items: flex-start;
 
   @include table-large-screen {
     display: block;

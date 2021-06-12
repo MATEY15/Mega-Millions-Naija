@@ -1,0 +1,51 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.million-text {
+  color: #fff;
+  &__title {
+    font-family: $hnb;
+    font-size: 50px;
+    line-height: 61px;
+    @include laptop-small-screen {
+      font-size: 40px;
+      line-height: 51px;
+    }
+    @include table-large-m-screen {
+      font-size: 22px;
+      line-height: 27px;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: flex-end;
+  }
+  &__content-small {
+    font-family: $ah;
+    font-size: 58px;
+    line-height: 44px;
+    @include laptop-small-screen {
+      font-size: 48px;
+      line-height: 41px;
+    }
+    @include table-large-m-screen {
+      font-size: 26px;
+      line-height: 21px;
+    }
+  }
+  &__content-big {
+    font-family: $ah;
+    font-size: 132px;
+    line-height: 100px;
+    color: #FFC217;
+    @include laptop-small-screen {
+      font-size: 122px;
+      line-height: 90px;
+    }
+    @include table-large-m-screen {
+      font-size: 61px;
+      line-height: 44px;
+    }
+  }
+}

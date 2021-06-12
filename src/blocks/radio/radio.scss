@@ -82,9 +82,9 @@ $checkBoxItemStatus: '.checkbox-item__status';
     .radio-button__status {
       position: relative;
       top: -1px;
-      width: 20px;
-      min-width: 20px;
-      height: 20px;
+      width: 29px;
+      min-width: 29px;
+      height: 29px;
       margin-right: 10px;
       cursor: pointer;
 
@@ -111,59 +111,59 @@ $checkBoxItemStatus: '.checkbox-item__status';
       &:before {
         top: 0;
         left: 0;
-        width: 20px;
-        height: 20px;
+        width: 29px;
+        height: 29px;
         border: 2px solid #707070;
         background-color: #fff;
       }
       &:after {
         top: 0;
         left: 0;
-        width: 20px;
-        height: 20px;
+        width: 29px;
+        height: 29px;
         background: #ffffff;
         opacity: 0;
-        border: 6px solid #707070;
+        border: 9px solid #707070;
         border-radius: 50%;
       }
     }
   }
 
-  &__status-gray2 {
-    position: relative;
-    width: 20px;
-    min-width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    cursor: pointer;
-
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      @include trn(.2s);
-    }
-
-    &:before {
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border: 1px solid #D2D6E6;
-      background-color: #f6f8f9;
-    }
-    &:after {
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      background: #ffffff;
-      opacity: 0;
-      border: 6px solid #707070;
-      border-radius: 50%;
-    }
-  }
+  //&__status-gray2 {
+  //  position: relative;
+  //  width: 20px;
+  //  min-width: 20px;
+  //  height: 20px;
+  //  margin-right: 10px;
+  //  cursor: pointer;
+  //
+  //  &:before,
+  //  &:after {
+  //    content: '';
+  //    position: absolute;
+  //    border-radius: 50%;
+  //    @include trn(.2s);
+  //  }
+  //
+  //  &:before {
+  //    top: 0;
+  //    left: 0;
+  //    width: 20px;
+  //    height: 20px;
+  //    border: 1px solid #D2D6E6;
+  //    background-color: #f6f8f9;
+  //  }
+  //  &:after {
+  //    top: 0;
+  //    left: 0;
+  //    width: 20px;
+  //    height: 20px;
+  //    background: #ffffff;
+  //    opacity: 0;
+  //    border: 6px solid #707070;
+  //    border-radius: 50%;
+  //  }
+  //}
 
   &__text {
     display: flex;
