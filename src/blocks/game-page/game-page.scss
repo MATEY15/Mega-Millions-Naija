@@ -111,17 +111,38 @@
   // Body
 
   &__body {
-
+    perspective: 2000px;
   }
   &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: #fff;
     padding: 24px 25px;
     @include boxShadow();
+    opacity: 0;
+    visibility: hidden;
+    transform: rotateX(-20deg) translateZ(0px);
+    transform-style: preserve-3d;
+    transform-origin: top;
 
     @include mobile-mini-screen {
       padding: 0;
       background-color: transparent;
       box-shadow: none;
+    }
+
+    &--active {
+      display: block;
+      position: relative;
+      transition: all .28s linear;
+    }
+
+    &--active-effect {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
     }
   }
 
@@ -135,6 +156,21 @@
     @include mobile-large-screen {
       display: block;
       margin-bottom: 35px;
+      text-align: center;
+    }
+    &--title {
+      display: flex;
+      align-items: center;
+      font-family: $hnb;
+      font-size: 25px;
+      line-height: 31px;
+      color: #688C34;
+      @include mobile-large-screen {
+        display: block;
+        font-size: 17px;
+        line-height: 21px;
+        text-align: center;
+      }
     }
   }
 
@@ -375,9 +411,16 @@
     &--yellow {
       background: #FFC217;
       color: #012F00;
+      &.game-page__circle--active {
+        background: #E71621;
+        color: #fff;
+      }
     }
     &--gray {
       background: #707070;
+      &.game-page__circle--active {
+        background: #688C34;
+      }
     }
   }
 
@@ -395,6 +438,10 @@
   &__total-draws {
     background: #fff;
     padding: 25px 20px 20px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @include boxShadow();
     @include table-large-screen {
       margin-bottom: 20px;
@@ -411,6 +458,7 @@
     grid-gap: 20px 30px;
     border-bottom: 1px solid #707070;
     padding-bottom: 14px;
+    margin-bottom: 25px;
     @include mobile-large-screen {
       display: block;
     }
@@ -505,7 +553,6 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 20px 30px;
-    padding-top: 25px;
     @include mobile-small-screen {
       display: block;
     }
@@ -596,6 +643,32 @@
     @media (max-width: 400px) {
       margin-right: 0;
       margin-bottom: 20px;
+    }
+  }
+
+  // Syndicates
+
+  &__syndicates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(410px, 1fr));
+    grid-gap: 38px 38px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    @media (max-width: 450px) {
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    }
+  }
+
+  // Combo
+
+  &__combo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(410px, 1fr));
+    grid-gap: 38px 38px;
+    justify-content: center;
+    padding-bottom: 20px;
+    @include mobile-mini-screen {
+      grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
     }
   }
 

@@ -1,0 +1,34 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+
+include ../blocks/header-section/header-section
+include ../blocks/game-item/game-item
+block content
+    +headerBanner('img/header-slider/header-slider5.jpg', '')
+        .slider-header__logo-icon.slider-header__logo-icon--offset-large
+            img(src="img/header-slider/footer-logo.png" alt="Logo Icon")
+        .slider-header__content-block
+            .slider-header__title-name Play #[br]Responsibly
+    section.section.section__content
+        .layout
+            .content
+                h4 The Lottery Office cares about your well-being
+                p Here at The Lottery Office, we care about you and your well-being. We strive to make your experience with us fun, simple and stress-free. We have implemented the responsible gambling measures outlined below for your protection. If your experience with us is impacting you or your family in a negative way, please review the measures below or  at any time.
+                h4 Responsible Gambling
+                p We are serious about Responsible Gambling. You should never gamble more than you can afford.
+                p If gambling is having a negative impact on your life or if you feel you or someone you know may have a gambling problem, free help is available at  or by calling the Helpline on 1800 858 858. For players from New Zealand, help is available at  or by calling 0800 654 655.
+                p
+                h4 Take a Break Function
+                p If you feel like you would like to have a break from playing lottery and from receiving our marketing communications, you can elect to ‘Take a Break’ from within the My Settings section of your Lottery Office account. By electing to take a break, you will not be able to purchase or deposit funds into your account and you will not receive any marketing communications from us for the duration of the break period.
+                h4 Set a weekly deposit limit
+                p If you would like to set yourself a weekly deposit limit, you are able to do so in the My Settings section of your Lottery Office account. You can also view your transaction history at any time in your account.
+                h4 Self-Exclusion
+                p You are able to close your Lottery Office account at any time under the My Settings section. If you would like to permanently exclude yourself from our service, please .
+                h4 Players must be 18+
+                p Gambling in Australia is illegal for anyone under the age of 18. In accordance with the law and our licensing obligations, we have strict rules and procedures in place to protect minors. When registering an account with The Lottery Office, you agree that you are over the age of 18. Until we can officially verify this, your account will be limited to a small spending threshold and you will not be able to withdraw any funds.
+
+
+    include ../blocks/get-know/get-know
+    include ../blocks/partner/partner

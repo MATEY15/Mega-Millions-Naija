@@ -1,0 +1,28 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+
+include ../blocks/header-section/header-section
+include ../blocks/game-item/game-item
+block content
+    +headerBanner('img/header-slider/header-slider6.jpg', '')
+        .slider-header__logo-icon.slider-header__logo-icon--offset-large
+            img(src="img/header-slider/footer-logo.png" alt="Logo Icon")
+        .slider-header__content-block
+            .slider-header__title-name Terms & #[br]Conditions
+    section.section.section__content
+        .layout
+            .content
+                h4 Terms & Conditions of Use
+                p This Privacy Policy sets out the principles undertaken by Global Players Network Pty Ltd (The Company) in the management of personal information of individual visitors and registered players of the Lottery Office website, www.lotteryoffice.com.au (the Website) operated by The Company. By using the Website, you agree to this Privacy Policy and the Terms and Conditions.
+                p The Company is committed to protecting the privacy of personal information of individual visitors and registered players of lotteries via the Website (Registered Players). The Company is bound by the Australian Privacy Principals set out in the Privacy Act 1988 (Act). We will only collect, use or disclose information in accordance with this Act and this Privacy Policy.
+                h4 Policy
+                p This Privacy Policy sets out the principles undertaken by Global Players Network Pty Ltd (The Company) in the management of personal information of individual visitors and registered players of the Lottery Office website, www.lotteryoffice.com.au (the Website) operated by The Company. By using the Website, you agree to this Privacy Policy and the Terms and Conditions.
+                p The Company is committed to protecting the privacy of personal information of individual visitors and registered players of lotteries via the Website (Registered Players). The Company is bound by the Australian Privacy Principals set out in the Privacy Act 1988 (Act). We will only collect, use or disclose information in accordance with this Act and this Privacy Policy.
+                h4 Rationale
+                p This Privacy Policy sets out the principles undertaken by Global Players Network Pty Ltd (The Company) in the management of personal information of individual visitors and registered players of the Lottery Office website, www.lotteryoffice.com.au (the Website) operated by The Company. By using the Website, you agree to this Privacy Policy and the Terms and Conditions.
+                p The Company is committed to protecting the privacy of personal information of individual visitors and registered players of lotteries via the Website (Registered Players). The Company is bound by the Australian Privacy Principals set out in the Privacy Act 1988 (Act). We will only collect, use or disclose information in accordance with this Act and this Privacy Policy.
+
+    include ../blocks/get-know/get-know
+    include ../blocks/partner/partner

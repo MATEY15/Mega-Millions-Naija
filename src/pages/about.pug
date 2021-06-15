@@ -1,0 +1,50 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+
+include ../blocks/header-section/header-section
+include ../blocks/game-item/game-item
+block content
+    +headerBanner('img/header-slider/header-slider4.jpg', '')
+        .slider-header__logo-icon.slider-header__logo-icon--offset-large
+            img(src="img/header-slider/footer-logo.png" alt="Logo Icon")
+        .slider-header__content-block
+            .slider-header__title-name About Us
+    section.section.section__about
+        .layout
+            .about
+                .about__content
+                    .about__content-head
+                        h1.text-center About
+                        strong.text-center Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                    h2.text-center Our Mission
+                    p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+                .about__content.about__leadership
+                    h3.about__leadership-head Leadership
+                    .about__leadership-body
+                        .about__leadership-item
+                            .about__leadership-image
+                                img(src="img/leadership/leadership1.jpg" alt="").about__leadership-img
+                            h3.about__leadership-title Mr Tunji Agbaje
+                            p.about__leadership-sub-title Co-Founder & CEO
+                            p.about__leadership-sub-text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                        .about__leadership-item
+                            .about__leadership-image
+                                img(src="img/leadership/leadership1.jpg" alt="").about__leadership-img
+                            h3.about__leadership-title Mr Tunji Agbaje
+                            p.about__leadership-sub-title Co-Founder & CEO
+                            p.about__leadership-sub-text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                        .about__leadership-item
+                            .about__leadership-image
+                                img(src="img/leadership/leadership1.jpg" alt="").about__leadership-img
+                            h3.about__leadership-title Mr Tunji Agbaje
+                            p.about__leadership-sub-title Co-Founder & CEO
+                            p.about__leadership-sub-text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+
+
+    include ../blocks/get-know/get-know
+    include ../blocks/partner/partner

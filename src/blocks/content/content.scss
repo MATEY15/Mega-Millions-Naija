@@ -1,0 +1,25 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.section__content {}
+
+.content {
+  margin-top: 35px;
+  padding: 70px 115px 80px;
+  background: #fff;
+  @include boxShadow();
+  h4 {
+    font-size: 20px;
+    line-height: 25px;
+    color: #688C34;
+    margin-bottom: 18px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+    margin-bottom: 18px;
+    min-height: 1px;
+  }
+}

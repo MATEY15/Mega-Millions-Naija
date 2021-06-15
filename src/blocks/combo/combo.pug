@@ -1,0 +1,49 @@
+mixin combo(className, title, tickets, lineCol )
+    .combo(class=className)
+        .combo__head
+            .combo__head-title= title
+            .combo__icon-star
+                +mixinSvg('32px', '30px', 'icon-star', 'icon-star')
+        .combo__body
+            .combo__body-head
+                .combo__title 66 TICKETS
+                .combo__sub-title + Personal Entry
+            .combo__price
+                .combo__price-old N4,600
+                .combo__price-current N4,600
+            .combo__line
+                .combo__line-title Personal entry
+                .combo__choose-line
+                    .choose-line__wrapper
+                        - for (var i=1; i<=lineCol; i++)
+                            .choose-line__item
+                a(href="#").combo__link Choose 5 main numbers
+                .combo__desc 40 Shares Left (Out of 100)
+            .combo__check
+                +mixinSvg('28px', '20px', 'icon-checked', 'icon-checked')
+
+.game-page__combo
+    +combo('combo--red', 'Classic', '56 TICKETS', 5)
+    +combo('combo--blue', 'Deluxe', '66 TICKETS', 10)
+    .combo.combo--green
+        .combo__head
+            .combo__head-title Premium #[span (BEST ODDS)]
+            .combo__icon-star
+                +mixinSvg('32px', '30px', 'icon-star', 'icon-star')
+        .combo__body
+            .combo__body-head
+                .combo__title 66 TICKETS
+                .combo__sub-title + Personal Entry
+            .combo__price
+                .combo__price-old N4,600
+                .combo__price-current N4,600
+            .combo__line
+                .combo__line-title Personal entry
+                .combo__choose-line
+                    .choose-line__wrapper
+                        - for (var i=1; i<=5; i++)
+                            .choose-line__item
+                a(href="#").combo__link Choose 5 main numbers
+                .combo__desc 40 Shares Left (Out of 100)
+            .combo__check.combo__check--active
+                +mixinSvg('28px', '20px', 'icon-checked', 'icon-checked')

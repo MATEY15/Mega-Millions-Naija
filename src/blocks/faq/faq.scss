@@ -1,0 +1,110 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.section__faq {
+  padding-top: 40px;
+}
+
+.faq {
+  &__body {
+    flex: 1;
+  }
+  &__wrapper {
+    display: flex;
+  }
+
+  &__sidebar {
+    padding-left: 75px;
+    margin-right: 40px;
+    max-width: 320px;
+    h3 {
+      font-family: $hnb;
+      font-size: 20px;
+      line-height: 25px;
+      color: #688C34;
+      margin-bottom: 20px;
+    }
+    p {
+      font-family: $hnr;
+      font-size: 18px;
+      line-height: 21px;
+      color: #000;
+    }
+  }
+
+  &__item-icon {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    width: 26px;
+    height: 26px;
+    border: 2px solid #707070;
+    @include brr(50%);
+
+
+    &:after,
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      @include tt(-50%,-50%)
+    }
+    &:after {
+      width: 12px;
+      height: 3px;
+      background: #707070;
+    }
+    &:before {
+      height: 12px;
+      width: 3px;
+      background: #707070;
+    }
+  }
+
+  &__item {
+    background: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include boxShadow();
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__item-title {
+    position: relative;
+    font-family: $hnb;
+    font-size: 20px;
+    line-height: 25px;
+    color: #688C34;
+    padding: 28px 25px 27px 60px;
+    cursor: pointer;
+    &--active {
+      .faq__item-icon:before {
+        display: none;
+      }
+    }
+  }
+  &__item-desc {
+    display: none;
+    padding: 20px 10px 1px 60px;
+    border-top: 1px solid #707070;
+    h4 {
+      font-family: $hnb;
+      font-size: 15px;
+      line-height: 18px;
+      color: #688C34;
+      margin-bottom: 16px;
+    }
+    p {
+      font-family: $hnr;
+      font-size: 15px;
+      line-height: 18px;
+      color: #707070;
+    }
+  }
+  &__item-desc-section {
+    margin-bottom: 30px;
+  }
+}

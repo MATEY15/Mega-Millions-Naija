@@ -124,3 +124,15 @@ if(document.querySelector('.proposal__tab-lists')) {
         toggleItemActiveClass: 'proposal__tab-content--active',
     });
 }
+
+if(document.querySelector('.game-page__tab-list')) {
+    window.secondTabsGames = new toggleTabs({
+        toggleButtonsWrapperClass: 'game-page__tab-list',
+        toggleButtonClass: 'game-page__tab-li',
+        toggleButtonActiveClass: 'game-page__tab-li--active',
+
+        toggleItemsWrapperClass: 'game-page__body',
+        toggleItemClass: 'game-page__item',
+        toggleItemActiveClass: 'game-page__item--active',
+    });
+}

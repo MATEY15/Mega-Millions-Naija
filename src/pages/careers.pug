@@ -5,7 +5,12 @@ block variables
 
 include ../blocks/header-section/header-section
 block content
-    +headerTwo('img/header-slider/header-slider3.jpg')
+    +headerBanner('img/header-slider/header-slider3.jpg', '')
+        .slider-header__logo-icon.slider-header__logo-icon--offset-large
+            img(src="img/header-slider/footer-logo.png" alt="Logo Icon")
+        .slider-header__content-block
+            .slider-header__title-name.slider-header__title-name--black Careers
+    //+headerTwo('img/header-slider/header-slider3.jpg')
     include ../blocks/careers/careers
     include ../blocks/get-know/get-know
     include ../blocks/partner/partner

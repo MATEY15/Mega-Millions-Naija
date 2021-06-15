@@ -201,6 +201,12 @@
     background: #E71621;
     border-radius: 50%;
     color: #FFFFFF;
+    @media (max-width: 480px) {
+      font-size: 14px;
+      line-height: 16px;
+      width: 30px;
+      height: 30px;
+    }
 
     &--gray {
       background: #707070;

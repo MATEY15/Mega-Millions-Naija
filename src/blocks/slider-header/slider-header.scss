@@ -3,6 +3,37 @@
 @import "../../blocks/base/media-queries";
 
 .slider-header {
+
+  &__content-block {
+    @include table-large-m-screen {
+      margin-left: 20px;
+    }
+  }
+
+  &__title-name {
+    font-family: $hnb;
+    font-size: 88px;
+    line-height: 85px;
+    color: #fff;
+    &--black {
+      color: #000;
+    }
+    @include table-large-m-screen {
+      font-size: 41px;
+      line-height: 40px;
+    }
+  }
+  &__sub-title {
+    font-family: $hnb;
+    font-size: 35px;
+    line-height: 34px;
+    color: #fff;
+    @include table-large-m-screen {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
   &__wrapper {
     position: relative;
     width: 100%;
@@ -19,11 +50,18 @@
     background-position: right 0;
     -webkit-background-size: cover;
     background-size: cover;
+
     @include table-large-screen {
       min-height: 140px;
       padding: 20px 15px 20px 30px;
-      flex-direction: row-reverse;
-      justify-content: space-between;
+
+      //justify-content: space-between;
+    }
+
+    &--reverse {
+      @include table-large-screen {
+        flex-direction: row-reverse;
+      }
     }
   }
 

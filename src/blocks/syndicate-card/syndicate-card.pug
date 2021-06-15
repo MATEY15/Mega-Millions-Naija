@@ -1,0 +1,32 @@
+include ../base/mixin
+
+mixin syndicateCard(title)
+    .syndicate-card
+        .syndicate-card__info
+            .syndicate-card__info-content
+                .syndicate-card__info-head
+                    .syndicate-card__title= title
+                    .syndicate-card__sub-title 150 TICKETS
+                a(href="#").syndicate-card__view-link View All 150 Lines
+            img(src="img/logos/logo1.png" alt="Logo").syndicate-card__logo
+        .syndicate-card__total
+            .syndicate-card__total-head
+                .syndicate-card__total-item
+                    p.syndicate-card__total-name Share Price
+                    p.syndicate-card__total-price N100
+                .syndicate-card__total-item
+                    p.syndicate-card__total-name Total
+                    p.syndicate-card__total-price N50,000
+            .syndicate-card__counter-wrapper
+                .syndicate-card__counter-text 340 Shares Left (Out of 500)
+                .syndicate-card__counter
+                    +qtyInput('11')
+
+
+.game-page__syndicates
+    +syndicateCard('Syndicate 1')
+    +syndicateCard('Syndicate 2')
+    +syndicateCard('Syndicate 3')
+    +syndicateCard('Syndicate 4')
+    +syndicateCard('Syndicate 5')
+    +syndicateCard('Syndicate 6')

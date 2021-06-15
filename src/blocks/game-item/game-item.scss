@@ -9,19 +9,60 @@
   margin-bottom: 35px;
   @include laptop-big-screen {
     max-width: 190px;
+    min-width: 190px;
   }
   @media (max-width: 1189px) {
     max-width: 242px;
   }
-  @include table-large-screen {
-    margin-bottom: 0;
-    max-width: 200px;
-  }
   @include mobile-large-screen {
-    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  @include mobile-mini-screen {
-    //width: 130px;
+
+
+  &--mobile {
+    @include table-large-screen {
+      margin-bottom: 0;
+      max-width: 200px;
+    }
+    @include mobile-large-screen {
+      width: 150px;
+    }
+    @include mobile-mini-screen {
+      //width: 130px;
+    }
+
+    .game-item__timer-wrapper {
+      @include table-large-screen {
+        margin-bottom: 56px;
+      }
+    }
+
+    .game-item__card-price-logo {
+      @include table-large-screen {
+        bottom: auto;
+        right: auto;
+        left: 50%;
+        top: 33px;
+        @include tt(-50%, 0)
+      }
+    }
+    .game-item__card-head {
+      @include table-large-screen {
+        padding-top: 62px;
+        text-align: center;
+      }
+    }
+    .game-item__card {
+      @include table-large-screen {
+        border-radius: 0;
+      }
+    }
+    .game-item__card-foot {
+      @include table-large-screen {
+        text-align: center;
+      }
+    }
   }
 
   &--white {
@@ -75,9 +116,9 @@
   &__timer-wrapper {
     display: flex;
     margin-bottom: 13px;
-    @include table-large-screen {
-      margin-bottom: 52px;
-    }
+    //@include table-large-screen {
+    //  margin-bottom: 52px;
+    //}
     svg {
       margin-right: 15px;
     }
@@ -88,9 +129,17 @@
     line-height: 20px;
     color: #012F00;
 
+    @include mobile-large-screen {
+      font-size: 15px;
+      line-height: 18px;
+    }
+
     &-wrapper {
       .icon-time {
         fill: #707070;
+        @include mobile-large-screen {
+          margin-right: 8px;
+        }
       }
     }
   }
@@ -100,9 +149,7 @@
   &__card {
     border-radius: 0 0 50px 0;
     overflow: hidden;
-    @include table-large-screen {
-      border-radius: 0;
-    }
+
     &--full {
       border-radius: 0;
       .game-item__card-head {
@@ -121,10 +168,7 @@
     background: #00235D;
     border-radius: 10px 10px 0 0;
     padding: 5px 15px 8px;
-    @include table-large-screen {
-      padding-top: 62px;
-      text-align: center;
-    }
+
   }
   &__card-price-logo {
     position: absolute;
@@ -137,13 +181,7 @@
     @media (max-width: 1189px) {
       max-width: 100px;
     }
-    @include table-large-screen {
-      bottom: auto;
-      right: auto;
-      left: 50%;
-      top: 33px;
-      @include tt(-50%, 0)
-    }
+
   }
   &__card-title {
     font-family: $hnbl;
@@ -186,9 +224,7 @@
     background: #FFC217;
     padding: 5px 15px;
     border-radius: 0 0 10px 10px;
-    @include table-large-screen {
-      text-align: center;
-    }
+
   }
   &__card-button {
     font-family: $hnbl;

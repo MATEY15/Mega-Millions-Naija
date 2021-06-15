@@ -13,11 +13,11 @@ mixin headerTwo(src)
                     +img(src, '', 'Slider Image')
                 include ../cart-head/cart-head
 
-mixin headerBanner(src, image)
+mixin headerBanner(src, image, classReverse)
     section.section.section__header-section
         .layout
             .header-section__wrapper
-                .slider-header__main-item(style="background-image: url(" +src+ ");")
+                .slider-header__main-item(class=classReverse style="background-image: url(" +src+ ");")
                     block
 
                 include ../cart-head/cart-head

@@ -282,3 +282,71 @@
                         .popup-check__text-desc Subscribe, never miss a draw, and earn Free tickets!
         .popup-check__button
             a(href="#").button.button--large.button--darkgreen Continue
+
++popupVideo('syndicate-popup', 'syndicate')
+    .syndicate-popup__wrapper
+        mixin syndicateTableItem()
+            .syndicate-popup__table-item
+                span.syndicate-popup__num #1.
+                span.syndicate-popup__num 1
+                span.syndicate-popup__num 2
+                span.syndicate-popup__num 3
+                span.syndicate-popup__num 5
+                span.syndicate-popup__num 14
+                span.syndicate-popup__num.syndicate-popup__num--active 6
+                span.syndicate-popup__num.syndicate-popup__num--active 8
+        .syndicate-popup__tickets Syndicate 1 (150 TICKETS)
+        .syndicate-popup__sub-title Give you a share of a syndicate with randomly selected numbers.
+        .syndicate-popup__table
+            +syndicateTableItem()
+            +syndicateTableItem()
+            +syndicateTableItem()
+            +syndicateTableItem()
+            +syndicateTableItem()
+            +syndicateTableItem()
+            +syndicateTableItem()
+            +syndicateTableItem()
+
++popupVideo('popup-entry', 'entry')
+    mixin gameChoose()
+        .game-page__ticket-item
+            .game-page__ticket
+                .game-page__ticket-pick
+                    .game-page__ticket-step Ticket 1/1
+                    a(href="#").button.button--ticket.button--green QUICK PICK
+                    a(href="#").button.button--delete
+                        +mixinSvg('20px', '25px', 'icon-delete', 'icon-delete')
+                .game-page__circle-body
+                    .game-page__circle-main
+                        - for (var i=1; i<=50; i++)
+                        if(i === 12)
+                            .game-page__circle.game-page__circle--active.game-page__circle--gray= i
+                        else
+                            .game-page__circle.game-page__circle--gray= i
+                    .game-page__ticket-title Choose your Jackpot number
+                    .game-page__circle-main
+                        - for (var i=1; i<=10; i++)
+                        if(i === 5)
+                            .game-page__circle.game-page__circle--yellow.game-page__circle--active= i
+                        else
+                            .game-page__circle.game-page__circle--yellow= i
+
+    .popup-entry__wrapper
+        .popup-entry__head
+            .popup-entry__title Personal Entry (2 Tickets)
+            .popup-entry__sub-title Modify the numbers of your Personal Entry below
+        .popup-entry__body
+            +gameChoose()
+            +gameChoose()
+        .popup-entry__button
+            a(href="#").button.button--large.button--darkgreen Confirm
+
++popupVideo('popup-entry popup-entry--one', 'personal-entry')
+    .popup-entry__wrapper
+        .popup-entry__head
+            .popup-entry__title Personal Entry
+            .popup-entry__sub-title Modify the numbers of your #[br]Personal Entry below
+        .popup-entry__body
+            +gameChoose()
+        .popup-entry__button
+            a(href="#").button.button--large.button--darkgreen Confirm

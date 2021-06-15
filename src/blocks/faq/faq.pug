@@ -1,0 +1,27 @@
+mixin descSection()
+    .faq__item-desc-section
+        h4 Who can sign up Mega Millions Naija
+        p Have a browse through our most common questions
+        p If you need further assistance, our Support Team is ready to help.
+
+mixin faqItem(title)
+    .faq__item
+        .faq__item-title=title
+            .faq__item-icon
+        .faq__item-desc
+            +descSection()
+            +descSection()
+            +descSection()
+            +descSection()
+            +descSection()
+
+.faq
+    +faqItem('Getting Started')
+    +faqItem('How it works')
+    +faqItem('General')
+    +faqItem('Winnings')
+    +faqItem('Managing my account')
+    +faqItem('Payment & Withdrawals')
+    +faqItem('App')
+    +faqItem('Lotteries')
+    +faqItem('Getting Started')

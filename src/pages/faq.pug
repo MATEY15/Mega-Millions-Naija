@@ -1,0 +1,27 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+
+include ../blocks/header-section/header-section
+include ../blocks/game-item/game-item
+block content
+    +headerBanner('img/header-slider/header-slider7.jpg', '')
+        .slider-header__logo-icon.slider-header__logo-icon--offset-large
+            img(src="img/header-slider/footer-logo.png" alt="Logo Icon")
+        .slider-header__content-block
+            .slider-header__title-name.slider-header__title-name--black F&Q
+    section.section.section__faq
+        .layout
+            .faq__wrapper
+                .faq__sidebar
+                    h3 Need some help?
+                    p Have a browse through our most common questions
+                    p If you need further assistance, our Support Team is ready to help.
+                .faq__body
+                    include ../blocks/faq/faq
+
+
+
+    include ../blocks/get-know/get-know
+    include ../blocks/partner/partner

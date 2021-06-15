@@ -1,0 +1,29 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.section__lotteries-page {
+
+}
+.lotteries-page {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-gap: 0 20px;
+  padding: 40px 60px 25px;
+  margin-top: 10px;
+  background: #fff;
+  @include boxShadow();
+
+  @include laptop-small-screen {
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  }
+  @include table-large-screen {
+    padding: 30px 30px 20px;
+  }
+  @media (max-width: 600px) {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+  }
+}

@@ -1,0 +1,43 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+
+include ../blocks/header-section/header-section
+include ../blocks/game-item/game-item
+block content
+    +headerBanner('img/header-slider/lotteries.jpg', '')
+        .slider-header__logo-icon.slider-header__logo-icon--offset-large
+            img(src="img/header-slider/footer-logo.png" alt="Logo Icon")
+        .slider-header__content-block
+            .slider-header__title-name Lotteries
+            .slider-header__sub-title You too can Hammer!
+    section.section.section__lotteries-page
+        .layout
+            .lotteries-page
+                +gameItemCustom('#00235D', 'US Mega Millions', 'United States', 'img/logos/logo1.png')
+                +gameItemCustom('#1549A0', 'US Power Ball', 'United States', 'img/logos/logo2.png')
+                +gameItemCustom('#007300', 'Italian Super EnaLotto', 'Italy', 'img/logos/logo3.png')
+                +gameItemCustom('#B20A1B', 'European Millions', 'Spain', 'img/logos/logo4.png')
+                +gameItemCustom('#5084F8', 'UK Lotto', 'United kingdom', 'img/logos/logo5.png')
+                +gameItemCustom('#7B0713', 'Spain La Primitiva', 'Spain', 'img/logos/logo6.png')
+                +gameItemCustom('#C66004', 'Irish Lotto', 'Ireland', 'img/logos/logo7.png')
+                +gameItemCustom('#BB885D', 'California Super Plus', 'United States', 'img/logos/logo8.png')
+                +gameItemCustom('#00235D', 'US Mega Millions', 'United States', 'img/logos/logo1.png')
+                +gameItemCustom('#1549A0', 'US Power Ball', 'United States', 'img/logos/logo2.png')
+                +gameItemCustom('#007300', 'Italian Super EnaLotto', 'Italy', 'img/logos/logo3.png')
+                +gameItemCustom('#B20A1B', 'European Millions', 'Spain', 'img/logos/logo4.png')
+                +gameItemCustom('#5084F8', 'UK Lotto', 'United kingdom', 'img/logos/logo5.png')
+                +gameItemCustom('#7B0713', 'Spain La Primitiva', 'Spain', 'img/logos/logo6.png')
+                +gameItemCustom('#C66004', 'Irish Lotto', 'Ireland', 'img/logos/logo7.png')
+                +gameItemCustom('#BB885D', 'California Super Plus', 'United States', 'img/logos/logo8.png')
+                +gameItemCustom('#00235D', 'US Mega Millions', 'United States', 'img/logos/logo1.png')
+                +gameItemCustom('#1549A0', 'US Power Ball', 'United States', 'img/logos/logo2.png')
+                +gameItemCustom('#007300', 'Italian Super EnaLotto', 'Italy', 'img/logos/logo3.png')
+                +gameItemCustom('#B20A1B', 'European Millions', 'Spain', 'img/logos/logo4.png')
+                +gameItemCustom('#5084F8', 'UK Lotto', 'United kingdom', 'img/logos/logo5.png')
+                +gameItemCustom('#7B0713', 'Spain La Primitiva', 'Spain', 'img/logos/logo6.png')
+                +gameItemFullDf('img/card-bg/card-bg1.jpg', 'Syndicates')
+                +gameItemFullDf('img/card-bg/card-bg2.jpg', 'Combos')
+    include ../blocks/get-know/get-know
+    include ../blocks/partner/partner

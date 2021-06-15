@@ -1,5 +1,5 @@
 mixin gameItem(fill, title, country, src)
-    .game-item
+    .game-item.game-item--mobile
         +img(src, 'game-item__card-price-logo', 'Logo')
         .game-item__timer-wrapper
             +mixinSvg('19px', '19px', 'icon-time', 'icon-time')
@@ -34,6 +34,46 @@ mixin gameItemFull(fillBg, title)
                 .game-item__card-summ
                     .game-item__card-price N500
                     .game-item__card-price-name Million
+
+            a(href="#").game-item__card-foot
+                span.game-item__card-button PLAY NOW
+
+mixin gameItemFullDf(fillBg, title)
+    .game-item
+        .game-item__timer-wrapper
+            +mixinSvg('19px', '19px', 'icon-time', 'icon-time')
+            .game-item__timer.timer(data-date="2021-06-10")
+                .timer-days
+                .timer-hours
+                .timer-minutes
+                .timer-seconds
+        .game-item__card.game-item__card--full
+            .game-item__card-head(style="background-image: url("+ fillBg +")")
+                .game-item__card-name
+                    .game-item__card-title=title
+                .game-item__card-summ
+                    .game-item__card-price N500
+                    .game-item__card-price-name Million
+
+            a(href="#").game-item__card-foot
+                span.game-item__card-button PLAY NOW
+
+mixin gameItemCustom(fill, title, country, src)
+    .game-item
+        +img(src, 'game-item__card-price-logo', 'Logo')
+        .game-item__timer-wrapper
+            +mixinSvg('19px', '19px', 'icon-time', 'icon-time')
+            .game-item__timer.timer(data-date="2021-06-10")
+                .timer-days
+                .timer-hours
+                .timer-minutes
+                .timer-seconds
+        .game-item__card
+            .game-item__card-head(style="background:" + fill +"")
+                .game-item__card-title=title
+                .game-item__card-country=country
+                .game-item__card-price N500
+                .game-item__card-price-name Million
 
             a(href="#").game-item__card-foot
                 span.game-item__card-button PLAY NOW

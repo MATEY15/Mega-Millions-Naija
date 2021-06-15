@@ -407,3 +407,108 @@
     padding-left: 80px;
   }
 }
+
+.syndicate-popup {
+  max-width: 600px;
+  padding: 60px 40px 65px;
+  &__wrapper {
+    max-width: 464px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__tickets {
+    font-family: $hnb;
+    font-size: 30px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    min-height: 100px;
+    background: #00235D;
+    padding: 32px 20px;
+    text-align: center;
+    @include brr(10px);
+  }
+  &__sub-title {
+    font-family: $hnb;
+    font-size: 17px;
+    line-height: 21px;
+    color: #012F00;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+  &__table {
+    background: #F7F7F7;
+    padding: 30px 25px 0;
+    max-height: 420px;
+    overflow-y: auto;
+    @include scrollbars(10px, #707070, transparent);
+    @include brr(10px);
+  }
+  &__table-item {
+    padding: 20px 15px;
+    display: flex;
+
+    //display: grid;
+    //grid-template-columns: minmax(50px, 60px) 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    &:not(:last-child) {
+      border-bottom: 1px solid #707070;
+    }
+  }
+  &__num {
+    width: calc(100% / 7);
+    font-size: 25px;
+    line-height: 31px;
+    color: #012F00;
+    &:first-child {
+      min-width: 60px;
+    }
+    &--active {
+      color: #E71621;
+    }
+  }
+}
+
+.popup-entry {
+  padding: 50px 60px;
+  max-width: 680px;
+  width: auto;
+  &--one {
+    max-width: 400px;
+  }
+  .game-page__ticket-item {
+    margin: 0 auto;
+  }
+  &__wrapper {}
+  &__head {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-family: $hnb;
+    font-size: 30px;
+    line-height: 37px;
+    color: #688C34;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  &__sub-title {
+    font-family: $hnb;
+    font-size: 13px;
+    line-height: 16px;
+    color: #707070;
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    grid-gap: 20px 28px;
+  }
+  &__button {
+    margin-top: 18px;
+    text-align: center;
+    .button {
+      max-width: 256px;
+    }
+  }
+}
