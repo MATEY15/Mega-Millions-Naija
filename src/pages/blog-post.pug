@@ -1,0 +1,38 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+
+include ../blocks/header-section/header-section
+include ../blocks/game-item/game-item
+include ../blocks/win-it-all/win-it-all
+block content
+    +headerBanner('img/header-slider/header-slider8.jpg', '')
+        .slider-header__logo-icon.slider-header__logo-icon--offset-large
+            img(src="img/header-slider/footer-logo.png" alt="Logo Icon")
+        .slider-header__content-block
+            .slider-header__title-name Blog
+    section.section.section__blog
+        .layout
+            .blog-post__wrapper
+                .blog-post__body
+                    .blog-post__date-wrapper
+                        .blog-post__date May 15, 2021
+                    .blog-post__heading
+                        a(href="#").blog-post__back
+                            +mixinSvg('24px', '13px', 'icon-back2', 'icon-back2')
+                        h1
+                            | Mega Millions Naija Latest winners
+                            .blog-post__date.blog-post__date--mobile May 15, 2021
+                    .blog-post__content
+                        img(src="img/blog/blog-post.jpg" alt="")
+                        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+                .blog-post__sidebar
+                    +winItAllOffers()
+
+
+    include ../blocks/get-know/get-know
+    include ../blocks/partner/partner

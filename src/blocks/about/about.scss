@@ -8,6 +8,14 @@
    padding: 30px 115px 80px;
    background: #fff;
    @include boxShadow();
+   @include laptop-small-screen {
+     padding: 30px 40px 50px;
+   }
+   @include mobile-small-screen {
+     padding: 0;
+     background-color: transparent;
+     box-shadow: none;
+   }
    h1,h2 {
      font-family: $hnr;
      font-weight: normal;
@@ -15,6 +23,11 @@
      line-height: 45px;
      color: #3A9B3F;
      margin-bottom: 40px;
+     @include mobile-small-screen {
+       font-size: 25px;
+       line-height: 29px;
+       margin-bottom: 25px;
+     }
    }
    strong {
      display: block;
@@ -22,19 +35,41 @@
      line-height: 25px;
      color: #707070;
      font-family: $hnb;
+     @include mobile-small-screen {
+       font-family: $hnr;
+       font-size: 17px;
+       line-height: 20px;
+       font-weight: normal;
+     }
    }
  }
   &__content-head {
     margin-bottom: 60px;
+    @include mobile-small-screen {
+      margin-bottom: 35px;
+    }
   }
   p {
     font-size: 18px;
     line-height: 21px;
     color: #000;
     margin-bottom: 24px;
+    @include mobile-small-screen {
+      font-size: 17px;
+      line-height: 20px;
+      margin-bottom: 18px;
+    }
   }
   &__leadership {
-    padding-top: 60px;
+    padding: 60px 115px 80px;
+    background: #fff;
+    @include boxShadow();
+    @include laptop-small-screen {
+      padding: 30px 40px 50px;
+    }
+    @include mobile-small-screen {
+      padding: 30px 25px 50px;
+    }
   }
   &__leadership-head {
     font-size: 40px;
@@ -42,13 +77,20 @@
     color: #3A9B3F;
     text-align: center;
     margin-bottom: 85px;
+    @include laptop-small-screen {
+      margin-bottom: 50px;
+    }
   }
 
   &__leadership-body {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    //grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fill ,minmax(200px, 300px));
     grid-gap: 30px 95px;
     justify-content: center;
+    @include laptop-small-screen {
+      grid-gap: 30px 30px;
+    }
   }
   &__leadership-item {
     max-width: 300px;

@@ -1,0 +1,48 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+
+include ../blocks/header-section/header-section
+include ../blocks/game-item/game-item
+block content
+    +headerBanner('img/header-slider/header-slider8.jpg', '')
+        .slider-header__logo-icon.slider-header__logo-icon--offset-large
+            img(src="img/header-slider/footer-logo.png" alt="Logo Icon")
+        .slider-header__content-block
+            .slider-header__title-name Blog
+    section.section.section__blog
+        mixin blogItem()
+            .blog__item
+                a(href="#").blog__item-img-wrapper
+                    img(src="img/blog/blog-item.jpg" alt="Blog item").blog__item-img
+                .blog__item-content
+                    .blog__item-date May 15, 2021
+                    a(href="#").blog__item-title Mega Millions Naija Latest winners
+                    .blog__item-button
+                        a(href="#").button.button--small-style Read More
+
+        .layout
+            .blog__wpapper
+                .blog__body
+                    +blogItem()
+                    +blogItem()
+                    +blogItem()
+                    +blogItem()
+                    +blogItem()
+                    +blogItem()
+                    +blogItem()
+                    +blogItem()
+                    +blogItem()
+                    +blogItem()
+                    +blogItem()
+                    +blogItem()
+                .blog__button
+                    a(href="#").button.button--small-style.button--small-style--gray Previous
+                    a(href="#").button.button--small-style.button--small-style--gray Showing 1 of 5 pages
+                    a(href="#").button.button--small-style Next
+
+
+
+    include ../blocks/get-know/get-know
+    include ../blocks/partner/partner
