@@ -1,0 +1,85 @@
+mixin cartItem(src)
+    .cart__item
+        .cart__item-grid.cart__item-head
+            .cart__item-name
+                .cart__game
+                    .cart__game-img
+                        img(src=src alt="Logo")
+                    .cart__game-name
+                        a(href="#").cart__game-title US Mega Millions
+                        .cart__item-mobname
+                            .cart__tickets-quik 1 Quick Play
+                            .cart__title N2 million
+                            .cart__date 12 -May-2021
+                            .cart__tickets-drows 5 Draws (5 Tickets X N2,500)
+            .cart__item-draws
+                .cart__tickets
+                    .cart__tickets-quik 1 Quick Play
+                    .cart__tickets-line
+                    .cart__tickets-drows 5 Draws (5 Tickets X N2,500)
+            .cart__item-total
+                a(href="#").cart__view-all View All
+                a(href="#").cart__item-delete
+                    +mixinSvg('20px', '25px', 'icon-delete', 'icon-delete')
+        .cart__item-grid.cart__item-food
+            .cart__item-name
+                .cart__title N2 million
+                .cart__date 12 -May-2021
+            .cart__item-draws
+                .cart__number
+                    .cart__number-label Random selected numbers
+                    .cart__bool-wrapper
+                        .cart__bool-title
+                            .cart__bool-name Game 1
+                                .cart__number-label.cart__number-label--mobile Random selected numbers
+                            a(href="#").cart__view-all.cart__view-all--mobile View All
+                        .cart__bool-body
+                            .cart__bool-main
+                                - for (var i=1; i<=6; i++)
+                                    if(i === 6)
+                                        .cart__bool.cart__bool--active 8
+                                    else
+                                        .cart__bool=60 + i
+                            .cart__bool-desc Multiplier/ Megaplier
+                        a(href="#").cart__bool-edit Edit
+            .cart__item-total
+                .cart__item-total-num N500
+                a(href="#").cart__item-delete.cart__item-delete--mobile
+                    +mixinSvg('20px', '25px', 'icon-delete', 'icon-delete')
+
+section.section.section__cart
+    .layout
+        .cart
+            .cart__body
+                +cartItem("img/logos/logo1.png")
+                +cartItem("img/logos/logo2.png")
+                +cartItem("img/logos/logo3.png")
+                +cartItem("img/logos/logo4.png")
+
+            .cart__total
+                .cart__total-head
+                    p.cart__total-head-name Total cost
+                    p.cart__total-head-sum N2,000
+                .cart__total-wrapper
+                    .cart__total-title Select your preferred payment option
+
+                    .profile__pay-wrapper
+                        .profile__pay-item.profile__pay-item--sum
+                            .account__balance-item
+                                .account__balance-title My Wallet
+                                .account__balance-number N5,600.00
+                                .account__balance-ckeck
+                                    img(src="img/icons/icon-chec-small.svg" alt="")
+                        .profile__pay-item.profile__pay-item--card
+                            .account__balance-item
+                                .account__balance-title Card
+                                .account__balance-card
+                                    .account__balance-card-icon
+                                        +mixinSvg('34px', '25px', 'icon-card', 'icon-card')
+                                    .account__balance-card-number **** **** **** 5678
+                                    a(href="#").account__balance-card-remove Remove
+                                button.button.button--add-card #[+mixinSvg('23px', '23px', 'icon-plus', 'icon-plus')] Add Another Card
+                        .profile__pay-item.profile__pay-item--points
+                            .account__balance-item
+                                .account__balance-title Reward Points
+                                .account__balance-number.account__balance-number--big 650

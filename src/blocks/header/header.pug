@@ -27,10 +27,43 @@ header.header
 
         .header__cart-wrapper
             a(href="#").header__link-home home
-            a(href="#").header__cart
-                | Cart
-                +mixinSvg('30px', '28px', 'icon-cart', 'icon-cart')
-                .header__cart-counter 0
+            .header__cart-drop
+                a(href="#").header__cart
+                    | Cart
+                    +mixinSvg('30px', '28px', 'icon-cart', 'icon-cart')
+                    .header__cart-counter 0
+                .header__cart-preview
+                    if (addCart === true)
+                        .header__cart-product
+                            .header__cart-item
+                                a(href="#").header__cart-product-image
+                                    img(src="img/logos/logo4.png" alt="Logo")
+                                .header__cart-product-content
+                                    a(href="#").header__cart-product-title US Power Ball
+                                    p.header__cart-product-desc 1 Quick Play
+                                    p.header__cart-product-price N2,500
+                                a(href="#").header__cart-product-delete
+                                    +mixinSvg('20px', '25px', 'icon-delete', 'icon-delete')
+                            .header__cart-item
+                                a(href="#").header__cart-product-image
+                                    img(src="img/logos/logo4.png" alt="Logo")
+                                .header__cart-product-content
+                                    a(href="#").header__cart-product-title US Mega Millions
+                                    p.header__cart-product-desc 1 Quick Play
+                                    p.header__cart-product-price N2,500
+                                a(href="#").header__cart-product-delete
+                                    +mixinSvg('20px', '25px', 'icon-delete', 'icon-delete')
+                        .header__cart-total
+                            p Total
+                            .header__cart-total-sum N4,000
+                        a(href="#").button.button--large.button--darkgreen Continue
+                    else
+                        .header__cart-content
+                            p Unfortunately, #[br] your cart is empty
+                            p Please add a game to your cart
+                        .header__cart-button
+                            a(href="#").button.button--large.button--darkgreen Play Now
+
 
         .header__drop-menu
             .drop-menu

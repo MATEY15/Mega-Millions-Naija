@@ -1,0 +1,37 @@
+mixin successfulItem()
+    .successful-game__item
+        .successful-game__logo
+            img(src="img/logos/logo1.png" alt="Logo")
+        .successful-game__descriptions
+            .successful-game__desc-game
+                p US Mega Millions
+                p N23455-44566
+                .successful-game__desc-view.successful-game__desc-view--mobile
+                    a(href="#") View entry
+            .successful-game__desc-draw
+                .successful-game__desc-date
+                    p 19-May-2021
+                    p 3: 59 PM
+                .successful-game__desc-view
+                    a(href="#") View entry
+
+section.section.section__successful-game
+    .layout
+        .successful-game__wrapper
+            .successful-game__main
+                .successful-game__head
+                    h2 Well Played
+                    p Your order has been recived. You will be notified via Email once we have purchased the matching ticket in the Overseas draw.
+                .successful-game__games
+                    .successful-game__games-head
+                        .successful-game__title Game
+                        .successful-game__title Draw date
+
+                    +successfulItem()
+                    +successfulItem()
+                    +successfulItem()
+
+                .successful-game__button
+                    a(href="#").button.button--large.button--darkgreen Add More Games
+            .successful-game__photo
+                img(src="img/account/account-person--big.jpg" alt="Person")

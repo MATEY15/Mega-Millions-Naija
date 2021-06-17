@@ -1,0 +1,83 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.how-to-play {
+  &__wpapper {
+    margin-top: 35px;
+    @include mobile-small-screen {
+      margin-top: 25px;
+    }
+  }
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(400px, 515px) minmax(400px, 540px);
+    grid-gap: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 55px 100px 60px 115px;
+    @include boxShadow();
+    margin-bottom: 38px;
+    @include laptop-small-screen {
+      padding: 50px;
+    }
+    @include table-large-screen {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    @include mobile-small-screen {
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+  &__title {
+    font-family: $hnr;
+    font-size: 40px;
+    line-height: 45px;
+    color: #3A9B3F;
+    margin-bottom: 30px;
+    @include table-large-screen {
+      font-size: 25px;
+      line-height: 29px;
+      display: none;
+    }
+    @include mobile-small-screen {
+      margin-bottom: 15px;
+    }
+    &--mobile {
+      display: none;
+      @include table-large-screen {
+        display: block;
+      }
+    }
+  }
+  &__item-content {
+    max-width: 515px;
+    p {
+      font-family: $hnr;
+      font-size: 20px;
+      line-height: 25px;
+      color: #707070;
+      @include table-large-screen {
+        font-size: 17px;
+        line-height: 21px;
+      }
+    }
+    .button {
+      margin-top: 30px;
+      max-width: 185px;
+    }
+  }
+
+  &__item-preview {
+    .get-know__play {
+      max-width: 540px;
+      @include table-large-screen {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

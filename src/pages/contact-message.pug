@@ -1,0 +1,38 @@
+extends ../templates/main
+
+block variables
+    - var title = 'Name Site'
+
+include ../blocks/header-section/header-section
+include ../blocks/game-item/game-item
+include ../blocks/win-it-all/win-it-all
+block content
+    +headerBanner('img/header-slider/header-slider10.jpg', '')
+        .slider-header__logo-icon.slider-header__logo-icon--offset-large
+            img(src="img/header-slider/footer-logo.png" alt="Logo Icon")
+        .slider-header__content-block
+            .slider-header__title-name Contact #[br]Us
+    section.section.section__contact
+        .layout
+            .contact__wrapper
+                .contact__main
+                    .contact__get
+                        .contact__get-head
+                            h3 Get in touch
+                            p Monday - Sunday: 7:00am - 5:00pm
+                        .contact__menu
+                            a(href="#").contact__menu-button Let’s have a chat
+                            a(href="#").contact__menu-button Drop us a message
+                            a(href="#").contact__menu-button Call Us
+                    .contact__content
+                        form.contact__message
+                            input(type="text" placeholder="Name")
+                            input(type="text" placeholder="Email")
+                            input(type="text" placeholder="Phone Number")
+                            textarea(placeholder="Message")
+                .contact__win-it-all
+                    +winItAllOffers()
+            .contact__social
+
+    include ../blocks/get-know/get-know
+    include ../blocks/partner/partner

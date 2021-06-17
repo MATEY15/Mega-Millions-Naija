@@ -1,0 +1,201 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.section__successful-game {
+  padding-top: 75px;
+  @include table-large-screen {
+    padding-top: 40px;
+  }
+}
+
+.successful-game {
+
+  &__wrapper {
+    //display: flex;
+    display: grid;
+    grid-template-columns: minmax(660px, 50%) minmax(300px, 50%);
+    @include tablet-big-screen {
+      display: block;
+    }
+  }
+  &__main {
+    background: #fff;
+    @include boxShadow();
+    padding: 55px 40px 50px;
+    @include mobile-large-screen {
+      background-color: transparent;
+      padding: 0;
+      box-shadow: none;
+    }
+  }
+
+  &__head {
+    text-align: center;
+    margin-bottom: 45px;
+    @include mobile-large-screen {
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-family: $hnbl;
+      font-size: 33px;
+      line-height: 46px;
+      color: #012F00;
+      margin-bottom: 40px;
+      @include mobile-large-screen {
+        margin-bottom: 35px;
+      }
+    }
+    p {
+      font-family: $hnb;
+      font-size: 17px;
+      line-height: 21px;
+      color: #707070;
+    }
+  }
+  &__games {}
+  &__games-head {
+    padding-left: 64px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px 20px;
+    margin-bottom: 25px;
+    @include mobile-large-screen {
+      margin-bottom: 10px;
+      padding-left: 0;
+    }
+  }
+  &__title {
+    font-family: $hnbl;
+    font-size: 33px;
+    line-height: 46px;
+    color: #012F00;
+    @include mobile-large-screen {
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    @include mobile-large-screen {
+      background: #fff;
+      margin: 0 -20px 20px;
+      padding: 0 20px;
+    }
+  }
+  &__logo {
+    position: relative;
+    width: 54px;
+    height: 54px;
+    margin-right: 10px;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__descriptions {
+    //display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px 20px;
+    background: #F7F7F7;
+    padding: 18px 40px;
+    flex: 1;
+    @include mobile-large-screen {
+      background-color: transparent;
+      padding: 18px 0;
+    }
+  }
+  &__desc-game {
+    p {
+      font-family: $hnb;
+      font-size: 17px;
+      line-height: 21px;
+      color: #707070;
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+  &__desc-draw {
+    display: flex;
+    flex: 1;
+    p {
+      font-family: $hnb;
+      font-size: 17px;
+      line-height: 21px;
+      color: #707070;
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+  &__desc-date {}
+  &__desc-view {
+    margin-left: auto;
+    @include mobile-large-screen {
+      display: none;
+    }
+    &--mobile {
+      display: none;
+      @include mobile-large-screen {
+        display: block;
+      }
+    }
+    a {
+      font-family: $hnb;
+      font-size: 17px;
+      line-height: 21px;
+      color: #6D9138;
+      text-decoration: underline;
+    }
+  }
+  &__button {
+    margin-top: 45px;
+    text-align: center;
+    @include mobile-large-screen {
+      margin-top: 30px;
+    }
+    .button {
+      height: 65px;
+      font-size: 26px;
+      line-height: 32px;
+      max-width: 470px;
+      @include mobile-large-screen {
+        font-size: 23px;
+        line-height: 28px;
+        height: 60px;
+      }
+    }
+  }
+
+
+
+  &__photo {
+    position: relative;
+    background: #fff;
+    @include boxShadow();
+    //width: 50%;
+    font-size: 0;
+    @include tablet-big-screen {
+      display: none;
+    }
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-width: 100%;
+      @include laptop-big-screen {
+        object-position: left top;
+      }
+      @include laptop-small-screen {
+        object-position: center top;
+      }
+    }
+  }
+}

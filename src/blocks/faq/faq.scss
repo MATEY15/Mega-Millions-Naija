@@ -4,6 +4,9 @@
 
 .section__faq {
   padding-top: 40px;
+  @include table-large-m-screen {
+    padding-top: 20px;
+  }
 }
 
 .faq {
@@ -12,24 +15,44 @@
   }
   &__wrapper {
     display: flex;
+    @include table-large-m-screen {
+      display: block;
+    }
   }
 
   &__sidebar {
     padding-left: 75px;
     margin-right: 40px;
     max-width: 320px;
+    @include table-large-screen {
+      padding-left: 0;
+      margin-right: 30px;
+      max-width: 280px;
+    }
+    @include table-large-m-screen {
+      margin-right: 0;
+      margin-bottom: 24px;
+      max-width: 400px;
+    }
     h3 {
       font-family: $hnb;
       font-size: 20px;
       line-height: 25px;
       color: #688C34;
       margin-bottom: 20px;
+      @include table-large-screen {
+        font-family: $hnr;
+      }
     }
     p {
       font-family: $hnr;
       font-size: 18px;
       line-height: 21px;
       color: #000;
+      @include table-large-m-screen {
+        font-size: 17px;
+        line-height: 20px;
+      }
     }
   }
 
@@ -71,6 +94,10 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+    @include table-large-screen {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
   &__item-title {
     position: relative;
@@ -80,6 +107,9 @@
     color: #688C34;
     padding: 28px 25px 27px 60px;
     cursor: pointer;
+    @include table-large-screen {
+      padding-left: 0;
+    }
     &--active {
       .faq__item-icon:before {
         display: none;
@@ -90,6 +120,9 @@
     display: none;
     padding: 20px 10px 1px 60px;
     border-top: 1px solid #707070;
+    @include table-large-screen {
+      padding-left: 0;
+    }
     h4 {
       font-family: $hnb;
       font-size: 15px;

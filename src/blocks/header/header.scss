@@ -179,6 +179,127 @@
     }
   }
 
+  &__cart-drop {
+    position: relative;
+  }
+
+  &__cart-preview {
+    position: absolute;
+    top: calc(100% + 30px);
+    right: -30px;
+    width: 400px;
+    max-width: 400px;
+    background: #fff;
+    padding: 35px 30px 40px;
+    @include boxShadow();
+    @include brr(10px);
+    @include trn(.15s);
+    @include tt(0, 20px);
+    opacity: 0;
+    visibility: hidden;
+    &--active {
+      opacity: 1;
+      visibility: visible;
+      @include tt(0, 0);
+    }
+    &:before {
+      position: absolute;
+      top: -15px;
+      right: 25px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 16px solid #fff;
+    }
+  }
+
+  &__cart-product-image {
+    position: relative;
+    display: block;
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
+    margin-right: 20px;
+    @include brr(50%);
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__cart-item {
+    position: relative;
+    display: flex;
+    padding-right: 30px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  &__cart-product {
+
+  }
+
+  &__cart-product-title {
+    font-family: $hnb;
+    font-size: 18px;
+    line-height: 22px;
+    color: #012F00;
+    margin-bottom: 5px;
+  }
+  &__cart-product-desc {
+    font-family: $hnr;
+    font-size: 15px;
+    line-height: 18px;
+    color: #707070;
+  }
+  &__cart-product-price {
+    font-family: $hnb;
+    font-size: 26px;
+    line-height: 32px;
+    color: #688C34;
+    margin-top: 10px;
+  }
+  &__cart-product-delete {
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+  }
+  &__cart-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: $hnb;
+    font-size: 18px;
+    line-height: 22px;
+    color: #012F00;
+    padding-top: 30px;
+    margin: 30px 0;
+    border-top: 1px solid #C7C7C7;
+  }
+  &__cart-total-sum {
+    font-size: 30px;
+    line-height: 34px;
+    color: #6D9138;
+  }
+  &__cart-content {
+    text-align: center;
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      color: #012F00;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__cart-button {
+    margin-top: 30px;
+  }
+
   &__cart {
     position: relative;
     display: flex;

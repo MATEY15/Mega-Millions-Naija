@@ -180,3 +180,20 @@ input {
   //outline: 1px solid #44c3ff;
 }
 
+.menu-view {
+  margin: 40px 0;
+  li {
+    margin-bottom: 14px;
+  }
+  a {
+    font-family: $hnb;
+    font-size: 20px;
+    line-height: 21px;
+    color: var(--black-green-color);
+    @include trn(.12s);
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+

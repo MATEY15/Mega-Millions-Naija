@@ -2,12 +2,11 @@ extends ../templates/main
 
 block variables
     - var title = 'Name Site'
-    - var addCart = true
+    - var user = true
 
+include ../blocks/popup-default/popup-default
 include ../blocks/header-section/header-section
 block content
-    +headerOne()
-    include ../blocks/proposal/proposal
-    include ../blocks/latest-results/latest-results
+    include ../blocks/successful-game/successful-game
     include ../blocks/get-know/get-know
     include ../blocks/partner/partner

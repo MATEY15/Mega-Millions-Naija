@@ -1,0 +1,362 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.section__cart {
+  padding-top: 75px;
+  @include table-large-screen {
+    padding-top: 25px;
+  }
+}
+
+.cart {
+  &__body {}
+  &__item {
+    padding: 15px 22px 20px;
+    background: #fff;
+    @include boxShadow();
+    &:not(:last-child) {
+      margin-bottom: 38px;
+    }
+    @include mobile-small-screen {
+      padding: 0;
+    }
+  }
+  &__item-grid {
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) minmax(380px, 1fr) minmax(330px, 360px);
+    grid-gap: 10px 20px;
+    @include laptop-big-screen {
+      grid-template-columns: minmax(250px,1fr) minmax(380px,1fr) 240px;
+    }
+    @include tablet-big-screen {
+      grid-template-columns: minmax(300px,1fr) minmax(380px,1fr) 200px;
+    }
+    @include table-large-screen {
+      display: block;
+    }
+  }
+  &__item-head {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #C7C7C7;
+    @include mobile-small-screen {
+      padding: 20px;
+    }
+    .cart__item-draws {
+      @include table-large-screen {
+        display: none;
+      }
+
+    }
+  }
+
+  &__game {
+    display: flex;
+    align-items: center;
+    @include table-large-screen {
+      align-items: flex-start;
+    }
+  }
+  &__game-img {
+    position: relative;
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+    margin-right: 18px;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__game-title {
+    font-family: $hnb;
+    font-size: 18px;
+    line-height: 22px;
+    color: #012F00;
+    @include table-large-screen {
+      margin-bottom: 6px;
+    }
+  }
+  &__item-draws {
+    display: flex;
+    align-items: center;
+    @include mobile-small-screen {
+      padding: 0 20px;
+    }
+  }
+  &__tickets {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: $hnb;
+    color: #707070;
+    @include table-large-screen {
+      display: none;
+    }
+  }
+  &__tickets-quik {
+    font-size: 15px;
+    line-height: 18px;
+    color: #707070;
+  }
+  &__tickets-line {
+    height: 40px;
+    width: 1px;
+    background: #707070;
+    margin: 0 24px;
+  }
+  &__tickets-drows {
+    font-size: 17px;
+    line-height: 21px;
+    color: #012F00;
+    @include table-large-screen {
+      font-family: $hnb;
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 12px;
+    }
+  }
+  &__item-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 30px;
+    @include table-large-screen {
+      padding-right: 0;
+    }
+  }
+  &__view-all {
+    font-family: $hnb;
+    font-size: 17px;
+    line-height: 21px;
+    color: #6D9138;
+    text-decoration: underline;
+    @include table-large-screen {
+      display: none;
+    }
+    &--mobile {
+      display: none;
+      @include table-large-screen {
+        display: block;
+      }
+    }
+  }
+  &__item-delete {
+    @include table-large-screen {
+      display: none;
+    }
+    &--mobile {
+      display: none;
+      @include table-large-screen {
+        display: block;
+      }
+    }
+    .icon-delete {
+      width: 20px;
+      fill: #1A1818;
+    }
+  }
+  &__item-food {
+    padding-top: 15px;
+    .cart__item-name {
+      @include table-large-screen {
+        display: none;
+      }
+    }
+    .cart__item-total {
+      @include table-large-screen {
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid #C7C7C7;
+      }
+      @include mobile-small-screen {
+        padding: 15px 20px;
+      }
+    }
+  }
+  &__item-name {
+
+  }
+  &__item-mobname {
+    display: none;
+    @include table-large-screen {
+      display: block;
+    }
+  }
+  &__title {
+    font-family: $hnb;
+    font-size: 56px;
+    line-height: 69px;
+    color: #688C34;
+    @include table-large-screen {
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+  &__date {
+    font-family: $hnb;
+    font-size: 15px;
+    line-height: 18px;
+    color: #707070;
+  }
+  &__number {
+    @include table-large-screen {
+      width: 100%;
+    }
+  }
+  &__number-label {
+    font-family: $hnb;
+    font-size: 18px;
+    line-height: 18px;
+    color: #707070;
+    margin-bottom: 15px;
+    @include table-large-screen {
+      display: none;
+    }
+    &--mobile {
+      display: none;
+      @include table-large-screen {
+        display: block;
+      }
+      @include table-large-m-screen {
+        font-size: 11px;
+        line-height: 13px;
+      }
+    }
+  }
+  &__bool-wrapper {
+    position: relative;
+    display: flex;
+    @include table-large-screen {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+  &__bool-title {
+    @include table-large-screen {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__bool-name {
+    font-family: $hnb;
+    font-size: 27px;
+    line-height: 33px;
+    color: #012F00;
+    margin-right: 50px;
+    white-space: nowrap;
+    @include table-large-screen {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+  &__bool-body {
+
+  }
+  &__bool-main {
+    position: relative;
+    display: flex;
+  }
+  &__bool-desc {
+    font-size: 10px;
+    line-height: 12px;
+    color: #E71621;
+    margin-top: 10px;
+  }
+  &__bool {
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    font-family: $hnb;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #707070;
+    @include brr(50%);
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+    &--active {
+      background: #FFC217;
+      color: #012F00;
+    }
+  }
+  &__bool-edit {
+    font-family: $hnb;
+    font-size: 15px;
+    line-height: 18px;
+    color: #688C34;
+    margin-left: 40px;
+    padding-top: 8px;
+  }
+  &__item-total-num {
+    font-family: $hnb;
+    font-size: 27px;
+    line-height: 33px;
+    color: #6D9138;
+    margin-left: auto;
+    @include table-large-screen {
+      margin-left: 0;
+    }
+  }
+
+  // Total
+
+  &__total {
+    @include table-large-screen {
+      //display: flex;
+      //align-items: center;
+      //justify-content: space-between;
+    }
+  }
+  &__total-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 38px;
+  }
+  &__total-head-name {
+    font-family: $hnb;
+    font-size: 27px;
+    line-height: 33px;
+    color: #012F00;
+  }
+  &__total-head-sum {
+    font-family: $hnb;
+    font-size: 48px;
+    line-height: 59px;
+    color: #688C34;
+    margin-left: 50px;
+  }
+  &__total-wrapper {
+    padding: 24px 20px 55px;
+    background: #fff;
+    @include boxShadow();
+    .profile__pay-wrapper {
+      @include laptop-big-screen {
+        display: grid;
+      }
+      @media (max-width: 950px) {
+        display: flex;
+      }
+    }
+  }
+  &__total-title {
+    font-family: $hnr;
+    font-size: 21px;
+    line-height: 26px;
+    color: #707070;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .profile__pay-wrapper {
+    max-width: 870px;
+    margin: 0 auto;
+  }
+}
