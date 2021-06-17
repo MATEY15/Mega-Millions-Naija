@@ -35,6 +35,17 @@
     border: 2px solid #FF2B25;
   }
 
+  &__error-message {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 20px);
+    font-size: 14px;
+    line-height: 17px;
+    color: #E71621;
+    width: 90px;
+    @include tt(0, -50%);
+  }
+
   &__item {
     position: relative;
     @media (max-width: 450px) {
@@ -114,5 +125,27 @@
     line-height: 20px;
     color: #707070;
     cursor: pointer;
+  }
+}
+
+.textarea {
+  font-family: $hnb;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000;
+  outline: none;
+  width: 100%;
+  min-height: 200px;
+  border: 2px solid #707070;
+  padding: 15px 15px;
+  @include brr(24px);
+  @include trn(.2s);
+  resize: none;
+
+  @include placeholder {
+    //font-family: $hnb;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000;
   }
 }

@@ -20,6 +20,14 @@
   background-position: center 0;
   color: #fff;
 
+  &--small {
+    width: 290px;
+    .win-it-all__sum {
+      font-size: 130px;
+      line-height: 170px;
+    }
+  }
+
   &__offers {
     max-height: 720px;
     min-width: 330px;

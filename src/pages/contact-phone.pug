@@ -24,20 +24,14 @@ block content
                             a(href="#" data-rename="Chat Us").contact__menu-button Let’s have a chat
                             a(href="#").contact__menu-button.contact__menu-button--active Drop us a message
                             a(href="#").contact__menu-button Call Us
-                    .contact__item.contact__content
-                        form.contact__message
-                            .contact__message-inputs
-                                .input__item
-                                    +input('Name', 'text', '')
-                                .input__item
-                                    +input('Email', 'text', 'input--error')
-                                    .input__error-message Invalid Email Address
-                                .input__item
-                                    +input('Phone Number', 'text', '')
-                                .input__item
-                                    textarea(placeholder="Message").textarea
-                            .contact__message-submit
-                                button.button.button--send Send
+                    .contact__item.contact__phone
+                        .contact__phone-body
+                            img(src="img/icons/phone-call.png" alt="")
+                            .contact__phone-block
+                                a(href="tel:+2349099999910").contact__phone-tel +234 909 999 9910
+                                a(href="tel:+2349099999910").contact__phone-tel +234 909 999 9910
+                                a(href="tel:+2349099999910").contact__phone-tel +234 909 999 9910
+
                 .contact__win-it-all
                     +winItAll('win-it-all--small')
             .contact__social

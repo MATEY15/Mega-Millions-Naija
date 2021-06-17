@@ -240,4 +240,19 @@
     }
   }
 
+  &--send {
+    font-family: $hnb;
+    font-size: 17px;
+    line-height: 21px;
+    color: #fff;
+    background: #3a9b3f;
+    min-height: 45px;
+    min-width: 100px;
+    padding: 12px 30px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    @include trn(.25s);
+  }
+
 }

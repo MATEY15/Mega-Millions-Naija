@@ -24,22 +24,27 @@ block content
                             a(href="#" data-rename="Chat Us").contact__menu-button Let’s have a chat
                             a(href="#").contact__menu-button.contact__menu-button--active Drop us a message
                             a(href="#").contact__menu-button Call Us
-                    .contact__item.contact__content
-                        form.contact__message
-                            .contact__message-inputs
-                                .input__item
-                                    +input('Name', 'text', '')
-                                .input__item
-                                    +input('Email', 'text', 'input--error')
-                                    .input__error-message Invalid Email Address
-                                .input__item
-                                    +input('Phone Number', 'text', '')
-                                .input__item
-                                    textarea(placeholder="Message").textarea
-                            .contact__message-submit
-                                button.button.button--send Send
+                    .contact__item.contact__messenger
+                        .contact__messenger-body
+                            .contact__messenger-item
+                                .contact__messenger-icon
+                                    img(src="img/icons/chat.svg" alt="")
+                                .contact__messenger-main
+                                    .contact__messenger-name Live Chat
+                                    .contact__messenger-desc
+                                        p Lets have a chat directly on the page
+                            .contact__messenger-item
+                                .contact__messenger-icon
+                                    img(src="img/icons/whatsapp.svg" alt="")
+                                .contact__messenger-main
+                                    .contact__messenger-name Whatsapp
+                                    .contact__messenger-desc
+                                        a(href="#").contact__messenger-tel +234 909 999 9910
+                                        p Send us a message
+
                 .contact__win-it-all
                     +winItAll('win-it-all--small')
+
             .contact__social
                 .contact__social-title We on Social Media
                 .contact__social-desc Write us your queries, suggestions and feedback on our social media pages through post, tagging, comments, messages etc.
