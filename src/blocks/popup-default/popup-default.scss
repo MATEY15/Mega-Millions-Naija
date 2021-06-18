@@ -63,12 +63,15 @@
     @include brr(0);
     min-height: 100vh;
     background: #F7F7F7;
-    padding: 100px 20px 40px;
+    padding: 0 20px 40px;
   }
 
   &--video {
     max-width: 750px;
     padding: 25px 25px 40px;
+    @include mobile-mini-screen {
+      padding: 0 20px 20px;
+    }
   }
 
   &__close {
@@ -92,12 +95,11 @@
     display: none;
     @include mobile-mini-screen {
       display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
+      width: calc(100% + 40px);
+      padding: 20px;
+      margin-left: -20px;
+      margin-bottom: 25px;
       background: #fff;
-      width: 100%;
-      padding: 20px 20px;
     }
   }
 
@@ -411,6 +413,9 @@
 .syndicate-popup {
   max-width: 600px;
   padding: 60px 40px 65px;
+  @include mobile-mini-screen {
+    padding: 0 20px 20px;
+  }
   &__wrapper {
     max-width: 464px;
     width: 100%;
@@ -427,6 +432,12 @@
     padding: 32px 20px;
     text-align: center;
     @include brr(10px);
+    @include mobile-mini-screen {
+      font-size: 20px;
+      line-height: 28px;
+      min-height: 60px;
+      padding: 22px 20px;
+    }
   }
   &__sub-title {
     font-family: $hnb;
@@ -473,8 +484,14 @@
   padding: 50px 60px;
   max-width: 680px;
   width: auto;
+  @include mobile-mini-screen {
+    padding: 0 20px 20px;
+  }
   &--one {
     max-width: 400px;
+    @include mobile-mini-screen {
+      max-width: 100%;
+    }
   }
   .game-page__ticket-item {
     margin: 0 auto;

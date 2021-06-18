@@ -23,10 +23,6 @@ html(lang="en")
         block content
         block footer
             include ../blocks/footer/footer
-            .chat
-                .chat__button
-                    +mixinSvg('33px', '33px', 'icon-chat', 'icon-chat')
-
-        //.popup-m__wrapper
+            include ../blocks/chat/chat
         .popup-hide
             include ../blocks/popup/popup-page

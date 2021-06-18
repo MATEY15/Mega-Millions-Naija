@@ -79,11 +79,21 @@
         </div>
         <div class="header__registration-wrapper"><a class="popup header__registration" href="#register">Log IN \ Register</a>
         </div>
-        <div class="header__cart-wrapper"><a class="header__link-home" href="#">home</a><a class="header__cart" href="#">Cart
-            <svg class="icon-cart" width="30px" height="28px">
-              <use xlink:href="img/icons/sprites.svg#icon-cart"></use>
-            </svg>
-            <div class="header__cart-counter">0</div></a></div>
+        <div class="header__cart-wrapper"><a class="header__link-home" href="#">home</a>
+          <div class="header__cart-drop"><a class="header__cart" href="#">Cart
+              <svg class="icon-cart" width="30px" height="28px">
+                <use xlink:href="img/icons/sprites.svg#icon-cart"></use>
+              </svg>
+              <div class="header__cart-counter">0</div></a>
+            <div class="header__cart-preview">
+              <div class="header__cart-content">
+                <p>Unfortunately, <br> your cart is empty</p>
+                <p>Please add a game to your cart</p>
+              </div>
+              <div class="header__cart-button"><a class="button button--large button--darkgreen" href="#">Play Now</a></div>
+            </div>
+          </div>
+        </div>
         <div class="header__drop-menu">
           <div class="drop-menu">
             <div class="drop-menu__button">
@@ -137,11 +147,18 @@
           <li class="menu-view__list"><a class="menu-view__link" href="privacy.html">Privacy</a></li>
           <li class="menu-view__list"><a class="menu-view__link" href="conditions.html">Terms &amp; Conditions</a></li>
           <li class="menu-view__list"><a class="menu-view__link" href="faq.html">Faq</a></li>
-          <!--+listLink('Personal Info', 'personal-info.html', 'menu-view__list', 'menu-view__link')-->
+          <li class="menu-view__list"><a class="menu-view__link" href="blog.html">Blog</a></li>
+          <li class="menu-view__list"><a class="menu-view__link" href="blog-post.html">Blog post</a></li>
+          <li class="menu-view__list"><a class="menu-view__link" href="how-to-play.html">How to play</a></li>
+          <li class="menu-view__list"><a class="menu-view__link" href="cart.html">Cart</a></li>
+          <li class="menu-view__list"><a class="menu-view__link" href="successful-game.html">Successful Game</a></li>
+          <li class="menu-view__list"><a class="menu-view__link" href="contact-message.html">Contact Us - Message</a></li>
+          <li class="menu-view__list"><a class="menu-view__link" href="contact-messenger.html">Contact Us - Messenger</a></li>
+          <li class="menu-view__list"><a class="menu-view__link" href="contact-phone.html">Contact Us - Phones</a></li>
+          <li class="menu-view__list"><a class="menu-view__link" href="contact-thanks.html">Contact Us - Thanks</a></li>
         </ul>
       </div>
     </section>
-    <!--include ../blocks/footer/footer-->
     <footer class="footer">
       <div class="layout footer__wrapper">
         <div class="footer__about">
@@ -205,7 +222,8 @@
         </svg>
       </div>
     </div>
-    <div class="popup-m__wrapper">
+    <!--.popup-m__wrapper-->
+    <div class="popup-hide">
       <div class="popup-default mfp-zoom-in mfp-with-anim mfp-hide" id="register">
         <div class="popup-default__close">
           <svg class="icon-close" width="21px" height="21px">
@@ -929,6 +947,21 @@
             </div>
           </div>
           <div class="popup-entry__button"><a class="button button--large button--darkgreen" href="#">Confirm</a></div>
+        </div>
+      </div>
+      <div class="popup-default popup-default--video mfp-zoom-in mfp-with-anim mfp-hide how-to-play__popup" id="how-to-play">
+        <div class="popup-default__close">
+          <svg class="icon-close" width="21px" height="21px">
+            <use xlink:href="img/icons/sprites.svg#icon-close"></use>
+          </svg>
+        </div>
+        <div class="popup-default__close-mobile"><svg width="27" height="21" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.1845 11.1001H4.26953" stroke="black" stroke-width="3"/><path d="M11.846 2L3 10.846L11.846 19.691" stroke="black" stroke-width="3"/></svg></div>
+        <div class="popup-default__title popup-default__title--center popup-default__names">Watch Video</div>
+        <div class="video-default__wrapper">
+          <div class="video-default__play"></div>
+          <video class="video-default" poster="img/video/video1.jpg">
+            <source src="img/video/Nadal-Novak.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>

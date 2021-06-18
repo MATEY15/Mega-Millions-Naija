@@ -1,0 +1,62 @@
+.chat
+    .chat__button
+        +mixinSvg('33px', '33px', 'icon-chat', 'icon-chat')
+    .chat__main
+        .chat__head
+            .chat__title Welcome to Mega Millions Naija
+            .chat__cloce
+        if(chat === true)
+            .chat__body
+                .chat__message
+                    .chat__message-item.chat__message-item--right
+                        .chat__message-item-title Oladapo
+                        .chat__message-body
+                            .chat__message-text Hello
+                            .chat__message-user
+                                +mixinSvg('24px', '25px', 'icon-user', 'icon-user')
+                        .chat__message-time 2 sec
+                    .chat__message-item
+                        .chat__message-item-title Mega Million
+                        .chat__message-body
+                            .chat__message-user
+                                +mixinSvg('24px', '25px', 'icon-user', 'icon-user')
+                            .chat__message-text Good Morning Sir. #[br]Kindly state your challenge
+                        .chat__message-time 2 sec
+                    .chat__message-item.chat__message-item--right
+                        .chat__message-item-title Oladapo
+                        .chat__message-body
+                            .chat__message-text What is your game?
+                            .chat__message-user
+                                +mixinSvg('24px', '25px', 'icon-user', 'icon-user')
+                        .chat__message-time 2 sec
+                    .chat__message-item
+                        .chat__message-item-title Mega Million
+                        .chat__message-body
+                            .chat__message-user
+                                +mixinSvg('24px', '25px', 'icon-user', 'icon-user')
+                            .chat__message-text Good Morning Sir. #[br]Kindly state your challenge
+                        .chat__message-time 2 sec
+                .chat__form-main
+                    form.chat__form-message
+                        input(type="text" value="Hello").chat__form-input
+                        button.chat__form-send-message
+                            +mixinSvg('46px', '44px', 'icon-send-message', 'icon-send-message')
+        else
+
+            .chat__form
+                .chat__form-item
+                    label.chat__form-label Your Name #[span.chat__important *]
+                    +input('', 'text', '')
+                .chat__form-item
+                    label.chat__form-label Email #[span.chat__important *]
+                    +input('', 'text', '')
+                .chat__form-item
+                    label.chat__form-label Phone Number #[span.chat__important *]
+                    +input('', 'text', '')
+                .chat__form-item
+                    label.chat__form-label Message #[span.chat__important *]
+                    +input('', 'text', '')
+                .chat__form-item
+                    p.chat__form-field #[span.chat__important *] Mandatory Field
+                .chat__form-button
+                    button.button.button--send Submit

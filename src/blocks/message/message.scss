@@ -33,6 +33,7 @@
   }
   @include mobile-large-screen {
     display: block;
+    overflow-y: auto;
   }
   
   &__overlay {
@@ -60,6 +61,7 @@
 
     @include mobile-large-screen {
       overflow-y: inherit;
+      padding-right: 10px;
     }
   }
   &__item {

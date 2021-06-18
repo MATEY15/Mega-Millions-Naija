@@ -131,29 +131,6 @@ input {
   }
 }
 
-.chat {
-  position: fixed;
-  right: 115px;
-  bottom: 50px;
-  @include mobile-large-screen {
-    display: none;
-  }
-  &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    background: #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    @include boxShadow();
-    .icon-chat {
-      fill: #000;
-    }
-  }
-}
-
 .height-40 {
   height: 40px;
 }
